@@ -7,14 +7,23 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "**",
+        protocol: "https",
+        hostname: "images.unsplash.com",
       },
       {
+        protocol: "https",
         hostname: "fakestoreapi.com",
+      },
+      {
+        protocol: "https",
+        hostname: "**.supabase.co",
+      },
+      {
+        protocol: "https",
+        hostname: "**",
       },
     ],
     dangerouslyAllowSVG: true,
-    unoptimized: process.env.NODE_ENV === "development",
   },
 };
 
