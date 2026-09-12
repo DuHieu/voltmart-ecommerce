@@ -1,4 +1,4 @@
-﻿# VoltMart – Modern Full-Stack Electronics E-Commerce Platform
+# VoltMart – Modern Full-Stack Electronics E-Commerce Platform
 
 [![Next.js 16](https://img.shields.io/badge/Next.js-16.2-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React 19](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://react.dev/)
@@ -15,8 +15,8 @@ The platform is purpose-built as a modern showcase for precision audio equipment
 
 ## 🌐 Live Demo
 
-- **Live URL**: [https://voltmart-ecommerce.vercel.app](https://voltmart-ecommerce.vercel.app) *(Coming Soon / Deployment Placeholder)*
-- **Demo Account**: demo@voltmart.io / Password123!
+- **Live URL**: [https://voltmart-ecommerce.vercel.app](https://voltmart-ecommerce.vercel.app)
+- **Demo Account**: `demo.voltmart@gmail.com` / `VoltMartDemo2026!`
 
 ---
 
