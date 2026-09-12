@@ -31,7 +31,7 @@ export function Navbar() {
   return (
     <nav className="border-border bg-background/95 supports-[backdrop-filter]:bg-background/60 z-60 w-full border-b backdrop-blur">
       <div className="mx-4 flex h-16 items-center">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 md:hidden">
           <SidebarTrigger className="hover:bg-muted/50 transition-colors duration-200" />
           <Link href="/" className="cursor-pointer">
             <VoltMartLogo size="md" />

@@ -20,6 +20,7 @@ import {
   RefreshCw,
   Gamepad2,
   Wifi,
+  PanelLeft,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -46,7 +47,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
-  SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
 import { useAuth } from "@/context/AuthContext";
@@ -55,11 +55,9 @@ import { useCategories } from "@/hooks/queries";
 import { usePathname, useRouter } from "next/navigation";
 import { Motion } from "@/components/motion/motion";
 import {
-  contentVariants,
   staggerVariants,
   itemVariants,
   searchVariants,
-  indicatorVariants,
 } from "@/components/motion/animation-variants";
 
 // Default icons for each category
@@ -95,7 +93,7 @@ export default function Sidebar() {
   const { isAdmin } = useAdmin();
   const pathname = usePathname();
   const router = useRouter();
-  const { state } = useSidebar();
+  const { state, toggleSidebar } = useSidebar();
 
   // Use the TanStack Query hook instead of manual state management
   const {
@@ -148,17 +146,30 @@ export default function Sidebar() {
 
   return (
     <ShadcnSidebar collapsible="icon" className="z-[70] border-r">
-      {/* Header with logo */}
-      <SidebarHeader>
-        <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center">
+      {/* Header with clickable logo to toggle sidebar */}
+      <SidebarHeader className="p-2.5">
+        <button
+          type="button"
+          onClick={toggleSidebar}
+          className={cn(
+            "flex w-full items-center rounded-xl transition-all duration-150 cursor-pointer group select-none outline-none focus-visible:ring-2 focus-visible:ring-primary/40",
+            isCollapsed
+              ? "justify-center p-1 hover:bg-muted/70"
+              : "justify-between px-2 py-1.5 hover:bg-muted/50"
+          )}
+          title={isCollapsed ? "Click to expand sidebar" : "Click to collapse sidebar"}
+          aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+        >
+          <div className="flex items-center pointer-events-none">
             <VoltMartLogo size="sm" showText={!isCollapsed} />
-          </Link>
+          </div>
 
           {!isCollapsed && (
-            <SidebarTrigger className="hover:bg-muted/50 ml-auto transition-colors duration-200" />
+            <div className="p-1.5 rounded-lg text-muted-foreground/60 group-hover:text-foreground group-hover:bg-muted/80 transition-all shrink-0">
+              <PanelLeft className="h-4 w-4" />
+            </div>
           )}
-        </div>
+        </button>
       </SidebarHeader>
 
       {/* Search Bar */}
@@ -215,54 +226,39 @@ export default function Sidebar() {
                       const Icon = item.icon;
 
                       return (
-                        <Motion
-                          key={item.name}
-                          variants={itemVariants}
-                          initial="closed"
-                          animate="open"
-                        >
-                          <SidebarMenuItem>
-                            <SidebarMenuButton
-                              render={<Link href={item.href} />}
-                              isActive={isActive}
+                        <SidebarMenuItem key={item.name}>
+                          <SidebarMenuButton
+                            render={<Link href={item.href} />}
+                            isActive={isActive}
+                            className={cn(
+                              "w-full rounded-xl transition-colors duration-150 cursor-pointer text-sm font-medium",
+                              isCollapsed
+                                ? "h-10 w-10 justify-center mx-auto"
+                                : "h-10 px-3 gap-3",
+                              isActive
+                                ? "bg-primary/10 text-primary font-semibold shadow-xs"
+                                : "text-muted-foreground hover:bg-muted/70 hover:text-foreground"
+                            )}
+                            tooltip={item.name}
+                          >
+                            <Icon
                               className={cn(
-                                "group relative transition-all duration-200",
+                                "h-4 w-4 shrink-0 transition-colors",
                                 isActive
-                                  ? "border-primary/20 bg-primary/10 text-primary border"
-                                  : "hover:translate-x-1",
+                                  ? "text-primary"
+                                  : "text-muted-foreground group-hover:text-foreground"
                               )}
-                              tooltip={item.name}
-                            >
-                              <Icon
-                                className={cn(
-                                  "h-4 w-4 transition-all duration-200",
-                                  isActive
-                                    ? "text-primary"
-                                    : "text-muted-foreground group-hover:text-foreground",
-                                )}
-                              />
-                              {!isCollapsed && (
-                                <span className="text-sm font-medium">
-                                  {item.name}
-                                </span>
-                              )}
-                              {/* Active indicator */}
-                              {isActive && (
-                                <Motion
-                                  variants={indicatorVariants}
-                                  initial="closed"
-                                  animate="open"
-                                  transition={{
-                                    type: "spring",
-                                    stiffness: 500,
-                                    damping: 30,
-                                  }}
-                                  className="bg-primary absolute right-2 h-2 w-2 rounded-full"
-                                />
-                              )}
-                            </SidebarMenuButton>
-                          </SidebarMenuItem>
-                        </Motion>
+                            />
+                            {!isCollapsed && (
+                              <span className="truncate">
+                                {item.name}
+                              </span>
+                            )}
+                            {isActive && !isCollapsed && (
+                              <span className="ml-auto h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                            )}
+                          </SidebarMenuButton>
+                        </SidebarMenuItem>
                       );
                     })}
                   </Motion>
@@ -333,44 +329,36 @@ export default function Sidebar() {
                           initial="closed"
                           animate="open"
                         >
-                          <SidebarMenuItem>
+                          <SidebarMenuItem key={category.name}>
                             <SidebarMenuButton
                               render={<Link href={category.href} />}
                               isActive={isActive}
                               className={cn(
-                                "group relative transition-all duration-200",
+                                "w-full rounded-xl transition-colors duration-150 cursor-pointer text-sm font-medium",
+                                isCollapsed
+                                  ? "h-10 w-10 justify-center mx-auto"
+                                  : "h-10 px-3 gap-3",
                                 isActive
-                                  ? "bg-primary/10 text-primary border-primary/20 border"
-                                  : "hover:translate-x-1",
+                                  ? "bg-primary/10 text-primary font-semibold shadow-xs"
+                                  : "text-muted-foreground hover:bg-muted/70 hover:text-foreground"
                               )}
                               tooltip={category.name}
                             >
                               <Icon
                                 className={cn(
-                                  "h-4 w-4 transition-all duration-200",
+                                  "h-4 w-4 shrink-0 transition-colors",
                                   isActive
                                     ? "text-primary"
-                                    : "text-muted-foreground group-hover:text-foreground",
+                                    : "text-muted-foreground group-hover:text-foreground"
                                 )}
                               />
                               {!isCollapsed && (
-                                <span className="text-sm font-medium">
+                                <span className="truncate">
                                   {category.name}
                                 </span>
                               )}
-                              {/* Active indicator */}
-                              {isActive && (
-                                <Motion
-                                  variants={indicatorVariants}
-                                  initial="closed"
-                                  animate="open"
-                                  transition={{
-                                    type: "spring",
-                                    stiffness: 500,
-                                    damping: 30,
-                                  }}
-                                  className="bg-primary absolute right-2 h-2 w-2 rounded-full"
-                                />
+                              {isActive && !isCollapsed && (
+                                <span className="ml-auto h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
                               )}
                             </SidebarMenuButton>
                           </SidebarMenuItem>
@@ -387,53 +375,46 @@ export default function Sidebar() {
 
       {/* User section */}
       {user && (
-        <SidebarFooter>
+        <SidebarFooter className="p-2.5">
           <DropdownMenu>
             <DropdownMenuTrigger
               render={
                 !isCollapsed ? (
-                  <Motion
-                    variants={contentVariants}
-                    initial={isCollapsed ? "closed" : "open"}
-                    animate={isCollapsed ? "closed" : "open"}
-                    className="bg-background/60 hover:bg-background/80 group border-border/30 flex cursor-pointer items-center rounded-xl border p-3 shadow-sm transition-all duration-200"
+                  <button
+                    type="button"
+                    className="group w-full flex items-center gap-2.5 rounded-xl border border-border/50 bg-card/70 p-2 hover:bg-accent/60 transition-all cursor-pointer select-none text-left"
                   >
-                    <Avatar className="ring-primary/20 h-9 w-9 ring-2">
-                      <AvatarFallback className="from-primary to-primary/80 text-primary-foreground bg-gradient-to-br font-semibold">
-                        {displayInitial}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div className="ml-3 min-w-0 flex-1">
-                      <p className="text-foreground truncate text-sm font-medium">
-                        {displayName}
-                      </p>
-                      <p className="text-muted-foreground truncate text-xs">
-                        {user.email}
-                      </p>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div
-                        className="h-2 w-2 rounded-full bg-green-500"
-                        title="Online"
-                      />
-                      <ChevronRight className="text-muted-foreground group-hover:text-foreground h-4 w-4 transition-colors duration-200" />
-                    </div>
-                  </Motion>
-                ) : (
-                  <SidebarMenuButton
-                    size="lg"
-                    className="group cursor-pointer"
-                    tooltip={displayName}
-                  >
-                    <div className="relative">
-                      <Avatar className="ring-primary/20 group-hover:ring-primary/40 h-8 w-8 ring-2 transition-all duration-200">
-                        <AvatarFallback className="from-primary to-primary/80 text-primary-foreground bg-gradient-to-br font-semibold">
+                    <div className="relative shrink-0">
+                      <Avatar className="h-8 w-8 ring-1 ring-border">
+                        <AvatarFallback className="from-primary to-primary/80 text-primary-foreground bg-gradient-to-br text-xs font-semibold">
                           {displayInitial}
                         </AvatarFallback>
                       </Avatar>
-                      <div className="border-background absolute -right-1 -bottom-1 h-3 w-3 rounded-full border-2 bg-green-500" />
+                      <span className="absolute -bottom-0.5 -right-0.5 h-2 w-2 rounded-full bg-emerald-500 ring-2 ring-background" />
                     </div>
-                  </SidebarMenuButton>
+                    <div className="min-w-0 flex-1 overflow-hidden">
+                      <p className="text-foreground truncate text-xs font-medium leading-tight">
+                        {displayName}
+                      </p>
+                      <p className="text-muted-foreground truncate text-[11px] leading-tight mt-0.5">
+                        {user.email}
+                      </p>
+                    </div>
+                    <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground/60 group-hover:text-foreground transition-transform duration-150" />
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    className="group relative flex h-10 w-10 mx-auto items-center justify-center rounded-xl hover:bg-muted/70 transition-colors cursor-pointer"
+                    title={displayName}
+                  >
+                    <Avatar className="h-8 w-8 ring-1 ring-border">
+                      <AvatarFallback className="from-primary to-primary/80 text-primary-foreground bg-gradient-to-br text-xs font-semibold">
+                        {displayInitial}
+                      </AvatarFallback>
+                    </Avatar>
+                    <span className="absolute bottom-0.5 right-0.5 h-2 w-2 rounded-full bg-emerald-500 ring-2 ring-background" />
+                  </button>
                 )
               }
             />
@@ -445,12 +426,12 @@ export default function Sidebar() {
             >
               <div className="flex items-center space-x-2 p-2">
                 <Avatar className="h-8 w-8">
-                  <AvatarFallback className="from-primary to-primary/80 text-primary-foreground bg-gradient-to-br">
+                  <AvatarFallback className="from-primary to-primary/80 text-primary-foreground bg-gradient-to-br text-xs font-semibold">
                     {displayInitial}
                   </AvatarFallback>
                 </Avatar>
-                <div className="flex flex-col">
-                  <span className="text-sm font-medium">
+                <div className="flex flex-col min-w-0 flex-1">
+                  <span className="text-sm font-medium truncate">
                     {displayName}
                   </span>
                   <span className="text-muted-foreground truncate text-xs">
