@@ -29,7 +29,7 @@ export function Navbar() {
   }
 
   return (
-    <nav className="border-border bg-background/95 supports-[backdrop-filter]:bg-background/60 z-60 w-full border-b backdrop-blur">
+    <nav className="border-border bg-background/95 supports-[backdrop-filter]:bg-background/60 z-40 w-full border-b backdrop-blur sticky top-0">
       <div className="mx-4 flex h-16 items-center">
         <div className="flex items-center gap-2 md:hidden">
           <SidebarTrigger className="hover:bg-muted/50 transition-colors duration-200" />
