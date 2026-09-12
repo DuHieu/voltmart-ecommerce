@@ -47,7 +47,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart Spatial Pro Wireless Headphones',
     description: 'Flagship over-ear wireless headphones with custom 45mm beryllium drivers, active hybrid noise cancellation, and 42-hour battery life.',
     price: 349.99,
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=800&q=80',
     stock: 25, sku: 'VLT-AUD-001', category_id: 1, created_at: now, updated_at: now,
   },
   {
@@ -55,7 +55,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart Pulse True Wireless Earbuds',
     description: 'Audiophile-grade in-ear monitors with adaptive ANC, IPX7 water resistance, wireless charging case, and ultra-low latency gaming mode.',
     price: 189.99,
-    image: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80',
     stock: 40, sku: 'VLT-AUD-002', category_id: 1, created_at: now, updated_at: now,
   },
   {
@@ -63,7 +63,7 @@ export const mockProducts: ProductType[] = [
     title: 'SoundWave Precision Studio Monitor Pair',
     description: 'Bi-amplified nearfield reference studio monitors with woven composite cones, silk dome tweeters, and room-acoustic tuning switches.',
     price: 499.00,
-    image: 'https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80',
     stock: 12, sku: 'VLT-AUD-003', category_id: 1, created_at: now, updated_at: now,
   },
   {
@@ -71,7 +71,7 @@ export const mockProducts: ProductType[] = [
     title: 'Aura Hi-Res USB-C Portable DAC & Amp',
     description: 'Ultra-compact MQA certified digital-to-analog converter delivering 32-bit/384kHz decoding with dual 3.5mm and 4.4mm balanced audio outputs.',
     price: 129.50,
-    image: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
     stock: 30, sku: 'VLT-AUD-004', category_id: 1, created_at: now, updated_at: now,
   },
   {
@@ -79,7 +79,7 @@ export const mockProducts: ProductType[] = [
     title: 'BassWave 360 Portable Bluetooth Speaker',
     description: 'IP67 waterproof 360Â° omnidirectional speaker with dual passive radiators, 20-hour battery, and TWS stereo pairing. Rugged aluminum chassis for outdoor adventures.',
     price: 149.00,
-    image: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80',
     stock: 45, sku: 'VLT-AUD-005', category_id: 1, created_at: now, updated_at: now,
   },
   {
@@ -87,7 +87,7 @@ export const mockProducts: ProductType[] = [
     title: 'VinylEdge Pro Turntable System',
     description: 'Belt-drive audiophile turntable with Ortofon 2M Red cartridge, built-in phono preamp, USB digitization output, and anti-vibration plinth.',
     price: 389.00,
-    image: 'https://images.unsplash.com/photo-1539375665275-f9de415ef9ac?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1615655114865-4cc1bfe7b774?auto=format&fit=crop&w=800&q=80',
     stock: 10, sku: 'VLT-AUD-006', category_id: 1, created_at: now, updated_at: now,
   },
   {
@@ -95,7 +95,7 @@ export const mockProducts: ProductType[] = [
     title: 'PlanarAir Open-Back Headphones',
     description: 'Professional open-back planar magnetic headphones with 96mm transducers, ultra-thin 1.5Î¼m diaphragm, and aerospace-grade magnesium frame. Reference-grade imaging.',
     price: 599.00,
-    image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=800&q=80',
     stock: 8, sku: 'VLT-AUD-007', category_id: 1, created_at: now, updated_at: now,
   },
   {
@@ -103,7 +103,7 @@ export const mockProducts: ProductType[] = [
     title: 'TravelQuiet Elite Noise-Cancelling Headphones',
     description: 'Compact foldable ANC headphones optimized for travel with 35dB noise reduction, 38-hour playback, multipoint Bluetooth 5.3, and airline adapter.',
     price: 259.00,
-    image: 'https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?auto=format&fit=crop&w=800&q=80',
     stock: 32, sku: 'VLT-AUD-008', category_id: 1, created_at: now, updated_at: now,
   },
   {
@@ -111,7 +111,7 @@ export const mockProducts: ProductType[] = [
     title: 'SurroundArc 5.1 Dolby Atmos Soundbar',
     description: '3.1.2 channel soundbar with dedicated upward-firing Atmos drivers, 500W peak output, HDMI eARC, Dirac room correction, and wireless subwoofer.',
     price: 849.00,
-    image: 'https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=800&q=80',
     stock: 6, sku: 'VLT-AUD-009', category_id: 1, created_at: now, updated_at: now,
   },
   {
@@ -119,7 +119,7 @@ export const mockProducts: ProductType[] = [
     title: 'CrystalIEM Reference In-Ear Monitors',
     description: 'Quad-driver hybrid IEM with 1 dynamic + 3 balanced armatures per ear, custom 3D-printed nozzle, detachable MMCX silver-plated cable, and Knowles tweeter.',
     price: 319.00,
-    image: 'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
     stock: 20, sku: 'VLT-AUD-010', category_id: 1, created_at: now, updated_at: now,
   },
   {
@@ -127,7 +127,7 @@ export const mockProducts: ProductType[] = [
     title: 'ProArm Broadcast Boom Arm',
     description: 'Heavy-duty desk-mounted microphone boom arm with internal cable routing, 360Â° rotation, aluminum construction, and 1.5kg load capacity.',
     price: 79.00,
-    image: 'https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1526406915894-7bcd65f60845?auto=format&fit=crop&w=800&q=80',
     stock: 60, sku: 'VLT-AUD-011', category_id: 1, created_at: now, updated_at: now,
   },
   {
@@ -135,7 +135,7 @@ export const mockProducts: ProductType[] = [
     title: 'FocusAudio 2Ã—2 USB Recording Interface',
     description: '24-bit/192kHz USB-C audio interface with 2 Neutrik combo XLR-TRS preamps, 48V phantom power, ultra-low latency ASIO, and direct monitoring.',
     price: 199.00,
-    image: 'https://images.unsplash.com/photo-1516223725307-6f76b9182f7c?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1585565804112-f201f68c48b4?auto=format&fit=crop&w=800&q=80',
     stock: 25, sku: 'VLT-AUD-012', category_id: 1, created_at: now, updated_at: now,
   },
 
@@ -145,7 +145,7 @@ export const mockProducts: ProductType[] = [
     title: 'Apex Custom 75% Mechanical Keyboard',
     description: 'Gasket-mounted tri-mode mechanical keyboard featuring CNC anodized aluminum chassis, hot-swappable switches, and PBT dye-sub keycaps.',
     price: 219.00,
-    image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?auto=format&fit=crop&w=800&q=80',
     stock: 18, sku: 'VLT-CMP-001', category_id: 2, created_at: now, updated_at: now,
   },
   {
@@ -153,7 +153,7 @@ export const mockProducts: ProductType[] = [
     title: 'Aerox Precision Wireless Ergonomic Mouse',
     description: 'Ergonomic wireless mouse with 26,000 DPI optical sensor, optical switches, and 100-hour battery life with USB-C quick charge.',
     price: 99.99,
-    image: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80',
     stock: 35, sku: 'VLT-CMP-002', category_id: 2, created_at: now, updated_at: now,
   },
   {
@@ -161,7 +161,7 @@ export const mockProducts: ProductType[] = [
     title: 'UltraView 32" 4K UHD Creator Display',
     description: '32-inch IPS panel with 99% DCI-P3 color accuracy, 144Hz refresh rate, VESA HDR600, and single-cable 90W USB-C Power Delivery.',
     price: 799.00,
-    image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1504274066651-8d31a536b11a?auto=format&fit=crop&w=800&q=80',
     stock: 8, sku: 'VLT-CMP-003', category_id: 2, created_at: now, updated_at: now,
   },
   {
@@ -169,7 +169,7 @@ export const mockProducts: ProductType[] = [
     title: 'Horizon 14-in-1 Thunderbolt 4 Dock',
     description: 'Dual 4K@60Hz display support, 98W host charging, 2.5Gbps Ethernet, UHS-II SD reader, and durable aluminum heat-dissipating chassis.',
     price: 279.00,
-    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1593642532744-d377ab507dc8?auto=format&fit=crop&w=800&q=80',
     stock: 22, sku: 'VLT-CMP-004', category_id: 2, created_at: now, updated_at: now,
   },
   {
@@ -177,7 +177,7 @@ export const mockProducts: ProductType[] = [
     title: 'FlexDesk Pro Electric Standing Desk',
     description: 'Dual-motor height-adjustable standing desk (60â€“125cm), anti-collision system, 4-memory preset controller, tempered glass top, and cable management tray.',
     price: 749.00,
-    image: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80',
     stock: 7, sku: 'VLT-CMP-005', category_id: 2, created_at: now, updated_at: now,
   },
   {
@@ -185,7 +185,7 @@ export const mockProducts: ProductType[] = [
     title: 'ErgoKing Lumbar Support Mesh Chair',
     description: 'Full-mesh ergonomic chair with 4D adjustable armrests, dynamic lumbar support, reclining mechanism (90â€“135Â°), and breathable 3D netting backrest.',
     price: 599.00,
-    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1531297172867-279262e3d36b?auto=format&fit=crop&w=800&q=80',
     stock: 12, sku: 'VLT-CMP-006', category_id: 2, created_at: now, updated_at: now,
   },
   {
@@ -193,7 +193,7 @@ export const mockProducts: ProductType[] = [
     title: 'ElevateX Adjustable Laptop & Monitor Riser',
     description: 'Dual-tier aluminum laptop stand with ventilated cooling slots, 6 height settings, USB-C passthrough, and non-slip heat-resistant silicone pads.',
     price: 69.00,
-    image: 'https://images.unsplash.com/photo-1593642632523-7e2c46ef3f34?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&q=80',
     stock: 55, sku: 'VLT-CMP-007', category_id: 2, created_at: now, updated_at: now,
   },
   {
@@ -201,7 +201,7 @@ export const mockProducts: ProductType[] = [
     title: 'CamPro 4K AI Auto-Tracking Webcam',
     description: '4K 30fps webcam with AI face framing, dual noise-cancelling mics, 90Â° FOV, HDR, privacy shutter, and USB-C plug-and-play for streaming and video calls.',
     price: 179.00,
-    image: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80',
     stock: 28, sku: 'VLT-CMP-008', category_id: 2, created_at: now, updated_at: now,
   },
   {
@@ -209,7 +209,7 @@ export const mockProducts: ProductType[] = [
     title: 'AuraLight Pro Smart Desk Lamp',
     description: 'Tunable white + RGB smart desk lamp with app control, circadian lighting schedule, wireless charging base (15W), and USB-A charging port.',
     price: 119.00,
-    image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=800&q=80',
     stock: 38, sku: 'VLT-CMP-009', category_id: 2, created_at: now, updated_at: now,
   },
   {
@@ -217,7 +217,7 @@ export const mockProducts: ProductType[] = [
     title: 'VaultDrive 2TB Portable NVMe SSD',
     description: 'USB 3.2 Gen 2Ã—2 portable NVMe SSD with 2,000MB/s read speeds, IP55 dust and water resistance, hardware AES-256 encryption, and shock-proof casing.',
     price: 189.00,
-    image: 'https://images.unsplash.com/photo-1597466599360-3b9775841aec?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1627844642677-9b48f6501235?auto=format&fit=crop&w=800&q=80',
     stock: 33, sku: 'VLT-CMP-010', category_id: 2, created_at: now, updated_at: now,
   },
   {
@@ -225,7 +225,7 @@ export const mockProducts: ProductType[] = [
     title: 'PixelHub 11-in-1 USB-C Compact Hub',
     description: '11-port USB-C hub: 4K HDMI, 3Ã— USB-A 3.0, 2Ã— USB-C PD 100W, SD/microSD slots, 2.5Gbps Ethernet, and 3.5mm audio â€” ultrabook-friendly design.',
     price: 89.00,
-    image: 'https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1592286927505-1def25115558?auto=format&fit=crop&w=800&q=80',
     stock: 50, sku: 'VLT-CMP-011', category_id: 2, created_at: now, updated_at: now,
   },
   {
@@ -233,7 +233,7 @@ export const mockProducts: ProductType[] = [
     title: 'NeatDesk Magnetic Cable Organizer Kit',
     description: '32-piece premium cable management kit with magnetic cable clips, velcro straps, under-desk cable tray, and desktop organizer in matte black aluminum.',
     price: 49.00,
-    image: 'https://images.unsplash.com/photo-1616004667892-d348f7349d39?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=800&q=80',
     stock: 80, sku: 'VLT-CMP-012', category_id: 2, created_at: now, updated_at: now,
   },
 
@@ -243,7 +243,7 @@ export const mockProducts: ProductType[] = [
     title: 'Chrono Pro Titanium Smartwatch',
     description: 'Grade-5 aerospace titanium casing with sapphire crystal AMOLED display, multi-band GPS, advanced cardiac metrics, and 14-day battery life.',
     price: 449.00,
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80',
     stock: 15, sku: 'VLT-WR-001', category_id: 3, created_at: now, updated_at: now,
   },
   {
@@ -251,7 +251,7 @@ export const mockProducts: ProductType[] = [
     title: 'OmniCharge 3-in-1 Magnetic Fast Charger',
     description: 'Fast wireless charging stand for smartphone, smartwatch, and earbuds simultaneously with weighted aluminum base and ambient status LED.',
     price: 119.00,
-    image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1623998021450-85c29c644e0d?auto=format&fit=crop&w=800&q=80',
     stock: 50, sku: 'VLT-WR-002', category_id: 3, created_at: now, updated_at: now,
   },
   {
@@ -259,7 +259,7 @@ export const mockProducts: ProductType[] = [
     title: 'Lumina Dynamic Ambient Monitor Light Bar',
     description: 'Asymmetric optical glare-free design with ambient sensor, wireless desktop dial controller, and customizable color temperature.',
     price: 89.00,
-    image: 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=800&q=80',
     stock: 40, sku: 'VLT-WR-003', category_id: 3, created_at: now, updated_at: now,
   },
   {
@@ -267,7 +267,7 @@ export const mockProducts: ProductType[] = [
     title: 'StreamMic Pro Broadcast USB Microphone',
     description: 'Studio-quality 24-bit/96kHz cardioid condenser microphone with built-in dual pop filter, internal shock mount, and zero-latency headphone monitoring.',
     price: 159.00,
-    image: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&w=800&q=80',
     stock: 28, sku: 'VLT-WR-004', category_id: 3, created_at: now, updated_at: now,
   },
   {
@@ -275,7 +275,7 @@ export const mockProducts: ProductType[] = [
     title: 'FlexBand Pro Health & Fitness Tracker',
     description: 'Slim AMOLED fitness band with 24/7 SpO2, ECG, skin temperature, sleep coaching, 21-day battery, 5ATM waterproofing, and 120+ workout modes.',
     price: 149.00,
-    image: 'https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1615655406736-b37c4fabf923?auto=format&fit=crop&w=800&q=80',
     stock: 42, sku: 'VLT-WR-005', category_id: 3, created_at: now, updated_at: now,
   },
   {
@@ -283,7 +283,7 @@ export const mockProducts: ProductType[] = [
     title: 'HaloRing Titanium Smart Health Ring',
     description: 'Invisible-wear titanium smart ring tracking HRV, body temperature, sleep stages, and activity. IPX8 waterproof, 7-day battery, and no charging cradle needed.',
     price: 299.00,
-    image: 'https://images.unsplash.com/photo-1609554496796-c345a5335ceb?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1623984109622-f909795cf3df?auto=format&fit=crop&w=800&q=80',
     stock: 18, sku: 'VLT-WR-006', category_id: 3, created_at: now, updated_at: now,
   },
   {
@@ -291,7 +291,7 @@ export const mockProducts: ProductType[] = [
     title: 'VisionX Mixed Reality Headset',
     description: 'Standalone MR headset with 4K micro-OLED per eye, inside-out 6DoF tracking, Snapdragon XR2+ Gen 2, 2-hour runtime, and passthrough AR mode.',
     price: 899.00,
-    image: 'https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80',
     stock: 5, sku: 'VLT-WR-007', category_id: 3, created_at: now, updated_at: now,
   },
   {
@@ -299,7 +299,7 @@ export const mockProducts: ProductType[] = [
     title: 'ClearView Smart AR Glasses',
     description: 'Lightweight titanium AR glasses with waveguide display, built-in 8MP camera, Snapdragon AR2 Gen 1 chip, 4-hour battery, and voice-first navigation.',
     price: 599.00,
-    image: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1507646227500-4d389b0012be?auto=format&fit=crop&w=800&q=80',
     stock: 9, sku: 'VLT-WR-008', category_id: 3, created_at: now, updated_at: now,
   },
   {
@@ -307,7 +307,7 @@ export const mockProducts: ProductType[] = [
     title: 'RunPulse Sport Open-Ear Earbuds',
     description: 'Open-ear sport earbuds with bone conduction + dynamic dual driver, IP68, adaptive EQ for running, touch controls, and 32-hour total battery with case.',
     price: 169.00,
-    image: 'https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1593121925328-369f088d638d?auto=format&fit=crop&w=800&q=80',
     stock: 36, sku: 'VLT-WR-009', category_id: 3, created_at: now, updated_at: now,
   },
   {
@@ -315,7 +315,7 @@ export const mockProducts: ProductType[] = [
     title: 'NanoShot 4K Action Camera',
     description: '4K 120fps action camera with HorizonSteady Pro EIS, 10m waterproof without case, dual-screen, wind-noise reduction, and live streaming via Wi-Fi 6.',
     price: 349.00,
-    image: 'https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=800&q=80',
     stock: 20, sku: 'VLT-WR-010', category_id: 3, created_at: now, updated_at: now,
   },
   {
@@ -323,7 +323,7 @@ export const mockProducts: ProductType[] = [
     title: 'SkyDrift Mini 4K Folding Drone',
     description: '249g foldable drone with 4K/60fps 3-axis gimbal, 34-min flight time, obstacle avoidance, 12km transmission, and automatic return-to-home.',
     price: 499.00,
-    image: 'https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80',
     stock: 11, sku: 'VLT-WR-011', category_id: 3, created_at: now, updated_at: now,
   },
   {
@@ -331,7 +331,7 @@ export const mockProducts: ProductType[] = [
     title: 'HomeHub Smart Display Controller',
     description: '7" ambient touchscreen smart home hub with matter/thread compatibility, local processing, built-in Zigbee, Z-Wave, and home dashboard automation.',
     price: 229.00,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80',
     stock: 24, sku: 'VLT-WR-012', category_id: 3, created_at: now, updated_at: now,
   },
 
@@ -341,7 +341,7 @@ export const mockProducts: ProductType[] = [
     title: 'NexForce Pro Wireless Gaming Controller',
     description: 'Precision haptic feedback gamepad with adaptive triggers, Hall-effect thumbsticks, 40-hour battery, back paddle buttons, and multi-platform Bluetooth/2.4GHz.',
     price: 89.00,
-    image: 'https://images.unsplash.com/photo-1592890288564-76628a30a657?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
     stock: 45, sku: 'VLT-GAM-001', category_id: 4, created_at: now, updated_at: now,
   },
   {
@@ -349,7 +349,7 @@ export const mockProducts: ProductType[] = [
     title: 'StrikeZone 7.1 Wireless Gaming Headset',
     description: '7.1 surround sound gaming headset with 53mm neodymium drivers, detachable noise-cancelling boom mic, RGB, and lossless 2.4GHz wireless.',
     price: 149.00,
-    image: 'https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80',
     stock: 30, sku: 'VLT-GAM-002', category_id: 4, created_at: now, updated_at: now,
   },
   {
@@ -357,7 +357,7 @@ export const mockProducts: ProductType[] = [
     title: 'CommandThrone Racing Gaming Chair',
     description: 'Racing-style gaming chair with lumbar massage pillow, 4D armrests, 165Â° recline, cold-cure foam cushioning, and breathable PU leather.',
     price: 449.00,
-    image: 'https://images.unsplash.com/photo-1616627988025-8ae67e15c5f7?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1615655114865-4cc1bfe7b774?auto=format&fit=crop&w=800&q=80',
     stock: 8, sku: 'VLT-GAM-003', category_id: 4, created_at: now, updated_at: now,
   },
   {
@@ -365,7 +365,7 @@ export const mockProducts: ProductType[] = [
     title: 'SpectraKeys RGB 60% Gaming Keyboard',
     description: 'Compact 60% gaming keyboard with optical linear switches (0.2mm actuation), per-key RGB, aluminum top plate, N-key rollover, and USB-C detachable cable.',
     price: 139.00,
-    image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=800&q=80',
     stock: 25, sku: 'VLT-GAM-004', category_id: 4, created_at: now, updated_at: now,
   },
   {
@@ -373,7 +373,7 @@ export const mockProducts: ProductType[] = [
     title: 'ArenaPad XXL Extended Gaming Mousepad',
     description: '900Ã—400mm stitched-edge gaming mousepad with micro-textured CORDURA surface for balanced speed/control, anti-slip rubber base, and wireless charging integration.',
     price: 69.00,
-    image: 'https://images.unsplash.com/photo-1615655114865-4cc1bfe7b774?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?auto=format&fit=crop&w=800&q=80',
     stock: 60, sku: 'VLT-GAM-005', category_id: 4, created_at: now, updated_at: now,
   },
   {
@@ -381,7 +381,7 @@ export const mockProducts: ProductType[] = [
     title: 'ImmersaView 27" 360Hz OLED Gaming Monitor',
     description: '27" QHD OLED gaming monitor with 360Hz, 0.03ms GtG, Delta-E < 1 color accuracy, AMD FreeSync Premium Pro, and USB-C 90W Power Delivery.',
     price: 999.00,
-    image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=800&q=80',
     stock: 5, sku: 'VLT-GAM-006', category_id: 4, created_at: now, updated_at: now,
   },
   {
@@ -389,7 +389,7 @@ export const mockProducts: ProductType[] = [
     title: 'PocketPlay Handheld Gaming Console',
     description: '7" 1080p AMOLED handheld with Snapdragon G3x Gen 2, dual hall-effect joysticks, 6000mAh battery, Android-based open ecosystem, and cloud gaming support.',
     price: 499.00,
-    image: 'https://images.unsplash.com/photo-1531525645387-7f14be1bdbbd?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
     stock: 13, sku: 'VLT-GAM-007', category_id: 4, created_at: now, updated_at: now,
   },
   {
@@ -397,7 +397,7 @@ export const mockProducts: ProductType[] = [
     title: 'StreamBox 4K HDMI Capture Card',
     description: '4K 60fps hardware capture card with USB 3.0, zero-lag passthrough, HDR10, instant clip saving, and compatibility with OBS, Streamlabs, and XSplit.',
     price: 189.00,
-    image: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1526406915894-7bcd65f60845?auto=format&fit=crop&w=800&q=80',
     stock: 22, sku: 'VLT-GAM-008', category_id: 4, created_at: now, updated_at: now,
   },
   {
@@ -405,7 +405,7 @@ export const mockProducts: ProductType[] = [
     title: 'ApexGlide Wireless Hall-Effect Gaming Mouse',
     description: 'Ultra-lightweight 49g competitive gaming mouse with 8,000Hz polling rate, magnetic optical switches, and carbon fiber composite shell.',
     price: 129.00,
-    image: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1585565804112-f201f68c48b4?auto=format&fit=crop&w=800&q=80',
     stock: 35, sku: 'VLT-GAM-009', category_id: 4, created_at: now, updated_at: now,
   },
   {
@@ -413,7 +413,7 @@ export const mockProducts: ProductType[] = [
     title: 'Vortex RGB Desktop Soundbar for PC Gaming',
     description: 'High-output compact gaming soundbar with dynamic reactive RGB, USB-C DAC input, Bluetooth 5.3, and dual passive bass radiators.',
     price: 99.00,
-    image: 'https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?auto=format&fit=crop&w=800&q=80',
     stock: 40, sku: 'VLT-GAM-010', category_id: 4, created_at: now, updated_at: now,
   },
 
@@ -423,7 +423,7 @@ export const mockProducts: ProductType[] = [
     title: 'MeshPro Wi-Fi 7 Tri-Band Router System',
     description: 'BE19000 tri-band Wi-Fi 7 mesh system (3-pack) with MLO, 320MHz channels, 10GbE WAN port, intelligent QoS, and covers up to 700m² per pack.',
     price: 549.00,
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80',
     stock: 10, sku: 'VLT-NET-001', category_id: 5, created_at: now, updated_at: now,
   },
   {
@@ -431,7 +431,7 @@ export const mockProducts: ProductType[] = [
     title: 'GuardCam 4K AI Security Camera Pro',
     description: 'Outdoor 4K PoE IP camera with 30m color night vision, AI human/vehicle detection, two-way talk, IP67, and no subscription local NAS recording.',
     price: 149.00,
-    image: 'https://images.unsplash.com/photo-1557597774-9d475d030a96?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1504274066651-8d31a536b11a?auto=format&fit=crop&w=800&q=80',
     stock: 28, sku: 'VLT-NET-002', category_id: 5, created_at: now, updated_at: now,
   },
   {
@@ -439,7 +439,7 @@ export const mockProducts: ProductType[] = [
     title: 'VaultNAS 4-Bay Network Storage Server',
     description: '4-bay NAS with Intel Celeron N5095, 8GB ECC RAM expandable to 32GB, 2×2.5GbE, Docker support, Plex media server, and RAID 0/1/5/6 support.',
     price: 649.00,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1593642532744-d377ab507dc8?auto=format&fit=crop&w=800&q=80',
     stock: 7, sku: 'VLT-NET-003', category_id: 5, created_at: now, updated_at: now,
   },
   {
@@ -447,7 +447,7 @@ export const mockProducts: ProductType[] = [
     title: 'SmartSwitch 8-Port 2.5Gbps PoE+ Hub',
     description: 'Unmanaged 8-port 2.5GbE switch with 4 PoE+ ports (120W budget), fanless aluminum chassis, wall-mountable, and plug-and-play setup.',
     price: 139.00,
-    image: 'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80',
     stock: 20, sku: 'VLT-NET-004', category_id: 5, created_at: now, updated_at: now,
   },
   {
@@ -455,7 +455,7 @@ export const mockProducts: ProductType[] = [
     title: 'NovaBridge Matter Smart Home Hub',
     description: 'Universal Matter/Thread/Zigbee/Z-Wave smart home hub with local processing, no cloud dependency, supports 500+ devices, and open API for automation.',
     price: 199.00,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1531297172867-279262e3d36b?auto=format&fit=crop&w=800&q=80',
     stock: 30, sku: 'VLT-NET-005', category_id: 5, created_at: now, updated_at: now,
   },
   {
@@ -463,7 +463,7 @@ export const mockProducts: ProductType[] = [
     title: 'AuraPlug Smart Power Strip',
     description: '6-outlet smart power strip with energy monitoring per outlet, 4×USB-A, 1×USB-C 30W, surge protection (4320J), and voice/app control.',
     price: 79.00,
-    image: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&q=80',
     stock: 55, sku: 'VLT-NET-006', category_id: 5, created_at: now, updated_at: now,
   },
   {
@@ -471,7 +471,7 @@ export const mockProducts: ProductType[] = [
     title: 'DoorSense Video Smart Doorbell',
     description: '4K HDR video doorbell with 180° head-to-toe view, package detection, built-in speaker/mic, local recording, and wired or 6000mAh battery powered.',
     price: 229.00,
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80',
     stock: 16, sku: 'VLT-NET-007', category_id: 5, created_at: now, updated_at: now,
   },
   {
@@ -479,7 +479,7 @@ export const mockProducts: ProductType[] = [
     title: 'ZenAir Smart Purifier & Air Quality Monitor',
     description: 'HEPA H14 + activated carbon air purifier with laser PM2.5/VOC/CO₂ sensors, auto mode, quiet 22dB sleep mode, app control, and 50m² coverage.',
     price: 349.00,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=800&q=80',
     stock: 18, sku: 'VLT-NET-008', category_id: 5, created_at: now, updated_at: now,
   },
   {
@@ -487,7 +487,7 @@ export const mockProducts: ProductType[] = [
     title: 'OmniShield Biometric Smart Door Lock',
     description: 'Keyless entry smart lock featuring 3D fingerprint scanner, Apple HomeKit / Matter compatibility, auto-relock, and built-in tamper alarm.',
     price: 249.00,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1627844642677-9b48f6501235?auto=format&fit=crop&w=800&q=80',
     stock: 22, sku: 'VLT-NET-009', category_id: 5, created_at: now, updated_at: now,
   },
   {
@@ -495,7 +495,7 @@ export const mockProducts: ProductType[] = [
     title: 'SenseAir Smart Thermostat with Remote Sensors',
     description: 'Energy-saving smart thermostat with ambient humidity tracking, schedule automation, voice control, and dual room temperature probes.',
     price: 179.00,
-    image: 'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1592286927505-1def25115558?auto=format&fit=crop&w=800&q=80',
     stock: 26, sku: 'VLT-NET-010', category_id: 5, created_at: now, updated_at: now,
   },
 
@@ -505,7 +505,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart HyperCharge 140W GaN 4-Port Fast Charger',
     description: 'Ultra-efficient GaN III wall charger delivering 140W total output across 3x USB-C PD 3.1 and 1x USB-A ports with intelligent dynamic power allocation.',
     price: 89.00,
-    image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=800&q=80',
     stock: 50, sku: 'VLT-PWR-001', category_id: 6, created_at: now, updated_at: now,
   },
   {
@@ -513,7 +513,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart PowerVault 25,000mAh 145W Laptop Power Bank',
     description: 'Airline-safe high-capacity power bank capable of 100W single-port charging for MacBooks and ultrabooks, with digital smart status display.',
     price: 119.00,
-    image: 'https://images.unsplash.com/photo-1609592426867-a54823292150?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80',
     stock: 35, sku: 'VLT-PWR-002', category_id: 6, created_at: now, updated_at: now,
   },
   {
@@ -521,7 +521,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart MagSpeed Qi2 15W Magnetic Wireless Car Mount',
     description: 'Certified Qi2 15W wireless charging car mount with active thermoelectric cooling fan, N52 neodymium magnets, and 360° ball joint air vent clamp.',
     price: 49.00,
-    image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1623998021450-85c29c644e0d?auto=format&fit=crop&w=800&q=80',
     stock: 65, sku: 'VLT-PWR-003', category_id: 6, created_at: now, updated_at: now,
   },
   {
@@ -529,7 +529,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart SolarFlow 100W Portable Foldable Solar Panel',
     description: 'Monocrystalline solar panel with 23.5% conversion efficiency, IP65 water resistance, kickstand design, and direct USB-C PD / DC solar generator output.',
     price: 269.00,
-    image: 'https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=800&q=80',
     stock: 15, sku: 'VLT-PWR-004', category_id: 6, created_at: now, updated_at: now,
   },
   {
@@ -537,7 +537,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart ArmorFlex 240W Kevlar Braided USB-C Cable (2m)',
     description: 'Ultra-durable Kevlar-reinforced 240W USB-C cable supporting 40Gbps data transfer, 8K video output, and certified 35,000 bend lifespan.',
     price: 29.00,
-    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&w=800&q=80',
     stock: 90, sku: 'VLT-PWR-005', category_id: 6, created_at: now, updated_at: now,
   },
   {
@@ -545,7 +545,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart CubeStation 65W Desktop Charging Station',
     description: 'Compact desktop cube with 3 AC outlets, dual USB-C 65W, dual USB-A, and a soft braided 1.8m flat-plug power cord for clean cable management.',
     price: 59.00,
-    image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1615655406736-b37c4fabf923?auto=format&fit=crop&w=800&q=80',
     stock: 45, sku: 'VLT-PWR-006', category_id: 6, created_at: now, updated_at: now,
   },
   {
@@ -553,7 +553,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart MagGrip Magnetic Wallet Stand with Find My',
     description: 'Premium vegan leather magnetic wallet holding 3 cards, with adjustable viewing kickstand and integrated Apple Find My lost-item tracking.',
     price: 39.00,
-    image: 'https://images.unsplash.com/photo-1609554496796-c345a5335ceb?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1623984109622-f909795cf3df?auto=format&fit=crop&w=800&q=80',
     stock: 60, sku: 'VLT-PWR-007', category_id: 6, created_at: now, updated_at: now,
   },
   {
@@ -561,7 +561,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart TurboCharge 45W Dual USB-C Mini Travel Adapter',
     description: 'Pocket-sized folding-prong dual-port GaN charger engineered for fast iPhone, iPad, and Galaxy smartphone quick recharging on the go.',
     price: 34.00,
-    image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80',
     stock: 75, sku: 'VLT-PWR-008', category_id: 6, created_at: now, updated_at: now,
   },
 
@@ -571,7 +571,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart CineGimbal 3-Axis Motorized Smartphone Stabilizer',
     description: 'Pro 3-axis motorized gimbal with magnetic AI tracking module, built-in extension rod, 360° infinite roll, and wireless focus/zoom control wheel.',
     price: 139.00,
-    image: 'https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1507646227500-4d389b0012be?auto=format&fit=crop&w=800&q=80',
     stock: 30, sku: 'VLT-CAM-001', category_id: 7, created_at: now, updated_at: now,
   },
   {
@@ -579,7 +579,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart LuminaPanel Edge-Lit Studio Key Light',
     description: 'Edge-lit 2800K-7000K bi-color streaming light with 2800 lumens output, zero glare, Wi-Fi desktop app control, and heavy-duty desk clamp mount.',
     price: 109.00,
-    image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1593121925328-369f088d638d?auto=format&fit=crop&w=800&q=80',
     stock: 38, sku: 'VLT-CAM-002', category_id: 7, created_at: now, updated_at: now,
   },
   {
@@ -587,7 +587,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart StudioCam 4K60 Pro Creator Webcam',
     description: 'High-performance 4K 60fps streaming camera with 1/1.8" Sony STARVIS 2 sensor, f/1.8 optical glass lens, AI auto-exposure, and omnidirectional stereo mics.',
     price: 199.00,
-    image: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=800&q=80',
     stock: 25, sku: 'VLT-CAM-003', category_id: 7, created_at: now, updated_at: now,
   },
   {
@@ -595,7 +595,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart Podcaster Dual Wireless Lavalier Mic System',
     description: '2.4GHz dual-channel wireless microphone kit with onboard 32-bit float recording, environmental noise cancellation, and 24-hour charging case.',
     price: 149.00,
-    image: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80',
     stock: 40, sku: 'VLT-CAM-004', category_id: 7, created_at: now, updated_at: now,
   },
   {
@@ -603,7 +603,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart TelePrompter Pro for Tablets & Phones',
     description: 'Studio beam-splitter 70/30 optical glass teleprompter compatible with DSLRs, mirrorless cameras, iPads, and smartphones, with wireless remote control.',
     price: 89.00,
-    image: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80',
     stock: 20, sku: 'VLT-CAM-005', category_id: 7, created_at: now, updated_at: now,
   },
   {
@@ -611,7 +611,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart MultiMount Pro Heavy-Duty Desk Rig System',
     description: 'All-metal modular desk rigging pole with 3 articulating arms for simultaneously mounting camera, microphone, and ring light in small spaces.',
     price: 69.00,
-    image: 'https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
     stock: 35, sku: 'VLT-CAM-006', category_id: 7, created_at: now, updated_at: now,
   },
   {
@@ -619,7 +619,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart ChromaKey Pro Collapsible Green Screen Panel',
     description: 'Wrinkle-resistant pneumatic pop-up green screen (150x200cm) housed in an aluminum hard-shell base for instant streaming chroma key setup.',
     price: 119.00,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80',
     stock: 18, sku: 'VLT-CAM-007', category_id: 7, created_at: now, updated_at: now,
   },
   {
@@ -627,7 +627,7 @@ export const mockProducts: ProductType[] = [
     title: 'VoltMart AcousticShield Pro Reflection Filter',
     description: 'High-density acoustic foam microphone isolation shield with vented aluminum backplate for capturing dry, studio-grade vocals in untreated rooms.',
     price: 59.00,
-    image: 'https://images.unsplash.com/photo-1516223725307-6f76b9182f7c?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1615655114865-4cc1bfe7b774?auto=format&fit=crop&w=800&q=80',
     stock: 28, sku: 'VLT-CAM-008', category_id: 7, created_at: now, updated_at: now,
   },
 ];

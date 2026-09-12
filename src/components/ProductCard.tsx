@@ -167,39 +167,42 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
 
       {/* Product Details */}
-      <CardContent className="space-y-2 p-3">
+      <CardContent className="space-y-1.5 p-2 sm:space-y-2 sm:p-3">
         {/* Rating & Stock */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-0.5 sm:gap-1">
             <div className="flex items-center gap-0.5">{renderStars()}</div>
-            <span className="text-muted-foreground text-xs">
+            <span className="text-muted-foreground hidden text-xs sm:inline">
               {rating.toFixed(1)} ({reviewCount})
             </span>
+            <span className="text-muted-foreground text-[10px] sm:hidden">
+              {rating.toFixed(1)}
+            </span>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-0.5 sm:gap-1">
             <div
               className={`h-1.5 w-1.5 rounded-full ${
                 product.stock > 0 ? "bg-emerald-500" : "bg-destructive"
               }`}
             ></div>
             <span
-              className={`text-xs font-medium ${
+              className={`text-[10px] font-medium sm:text-xs ${
                 product.stock > 0
                   ? "text-emerald-600 dark:text-emerald-400"
                   : "text-destructive"
               }`}
             >
-              {product.stock > 0 ? "In Stock" : "Out of Stock"}
+              {product.stock > 0 ? "In Stock" : "Out"}
             </span>
           </div>
         </div>
 
         {/* Product Title */}
         <div>
-          <h3 className="text-foreground group-hover:text-primary line-clamp-1 text-sm font-semibold transition-colors duration-200">
+          <h3 className="text-foreground group-hover:text-primary line-clamp-1 text-xs font-semibold transition-colors duration-200 sm:text-sm">
             {product.title}
           </h3>
-          <p className="text-muted-foreground line-clamp-2 text-xs">
+          <p className="text-muted-foreground line-clamp-2 hidden text-xs sm:block">
             {product.description ||
               "Premium quality product with exceptional features."}
           </p>
@@ -207,25 +210,25 @@ export function ProductCard({ product }: ProductCardProps) {
 
         {/* Price Section */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-1.5">
-            <span className="text-foreground text-lg font-bold">
+          <div className="flex items-center gap-1">
+            <span className="text-foreground text-sm font-bold sm:text-lg">
               ${product.price.toFixed(2)}
             </span>
             {originalPrice && (
-              <span className="text-muted-foreground text-xs line-through">
+              <span className="text-muted-foreground hidden text-xs line-through sm:inline">
                 ${originalPrice.toFixed(2)}
               </span>
             )}
           </div>
           {isOnSale && (
-            <div className="bg-primary/10 text-primary rounded-md px-1.5 py-0.5 text-xs font-medium">
+            <div className="bg-primary/10 text-primary hidden rounded-md px-1.5 py-0.5 text-xs font-medium sm:block">
               Save ${(originalPrice! - product.price).toFixed(0)}
             </div>
           )}
         </div>
 
-        {/* Feature Badges */}
-        <div className="flex items-center gap-1">
+        {/* Feature Badges - hidden on smallest mobile */}
+        <div className="hidden items-center gap-1 sm:flex">
           <span className="bg-primary/10 text-primary rounded-md px-1.5 py-0.5 text-xs font-medium">
             Free Ship
           </span>
@@ -235,13 +238,13 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Mobile Action Button */}
-        <div className="pt-1 sm:hidden">
+        <div className="pt-0.5 sm:hidden">
           <Button
-            className="h-8 w-full cursor-pointer text-xs"
+            className="h-7 w-full cursor-pointer text-[11px] sm:h-8 sm:text-xs"
             onClick={handleAddToCart}
             disabled={product.stock === 0}
           >
-            <ShoppingCart className="mr-1.5 h-3 w-3" />
+            <ShoppingCart className="mr-1 h-3 w-3" />
             {product.stock === 0 ? "Out of Stock" : "Add to Cart"}
           </Button>
         </div>

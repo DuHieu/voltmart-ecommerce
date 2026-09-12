@@ -69,74 +69,60 @@ export function ProductFilter({ filters, onFilterChange }: ProductFilterProps) {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="bg-card flex flex-col gap-4 rounded-lg border p-4 sm:flex-row"
+      className="bg-card rounded-lg border p-2 sm:p-4"
     >
-      <div className="flex items-center gap-2 text-sm font-medium">
-        <Filter className="h-4 w-4" />
-        <span>Filters:</span>
-      </div>
-
-      <div className="flex flex-1 flex-col gap-4 sm:flex-row">
-        {/* Sort Options */}
-        <div className="flex flex-col gap-2">
-          <label className="text-muted-foreground text-xs font-medium">
-            Sort by
-          </label>
-          <Select value={filters.sortBy} onValueChange={handleSortChange}>
-            <SelectTrigger className="w-full sm:w-[180px]">
-              <SortAsc className="mr-2 h-4 w-4" />
-              <SelectValue placeholder="Sort by" />
-            </SelectTrigger>
-            <SelectContent>
-              {sortOptions.map((option) => (
-                <SelectItem key={option.value} value={option.value}>
-                  {option.label}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+      {/* Mobile: compact horizontal scroll row */}
+      <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:flex-wrap sm:overflow-visible sm:pb-0">
+        <div className="flex shrink-0 items-center gap-1.5 text-xs font-medium sm:text-sm">
+          <Filter className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+          <span className="hidden sm:inline">Filters:</span>
         </div>
+
+        {/* Sort Options */}
+        <Select value={filters.sortBy} onValueChange={handleSortChange}>
+          <SelectTrigger className="h-8 w-[130px] shrink-0 text-xs sm:h-9 sm:w-[180px] sm:text-sm">
+            <SortAsc className="mr-1.5 h-3 w-3 sm:mr-2 sm:h-4 sm:w-4" />
+            <SelectValue placeholder="Sort" />
+          </SelectTrigger>
+          <SelectContent>
+            {sortOptions.map((option) => (
+              <SelectItem key={option.value} value={option.value}>
+                {option.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
 
         {/* Stock Filter */}
-        <div className="flex flex-col gap-2">
-          <label className="text-muted-foreground text-xs font-medium">
-            Stock Status
-          </label>
-          <Select value={filters.stockFilter} onValueChange={handleStockChange}>
-            <SelectTrigger className="w-full sm:w-[150px]">
-              <SelectValue placeholder="Stock status" />
-            </SelectTrigger>
-            <SelectContent>
-              {stockOptions.map((option) => (
-                <SelectItem key={option.value} value={option.value}>
-                  {option.label}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
+        <Select value={filters.stockFilter} onValueChange={handleStockChange}>
+          <SelectTrigger className="h-8 w-[110px] shrink-0 text-xs sm:h-9 sm:w-[150px] sm:text-sm">
+            <SelectValue placeholder="Stock" />
+          </SelectTrigger>
+          <SelectContent>
+            {stockOptions.map((option) => (
+              <SelectItem key={option.value} value={option.value}>
+                {option.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
 
         {/* Category Filter */}
-        <div className="flex flex-col gap-2">
-          <label className="text-muted-foreground text-xs font-medium">
-            Category
-          </label>
-          <Select
-            value={filters.categoryFilter}
-            onValueChange={handleCategoryChange}
-          >
-            <SelectTrigger className="w-full sm:w-[150px]">
-              <SelectValue placeholder="Category" />
-            </SelectTrigger>
-            <SelectContent>
-              {categoryOptions.map((option) => (
-                <SelectItem key={option.value} value={option.value}>
-                  {option.label}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
+        <Select
+          value={filters.categoryFilter}
+          onValueChange={handleCategoryChange}
+        >
+          <SelectTrigger className="h-8 w-[120px] shrink-0 text-xs sm:h-9 sm:w-[150px] sm:text-sm">
+            <SelectValue placeholder="Category" />
+          </SelectTrigger>
+          <SelectContent>
+            {categoryOptions.map((option) => (
+              <SelectItem key={option.value} value={option.value}>
+                {option.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
     </motion.div>
   );

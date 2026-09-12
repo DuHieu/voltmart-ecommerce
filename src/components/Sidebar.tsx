@@ -97,7 +97,7 @@ export default function Sidebar() {
   const { isAdmin } = useAdmin();
   const pathname = usePathname();
   const router = useRouter();
-  const { state, toggleSidebar } = useSidebar();
+  const { state, toggleSidebar, isMobile, setOpenMobile } = useSidebar();
 
   // Use the TanStack Query hook instead of manual state management
   const {
@@ -234,6 +234,11 @@ export default function Sidebar() {
                           <SidebarMenuButton
                             render={<Link href={item.href} />}
                             isActive={isActive}
+                            onClick={() => {
+                              if (isMobile) {
+                                setOpenMobile(false);
+                              }
+                            }}
                             className={cn(
                               "w-full rounded-xl transition-colors duration-150 cursor-pointer text-sm font-medium",
                               isCollapsed
@@ -337,6 +342,12 @@ export default function Sidebar() {
                             <SidebarMenuButton
                               render={<Link href={category.href} />}
                               isActive={isActive}
+                              onClick={() => {
+                                // Close sidebar on mobile after clicking a link
+                                if (isMobile) {
+                                  setOpenMobile(false);
+                                }
+                              }}
                               className={cn(
                                 "w-full rounded-xl transition-colors duration-150 cursor-pointer text-sm font-medium",
                                 isCollapsed
