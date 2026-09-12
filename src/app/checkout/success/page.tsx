@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
+import { Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,33 +10,7 @@ import { CheckCircle2 } from "lucide-react";
 function SuccessContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const checkoutId = searchParams.get("checkout_id");
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Give webhook time to process
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="bg-background min-h-screen py-12">
-        <Card className="mx-auto max-w-md">
-          <CardHeader>
-            <CardTitle>Processing your order...</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col items-center justify-center py-8">
-            <LoadingSpinner />
-            <p className="text-muted-foreground mt-4">
-              Please wait while we confirm your payment and create your order.
-            </p>
-          </CardContent>
-        </Card>
-      </div>
-    );
-  }
+  const orderId = searchParams.get("order_id") || searchParams.get("checkout_id");
 
   return (
     <div className="bg-background min-h-screen py-12">
@@ -52,9 +26,9 @@ function SuccessContent() {
             <p className="text-muted-foreground">
               Your order has been successfully placed.
             </p>
-            {checkoutId && (
-              <p className="text-muted-foreground text-sm">
-                Order ID: {checkoutId}
+            {orderId && (
+              <p className="text-foreground font-semibold text-sm">
+                Order Confirmation #: <span className="font-mono text-primary">{orderId}</span>
               </p>
             )}
             <p className="text-muted-foreground">

@@ -16,17 +16,9 @@ export function ReviewedCard({ productId, limit }: ReviewedCardProps) {
   const {
     data: reviewsData,
     isLoading: reviewsLoading,
-    error: reviewsError,
   } = useGetProductReviews(productId);
 
   const { data: profileData } = useCurrentProfile();
-
-  console.log(
-    "reviewsError",
-    reviewsError?.message,
-    reviewsError?.name,
-    reviewsError?.stack,
-  );
 
   if (reviewsLoading) {
     return (

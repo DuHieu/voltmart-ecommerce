@@ -13,6 +13,7 @@ type SignInProps = {
 export default async function SignIn({ searchParams }: SignInProps) {
   const params = await searchParams;
   const message = params.message ? String(params.message) : null;
+  const returnTo = params.returnTo ? String(params.returnTo) : undefined;
 
   return (
     <div className="bg-background flex min-h-[85vh] items-center justify-center p-4">
@@ -26,7 +27,7 @@ export default async function SignIn({ searchParams }: SignInProps) {
             Enter your credentials to access your account & orders
           </CardDescription>
         </CardHeader>
-        <SignInForm message={message} />
+        <SignInForm message={message} returnTo={returnTo} />
       </Card>
     </div>
   );

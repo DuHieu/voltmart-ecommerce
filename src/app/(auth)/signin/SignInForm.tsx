@@ -8,7 +8,13 @@ import { Label } from "@/components/ui/label";
 import { Eye, EyeOff } from "lucide-react";
 import { useAuthForm } from "@/hooks/useAuthForm";
 
-export function SignInForm({ message }: { message: string | null }) {
+export function SignInForm({
+  message,
+  returnTo,
+}: {
+  message: string | null;
+  returnTo?: string;
+}) {
   const {
     formData,
     loading,
@@ -17,7 +23,7 @@ export function SignInForm({ message }: { message: string | null }) {
     handleChange,
     togglePasswordVisibility,
     handleSubmit,
-  } = useAuthForm();
+  } = useAuthForm({ returnTo });
 
   return (
     <form onSubmit={handleSubmit}>

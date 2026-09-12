@@ -1,166 +1,159 @@
-'use server'
+﻿'use server';
 
-import { Polar } from '@polar-sh/sdk'
-import { createServerSupabase, getAuthenticatedUser } from '@/lib/supabase/server'
-import { ProductType } from '@/types'
+import { createServerSupabase, getAuthenticatedUser } from '@/lib/supabase/server';
 
-const polar = new Polar({
-	accessToken: process.env.POLAR_ACCESS_TOKEN!,
-	server: 'sandbox',
-})
-
-/**
- * Get an existing Polar product for e-commerce checkouts
- * Uses POLAR_PRODUCT_ID if set, otherwise finds the first non-archived product
- */
-async function getPolarProduct(): Promise<string> {
-	// If product ID is explicitly provided, use it
-	const productId = process.env.POLAR_PRODUCT_ID
-	if (productId) {
-		return productId
-	}
-
-	// Otherwise, list existing products and find one
-	// When using organization token, don't pass organizationId
-	const organizationId = process.env.POLAR_ORG_ID
-	const listParams = organizationId ? { organizationId } : {}
-
-	try {
-		const productsIterator = await polar.products.list(listParams)
-
-		// Iterate through pages to find first non-archived product
-		for await (const page of productsIterator) {
-			if (page?.result?.items) {
-				const product = page.result.items.find(
-					(p: { isArchived?: boolean; id?: string }) => !p.isArchived
-				)
-
-				if (product?.id) {
-					return product.id
-				}
-			}
-		}
-
-		throw new Error('No active Polar products found. Please create a product in Polar or set POLAR_PRODUCT_ID environment variable.')
-	} catch (error) {
-		console.error('Error getting Polar product:', error)
-		throw new Error(`Failed to get Polar product: ${error instanceof Error ? error.message : 'Unknown error'}`)
-	}
+export interface CheckoutShippingInput {
+  street: string;
+  city: string;
+  state?: string;
+  zip_code: string;
+  country: string;
+  clientCartItems?: Array<{
+    product_id: string;
+    quantity: number;
+    price: number;
+  }>;
 }
 
-export async function createPolarCheckout() {
-	try {
-		// Get authenticated user
-		const user = await getAuthenticatedUser()
-		if (!user) {
-			throw new Error('Unauthorized')
-		}
+export async function createDemoOrder(input: CheckoutShippingInput) {
+  try {
+    const user = await getAuthenticatedUser();
+    if (!user) {
+      return { success: false, error: 'You must be signed in to checkout.' };
+    }
 
-		// Get Supabase client
-		const supabase = await createServerSupabase()
+    const supabase = await createServerSupabase();
 
-		// Get active cart
-		const { data: cart, error: cartError } = await supabase
-			.from('carts')
-			.select('*')
-			.eq('user_id', user.id)
-			.eq('status', 'active')
-			.single()
+    // 1. Get or create shipping address in addresses table
+    let addressId: number | null = null;
+    const { data: existingAddress } = await supabase
+      .from('addresses')
+      .select('id')
+      .eq('user_id', user.id)
+      .eq('street', input.street.trim())
+      .limit(1)
+      .maybeSingle();
 
-		if (cartError || !cart) {
-			throw new Error('No active cart found')
-		}
+    if (existingAddress?.id) {
+      addressId = existingAddress.id;
+    } else {
+      const { data: newAddress, error: addrError } = await supabase
+        .from('addresses')
+        .insert({
+          user_id: user.id,
+          street: input.street.trim() || '100 VoltMart Tech Blvd',
+          city: input.city.trim() || 'San Francisco',
+          state: input.state?.trim() || 'CA',
+          zip_code: input.zip_code.trim() || '94105',
+          country: input.country.trim() || 'United States',
+          is_default: true,
+        })
+        .select('id')
+        .single();
 
-		// Get cart items with product details
-		const { data: cartItems, error: itemsError } = await supabase
-			.from('cart_items')
-			.select(
-				`
-				*,
-				product:products(*)
-			`
-			)
-			.eq('cart_id', cart.id)
+      if (addrError || !newAddress) {
+        console.error('Error creating address:', addrError);
+        const { data: anyAddress } = await supabase
+          .from('addresses')
+          .select('id')
+          .eq('user_id', user.id)
+          .limit(1)
+          .maybeSingle();
+        addressId = anyAddress?.id || 1;
+      } else {
+        addressId = newAddress.id;
+      }
+    }
 
-		if (itemsError || !cartItems || cartItems.length === 0) {
-			throw new Error('Cart is empty')
-		}
+    // 2. Resolve items to order
+    let itemsToOrder: Array<{ product_id: string; quantity: number; price: number }> = [];
 
-		// Get existing Polar product
-		const polarProductId = await getPolarProduct()
+    const { data: cart } = await supabase
+      .from('carts')
+      .select('id')
+      .eq('user_id', user.id)
+      .eq('status', 'active')
+      .maybeSingle();
 
-		// Calculate total amount for all cart items
-		let totalAmountInCents = 0
-		const cartItemsData: Array<{
-			product_id: string
-			quantity: number
-			price: number
-			product_title: string
-		}> = []
+    if (cart?.id) {
+      const { data: dbItems } = await supabase
+        .from('cart_items')
+        .select('product_id, quantity, price')
+        .eq('cart_id', cart.id);
 
-		for (const item of cartItems) {
-			const productId = item.product_id
-			const product = item.product as ProductType | null | undefined
-			const itemTotalInCents = Math.round(item.price * item.quantity * 100)
-			totalAmountInCents += itemTotalInCents
+      if (dbItems && dbItems.length > 0) {
+        itemsToOrder = dbItems;
+      }
+    }
 
-			cartItemsData.push({
-				product_id: productId,
-				quantity: item.quantity,
-				price: item.price,
-				product_title: product?.title || '',
-			})
-		}
+    // If database cart was empty, fallback to clientCartItems
+    if (itemsToOrder.length === 0 && input.clientCartItems && input.clientCartItems.length > 0) {
+      itemsToOrder = input.clientCartItems;
+    }
 
-		// Build ad-hoc prices object for Polar
-		// Polar only allows ONE static price per product, so we combine all items into a single total
-		// Store individual cart items in metadata as JSON for webhook processing
-		const prices: Record<string, Array<{
-			amountType: 'fixed'
-			priceAmount: number
-			priceCurrency: string
-			metadata?: Record<string, string>
-		}>> = {}
+    if (itemsToOrder.length === 0) {
+      return {
+        success: false,
+        error: 'Your cart is empty. Please add products to cart before checking out.',
+      };
+    }
 
-		// Single price entry with total amount and all items in metadata
-		prices[polarProductId] = [{
-			amountType: 'fixed' as const,
-			priceAmount: totalAmountInCents,
-			priceCurrency: 'usd' as const,
-			metadata: {
-				cart_items: JSON.stringify(cartItemsData),
-				total_items: cartItems.length.toString(),
-			},
-		}]
+    // 3. Calculate subtotal & shipping
+    const subtotal = itemsToOrder.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    const shipping = subtotal >= 150 ? 0 : 5.99;
+    const totalAmount = Number((subtotal + shipping).toFixed(2));
 
-		// Get base URL for redirect URLs
-		const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+    // 4. Create the Order
+    const { data: order, error: orderError } = await supabase
+      .from('orders')
+      .insert({
+        user_id: user.id,
+        status: 'processing',
+        total: totalAmount,
+        shipping_address_id: addressId,
+        payment_method: 'VoltMart Demo Card (Instant Verification)',
+        payment_id: `vlt_demo_${Date.now()}`,
+      })
+      .select('id')
+      .single();
 
-		// Create Polar checkout session
-		// Use the single Polar product ID with multiple price entries
-		const checkout = await polar.checkouts.create({
-			products: [polarProductId], // Single Polar product ID
-			prices: prices as Parameters<typeof polar.checkouts.create>[0]['prices'],
-			externalCustomerId: user.id, // Map to Supabase user ID
-			successUrl: `${baseUrl}/checkout/success?checkout_id={CHECKOUT_ID}`,
-			customerEmail: user.email || undefined,
-		})
+    if (orderError || !order) {
+      console.error('Error creating order record:', orderError);
+      return { success: false, error: orderError?.message || 'Failed to create order.' };
+    }
 
-		if (!checkout.url) {
-			throw new Error('Failed to create checkout session')
-		}
+    // 5. Insert order items
+    const orderItemsRows = itemsToOrder.map((item) => ({
+      order_id: order.id,
+      product_id: item.product_id,
+      quantity: item.quantity,
+      price: item.price,
+    }));
 
-		return {
-			success: true,
-			checkoutUrl: checkout.url,
-			checkoutId: checkout.id,
-		}
-	} catch (error) {
-		console.error('Error creating Polar checkout:', error)
-		return {
-			success: false,
-			error: error instanceof Error ? error.message : 'Internal server error',
-		}
-	}
+    const { error: itemsError } = await supabase
+      .from('order_items')
+      .insert(orderItemsRows);
+
+    if (itemsError) {
+      console.error('Error inserting order items:', itemsError);
+    }
+
+    // 6. Clear user active database cart
+    if (cart?.id) {
+      await supabase.from('cart_items').delete().eq('cart_id', cart.id);
+      await supabase.from('carts').update({ status: 'completed' }).eq('id', cart.id);
+    }
+
+    return {
+      success: true,
+      orderId: order.id,
+      total: totalAmount,
+    };
+  } catch (error) {
+    console.error('Checkout error:', error);
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : 'An unexpected error occurred during checkout.',
+    };
+  }
 }
-

@@ -19,11 +19,36 @@ const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: {
-    default: "VoltMart – Modern Full-Stack Electronics Ecommerce",
-    template: "%s | VoltMart",
+    default: "VoltMart – Precision Electronics for the Modern Workspace",
+    template: "%s | VoltMart Electronics",
   },
   description:
-    "VoltMart – A modern full-stack electronics ecommerce platform built with Next.js, React, TypeScript, Supabase, PostgreSQL, and Tailwind CSS.",
+    "Shop premium audiophile headphones, custom mechanical keyboards, 4K displays, smart wearables, and gaming hardware at VoltMart.",
+  keywords: [
+    "electronics",
+    "audiophile",
+    "mechanical keyboards",
+    "studio monitors",
+    "smartwatches",
+    "gaming gear",
+    "VoltMart",
+  ],
+  authors: [{ name: "VoltMart Electronics" }],
+  openGraph: {
+    title: "VoltMart – Precision Electronics for the Modern Workspace",
+    description:
+      "Curated high-performance electronics: studio audio, workspace computing, gaming peripherals, and smart wearables.",
+    url: "https://voltmart-ecommerce.vercel.app",
+    siteName: "VoltMart Electronics",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VoltMart – Precision Electronics",
+    description:
+      "Shop high-performance audio, mechanical keyboards, 4K creator displays, and smart hardware.",
+  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/icon.svg",

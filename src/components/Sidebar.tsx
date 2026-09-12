@@ -18,9 +18,12 @@ import {
   ChevronRight,
   User,
   RefreshCw,
+  Gamepad2,
+  Wifi,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { getCategorySlug } from "@/utils/categoryUtils";
 import { Input } from "@/components/ui/input";
 import {
   DropdownMenu,
@@ -61,12 +64,14 @@ import {
 // Default icons for each category
 const categoryIcons: Record<string, React.ElementType> = {
   All: Home,
+  "Audio & Sound": Headphones,
+  "Computing & Workspace": Laptop,
+  "Smart Gear & Wearables": Watch,
+  "Gaming & Controllers": Gamepad2,
+  "Networking & Smart Home": Wifi,
   Clothing: Headphones,
   Accessories: Laptop,
-  Electronics: Smartphone,
-  Audio: Headphones,
-  Computing: Laptop,
-  Wearables: Watch,
+  Electronics: Watch,
 };
 
 // Clean display names for categories
@@ -112,11 +117,14 @@ export default function Sidebar() {
   // Mapping of categories from DB to display with icons and hrefs
   const categoryItems = [
     { name: "All Products", icon: Home, href: "/" },
-    ...(categories || []).map((category) => ({
-      name: getCategoryDisplayName(category.name),
-      icon: categoryIcons[category.name] || Smartphone,
-      href: `/${category.name.toLowerCase()}`,
-    })),
+    ...(categories || []).map((category) => {
+      const slug = getCategorySlug(category.name);
+      return {
+        name: getCategoryDisplayName(category.name),
+        icon: categoryIcons[category.name] || Smartphone,
+        href: `/category/${slug}`,
+      };
+    }),
   ];
 
   // Provide full category navigation for smooth browsing

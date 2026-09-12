@@ -32,9 +32,11 @@ const stockOptions = [
 
 const categoryOptions = [
   { value: "all", label: "All Categories" },
-  { value: "clothing", label: "Audio & Sound" },
-  { value: "accessories", label: "Computing & Workspace" },
-  { value: "electronics", label: "Smart Gear & Wearables" },
+  { value: "audio", label: "Audio & Sound" },
+  { value: "computing", label: "Computing & Workspace" },
+  { value: "wearables", label: "Smart Gear & Wearables" },
+  { value: "gaming", label: "Gaming & Controllers" },
+  { value: "networking", label: "Networking & Smart Home" },
 ];
 
 export function ProductFilter({ filters, onFilterChange }: ProductFilterProps) {

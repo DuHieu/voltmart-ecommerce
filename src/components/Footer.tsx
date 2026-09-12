@@ -61,9 +61,9 @@ export function Footer() {
               Precision audio, computing peripherals, and smart wearable hardware engineered for power users and creators.
             </p>
             <div className="flex items-center gap-2 pt-2">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-primary/10 text-primary border border-primary/20">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                Next.js 16 + Supabase
+                Authorized Retailer
               </span>
             </div>
           </div>
@@ -72,9 +72,11 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-3">Categories</h4>
             <ul className="space-y-2 text-xs text-muted-foreground">
-              <li><Link href="/clothing" className="hover:text-primary transition-colors">Audio & Sound</Link></li>
-              <li><Link href="/accessories" className="hover:text-primary transition-colors">Computing & Workspace</Link></li>
-              <li><Link href="/electronics" className="hover:text-primary transition-colors">Smart Gear & Wearables</Link></li>
+              <li><Link href="/category/audio" className="hover:text-primary transition-colors">Audio & Sound</Link></li>
+              <li><Link href="/category/computing" className="hover:text-primary transition-colors">Computing & Workspace</Link></li>
+              <li><Link href="/category/wearables" className="hover:text-primary transition-colors">Smart Gear & Wearables</Link></li>
+              <li><Link href="/category/gaming" className="hover:text-primary transition-colors">Gaming & Controllers</Link></li>
+              <li><Link href="/category/networking" className="hover:text-primary transition-colors">Networking & Smart Home</Link></li>
               <li><Link href="/" className="hover:text-primary transition-colors">All Products</Link></li>
             </ul>
           </div>
@@ -83,30 +85,30 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-3">Customer Service</h4>
             <ul className="space-y-2 text-xs text-muted-foreground">
-              <li><Link href="/cart" className="hover:text-primary transition-colors">Order Tracking</Link></li>
-              <li><Link href="/dashboard" className="hover:text-primary transition-colors">Customer Portal</Link></li>
-              <li><Link href="/profile" className="hover:text-primary transition-colors">Warranty Registration</Link></li>
+              <li><Link href="/cart" className="hover:text-primary transition-colors">Shopping Cart</Link></li>
+              <li><Link href="/dashboard" className="hover:text-primary transition-colors">Order Tracking & History</Link></li>
+              <li><Link href="/profile" className="hover:text-primary transition-colors">Customer Profile</Link></li>
               <li><span className="text-muted-foreground/60 cursor-default">support@voltmart.io</span></li>
             </ul>
           </div>
 
-          {/* Tech Architecture Stack */}
+          {/* Company & Policies */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-3">Architecture & Tech</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-3">About & Policies</h4>
             <ul className="space-y-2 text-xs text-muted-foreground">
-              <li><span className="font-medium text-foreground">Framework:</span> Next.js 16 (App Router + Turbopack)</li>
-              <li><span className="font-medium text-foreground">Database:</span> Supabase PostgreSQL + RLS</li>
-              <li><span className="font-medium text-foreground">Styling:</span> Tailwind CSS v4 + Radix UI</li>
-              <li><span className="font-medium text-foreground">State:</span> TanStack Query v5</li>
+              <li><span className="cursor-default hover:text-foreground transition-colors">Worldwide Shipping Policy</span></li>
+              <li><span className="cursor-default hover:text-foreground transition-colors">30-Day Return Guarantee</span></li>
+              <li><span className="cursor-default hover:text-foreground transition-colors">Official Hardware Warranty</span></li>
+              <li><span className="cursor-default hover:text-foreground transition-colors">Privacy & Terms</span></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="border-t border-border/40 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-muted-foreground gap-4">
-          <p>© {new Date().getFullYear()} VoltMart Electronics Inc. Portfolio Showcase.</p>
+          <p>© {new Date().getFullYear()} VoltMart Electronics Inc. All rights reserved.</p>
           <p className="flex items-center gap-1">
-            Engineered with modern full-stack web standards.
+            Precision engineered electronics for creators & power users.
           </p>
         </div>
       </div>

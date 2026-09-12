@@ -41,12 +41,12 @@ export function HeroBanner() {
             Browse All Products
             <ArrowRight className="h-4 w-4" />
           </Button>
-          <Link href="/clothing">
+          <Link href="/category/audio">
             <Button variant="outline" size="lg" className="cursor-pointer font-medium">
               Explore Audio
             </Button>
           </Link>
-          <Link href="/accessories">
+          <Link href="/category/computing">
             <Button variant="outline" size="lg" className="cursor-pointer font-medium">
               Workstation Docks
             </Button>

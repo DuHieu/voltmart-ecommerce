@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" fill="none">
+  <rect width="600" height="600" fill="#18181B"/>
+  <circle cx="300" cy="270" r="80" fill="#27272A"/>
+  <path d="M260 250L300 290L340 250" stroke="#71717A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="240" y="220" width="120" height="100" rx="12" stroke="#71717A" stroke-width="4"/>
+  <text x="300" y="400" text-anchor="middle" fill="#A1A1AA" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600">VoltMart Hardware</text>
+  <text x="300" y="430" text-anchor="middle" fill="#71717A" font-family="system-ui, -apple-system, sans-serif" font-size="14">Image coming soon</text>
+</svg>

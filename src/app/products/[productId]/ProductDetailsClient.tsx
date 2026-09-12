@@ -43,15 +43,13 @@ export default function ProductDetailsClient({
   // Generate multiple images from the single image (mock data for demo)
   const productImages = product.image
     ? [product.image, product.image, product.image, product.image]
-    : ["/placeholder-product.jpg"];
+    : ["/placeholder-product.svg"];
 
  
 
   const handleAddToCart = async () => {
     try {
-      for (let i = 0; i < quantity; i++) {
-        addToCart(product);
-      }
+      await addToCart(product, quantity);
       setIsAddedToCart(true);
       setTimeout(() => setIsAddedToCart(false), 2000);
     } catch (err) {

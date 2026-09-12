@@ -1,11 +1,5 @@
-import { Suspense } from "react";
-import CategoryPage from "@/components/CategoryPage";
-import { LoadingSpinner } from "@/components/LoadingSpinner";
+import { redirect } from "next/navigation";
 
-export default function ElectronicsPage() {
-  return (
-    <Suspense fallback={<LoadingSpinner />}>
-      <CategoryPage categoryName="Smart Gear & Wearables" categoryId={3} />
-    </Suspense>
-  );
+export default function ElectronicsLegacyRedirect() {
+  redirect("/category/wearables");
 }

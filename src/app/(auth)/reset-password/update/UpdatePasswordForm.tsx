@@ -34,8 +34,7 @@ export function UpdatePasswordForm({ message }: { message: string | null }) {
         const type = hashParams.get("type");
 
         if (accessToken && type === "recovery") {
-          // We have a valid recovery flow from email link
-          console.log("Valid recovery flow detected");
+          // Set the access token in Supabase to authenticate the user
 
           // Set the access token in Supabase to authenticate the user
           // This is important - without this, updateUser won't work

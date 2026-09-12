@@ -1,11 +1,5 @@
-import { Suspense } from "react";
-import CategoryPage from "@/components/CategoryPage";
-import { LoadingSpinner } from "@/components/LoadingSpinner";
+import { redirect } from "next/navigation";
 
-export default function ComputingPage() {
-  return (
-    <Suspense fallback={<LoadingSpinner />}>
-      <CategoryPage categoryName="Computing & Workspace" categoryId={2} />
-    </Suspense>
-  );
+export default function AccessoriesLegacyRedirect() {
+  redirect("/category/computing");
 }

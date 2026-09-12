@@ -9,7 +9,7 @@ export default async function CheckoutPage() {
 
 	// Redirect to sign-in if not authenticated
 	if (!user) {
-		redirect("/signin");
+		redirect("/signin?returnTo=/checkout");
 	}
 
 	return <CheckoutRedirect />;

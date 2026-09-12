@@ -11,6 +11,7 @@ interface AuthFormState {
 
 interface UseAuthFormProps {
   isSignUp?: boolean;
+  returnTo?: string;
 }
 
 interface UseAuthFormReturn {
@@ -27,6 +28,7 @@ interface UseAuthFormReturn {
 
 export function useAuthForm({
   isSignUp = false,
+  returnTo,
 }: UseAuthFormProps = {}): UseAuthFormReturn {
   const router = useRouter();
   const { signIn, signUp } = useAuth();
@@ -83,7 +85,14 @@ export function useAuthForm({
       } else {
         await signIn(formData.email, formData.password);
       }
-      router.push("/");
+
+      let dest = returnTo;
+      if (!dest && typeof window !== "undefined") {
+        const urlParams = new URLSearchParams(window.location.search);
+        dest = urlParams.get("returnTo") || undefined;
+      }
+      const destination = dest && dest.startsWith("/") ? dest : "/";
+      router.push(destination);
     } catch (error: unknown) {
       const errorMessage =
         error instanceof Error

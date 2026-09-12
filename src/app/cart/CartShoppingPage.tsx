@@ -118,7 +118,8 @@ export default function CartShoppingPage() {
                       <span className="mx-3">{item.quantity}</span>
                       <Button
                         type="button"
-                        className="border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 cursor-pointer rounded-md border p-0 shadow-xs"
+                        className="border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 w-9 cursor-pointer rounded-md border p-0 shadow-xs disabled:opacity-40"
+                        disabled={item.quantity >= item.stock}
                         onClick={(e) => {
                           e.preventDefault();
                           updateQuantity(item.product_id, 1);
@@ -150,17 +151,30 @@ export default function CartShoppingPage() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  <div className="flex justify-between">
+                  <div className="flex justify-between text-sm">
                     <span>Subtotal</span>
                     <span>${subtotal.toFixed(2)}</span>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between text-sm items-center">
                     <span>Shipping</span>
-                    <span>$5.99</span>
+                    {subtotal >= 150 ? (
+                      <span className="font-semibold text-emerald-600 dark:text-emerald-400">
+                        FREE
+                      </span>
+                    ) : (
+                      <span>$5.99</span>
+                    )}
                   </div>
+                  {subtotal < 150 && (
+                    <p className="text-[11px] text-muted-foreground">
+                      Add ${(150 - subtotal).toFixed(2)} more for free express shipping.
+                    </p>
+                  )}
                   <div className="flex justify-between border-t pt-4 text-lg font-bold">
                     <span>Total</span>
-                    <span>${(subtotal + 5.99).toFixed(2)}</span>
+                    <span>
+                      ${(subtotal + (subtotal >= 150 ? 0 : 5.99)).toFixed(2)}
+                    </span>
                   </div>
                 </div>
               </CardContent>

@@ -8,7 +8,7 @@ export function DemoBanner() {
           • Free Global Express Delivery on orders over $150
         </span>
         <span className="hidden md:inline text-muted-foreground/60">
-          • Next.js + Supabase Modern Full-Stack Platform
+          • Official 2-Year Hardware Warranty & 30-Day Returns
         </span>
       </div>
     </div>

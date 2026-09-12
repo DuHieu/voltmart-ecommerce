@@ -13,6 +13,11 @@ import { useState, useMemo } from "react";
 // Helper functions (moved from hook to component for simplicity)
 const getCategoryId = (categoryName: string): number | null => {
   const categoryMap: { [key: string]: number } = {
+    audio: 1,
+    computing: 2,
+    wearables: 3,
+    gaming: 4,
+    networking: 5,
     electronics: 3,
     clothing: 1,
     accessories: 2,
