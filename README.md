@@ -13,10 +13,19 @@ The platform is purpose-built as a modern showcase for precision audio equipment
 
 ---
 
-## 🌐 Live Demo
+## 🌐 Live Store & Access
 
 - **Live URL**: [https://voltmart-ecommerce.vercel.app](https://voltmart-ecommerce.vercel.app)
-- **Demo Account**: `demo.voltmart@gmail.com` / `VoltMartDemo2026!`
+- **Store Owner / Admin Account**:
+  - Name: **Marcus Vance**
+  - Email: `demo.voltmart@gmail.com` (or `owner@voltmart.com`)
+  - Password: `VoltMartDemo2026!`
+  - Privileges: Store Owner (`admin` role), Full Catalog & Order Management
+- **Verified Customer Account**:
+  - Name: **Alex Miller**
+  - Email: `customer@voltmart.com`
+  - Password: `VoltMart2026!`
+  - Privileges: Customer (`user` role), Orders, Cart & Reviews
 
 ---
 

@@ -1,4 +1,4 @@
-﻿'use server';
+'use server';
 
 import { createServerSupabase, getAuthenticatedUser } from '@/lib/supabase/server';
 
@@ -8,6 +8,7 @@ export interface CheckoutShippingInput {
   state?: string;
   zip_code: string;
   country: string;
+  paymentMethod?: 'card' | 'cod';
   clientCartItems?: Array<{
     product_id: string;
     quantity: number;
@@ -15,7 +16,7 @@ export interface CheckoutShippingInput {
   }>;
 }
 
-export async function createDemoOrder(input: CheckoutShippingInput) {
+export async function createOrder(input: CheckoutShippingInput) {
   try {
     const user = await getAuthenticatedUser();
     if (!user) {
@@ -104,6 +105,11 @@ export async function createDemoOrder(input: CheckoutShippingInput) {
     const totalAmount = Number((subtotal + shipping).toFixed(2));
 
     // 4. Create the Order
+    const paymentLabel =
+      input.paymentMethod === 'cod'
+        ? 'Cash on Delivery (Standard)'
+        : 'Credit / Debit Card (VoltMart Express Pay)';
+
     const { data: order, error: orderError } = await supabase
       .from('orders')
       .insert({
@@ -111,8 +117,8 @@ export async function createDemoOrder(input: CheckoutShippingInput) {
         status: 'processing',
         total: totalAmount,
         shipping_address_id: addressId,
-        payment_method: 'VoltMart Demo Card (Instant Verification)',
-        payment_id: `vlt_demo_${Date.now()}`,
+        payment_method: paymentLabel,
+        payment_id: `vlt_pay_${Date.now()}`,
       })
       .select('id')
       .single();
@@ -157,3 +163,5 @@ export async function createDemoOrder(input: CheckoutShippingInput) {
     };
   }
 }
+
+export const createDemoOrder = createOrder;

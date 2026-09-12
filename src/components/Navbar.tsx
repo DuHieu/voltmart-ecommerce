@@ -59,12 +59,12 @@ export function Navbar() {
               size="icon"
               className="relative h-9 w-9 rounded-full cursor-pointer p-0 overflow-hidden ring-1 ring-border/80 hover:ring-primary transition-all"
               onClick={() => router.push("/profile")}
-              title={user.email || "Tài khoản của tôi"}
+              title={user.email || "My Account"}
             >
               <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-amber-500 via-orange-500 to-indigo-600 text-white font-bold text-xs uppercase shadow-inner">
                 {user.email?.charAt(0) || "U"}
               </div>
-              <span className="sr-only">Tài khoản</span>
+              <span className="sr-only">Account</span>
             </Button>
           ) : (
             <Button

@@ -139,6 +139,13 @@ export default function Sidebar() {
     { name: "Users", icon: Users, href: "/admin/users" },
   ];
 
+  const displayName =
+    user?.user_metadata?.username ||
+    user?.user_metadata?.full_name ||
+    user?.email?.split("@")[0] ||
+    "User";
+  const displayInitial = (displayName.charAt(0) || "U").toUpperCase();
+
   return (
     <ShadcnSidebar collapsible="icon" className="z-[70] border-r">
       {/* Header with logo */}
@@ -393,12 +400,12 @@ export default function Sidebar() {
                   >
                     <Avatar className="ring-primary/20 h-9 w-9 ring-2">
                       <AvatarFallback className="from-primary to-primary/80 text-primary-foreground bg-gradient-to-br font-semibold">
-                        {user.email?.charAt(0).toUpperCase() || "U"}
+                        {displayInitial}
                       </AvatarFallback>
                     </Avatar>
                     <div className="ml-3 min-w-0 flex-1">
                       <p className="text-foreground truncate text-sm font-medium">
-                        {user.email?.split("@")[0] || "User"}
+                        {displayName}
                       </p>
                       <p className="text-muted-foreground truncate text-xs">
                         {user.email}
@@ -416,12 +423,12 @@ export default function Sidebar() {
                   <SidebarMenuButton
                     size="lg"
                     className="group cursor-pointer"
-                    tooltip={`${user.email?.split("@")[0] || "User"}`}
+                    tooltip={displayName}
                   >
                     <div className="relative">
                       <Avatar className="ring-primary/20 group-hover:ring-primary/40 h-8 w-8 ring-2 transition-all duration-200">
                         <AvatarFallback className="from-primary to-primary/80 text-primary-foreground bg-gradient-to-br font-semibold">
-                          {user.email?.charAt(0).toUpperCase() || "U"}
+                          {displayInitial}
                         </AvatarFallback>
                       </Avatar>
                       <div className="border-background absolute -right-1 -bottom-1 h-3 w-3 rounded-full border-2 bg-green-500" />
@@ -439,12 +446,12 @@ export default function Sidebar() {
               <div className="flex items-center space-x-2 p-2">
                 <Avatar className="h-8 w-8">
                   <AvatarFallback className="from-primary to-primary/80 text-primary-foreground bg-gradient-to-br">
-                    {user.email?.charAt(0).toUpperCase() || "U"}
+                    {displayInitial}
                   </AvatarFallback>
                 </Avatar>
                 <div className="flex flex-col">
                   <span className="text-sm font-medium">
-                    {user.email?.split("@")[0] || "User"}
+                    {displayName}
                   </span>
                   <span className="text-muted-foreground truncate text-xs">
                     {user.email}

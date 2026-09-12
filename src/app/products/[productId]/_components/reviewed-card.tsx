@@ -29,11 +29,11 @@ export function ReviewedCard({
   // Combine database reviews with rich realistic seed pool
   const dbReviewsAsRealistic: RealisticReview[] = (reviewsData || []).map((rev) => ({
     id: `db-${rev.id}`,
-    userName: "Khách hàng xác thực",
+    userName: "Verified Customer",
     userAvatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80",
     rating: rev.rating,
-    date: rev.created_at ? format(new Date(rev.created_at), "dd/MM/yyyy") : "Vừa xong",
-    variant: "Phiên bản: Chính Hãng Phân Phối",
+    date: rev.created_at ? format(new Date(rev.created_at), "MMM dd, yyyy") : "Just now",
+    variant: "Variant: Official VoltMart Distribution",
     comment: rev.comment || "",
     helpfulCount: 5,
     verifiedPurchase: true,
@@ -83,7 +83,7 @@ export function ReviewedCard({
       <Card className="border-border/60">
         <CardContent className="p-8 text-center">
           <p className="text-muted-foreground text-sm">
-            Chưa có đánh giá nào phù hợp với bộ lọc hiện tại.
+            No customer reviews match the selected filter.
           </p>
         </CardContent>
       </Card>
@@ -118,7 +118,7 @@ export function ReviewedCard({
                       {review.verifiedPurchase && (
                         <span className="inline-flex items-center gap-1 rounded bg-emerald-500/10 px-1.5 py-0.5 text-[10px] font-medium text-emerald-600 dark:text-emerald-400">
                           <CheckCircle2 className="h-3 w-3" />
-                          Đã mua hàng
+                          Verified Purchase
                         </span>
                       )}
                     </div>
@@ -152,7 +152,7 @@ export function ReviewedCard({
                         >
                           <Image
                             src={photo}
-                            alt="Ảnh đánh giá của khách hàng"
+                            alt="Customer review photo"
                             fill
                             className="object-cover"
                             sizes="80px"
@@ -166,7 +166,7 @@ export function ReviewedCard({
                   {review.storeResponse && (
                     <div className="mt-3.5 rounded-lg border border-border/40 bg-muted/40 p-3 text-xs leading-relaxed">
                       <p className="font-bold text-primary flex items-center gap-1">
-                        Phản Hồi Của Người Bán (VoltMart Official):
+                        Seller Response (VoltMart Official Store):
                       </p>
                       <p className="mt-1 text-muted-foreground">
                         {review.storeResponse}
@@ -185,7 +185,7 @@ export function ReviewedCard({
                       }`}
                     >
                       <ThumbsUp className={`h-3.5 w-3.5 ${isLiked ? "fill-primary" : ""}`} />
-                      <span>Hữu ích ({currentLikes})</span>
+                      <span>Helpful ({currentLikes})</span>
                     </button>
                   </div>
                 </div>
@@ -198,7 +198,7 @@ export function ReviewedCard({
       {limit && filteredReviews.length > limit && (
         <div className="text-center py-2">
           <p className="text-xs text-muted-foreground">
-            Đang hiển thị {limit} trên tổng số {filteredReviews.length} đánh giá
+            Showing {limit} of {filteredReviews.length} reviews
           </p>
         </div>
       )}

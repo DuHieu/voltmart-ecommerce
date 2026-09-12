@@ -101,10 +101,27 @@ export function OrderCard({ order, onDelete }: OrderCardProps) {
               </p>
             </div>
           ))}
-          <div className="flex justify-end pt-2">
+          {(!order.order_items || order.order_items.length === 0) && (
+            <p className="text-sm text-muted-foreground py-1">
+              Standard Electronics Package
+            </p>
+          )}
+          <div className="flex items-center justify-between pt-3 border-t border-border/40">
+            <div className="text-xs text-muted-foreground">
+              <p className="font-medium text-foreground/80">
+                {order.payment_method || "Credit / Debit Card"}
+              </p>
+              {order.payment_id && (
+                <p className="font-mono text-[10px] text-muted-foreground/70">
+                  {order.payment_id}
+                </p>
+              )}
+            </div>
             <div className="text-right">
-              <p className="text-muted-foreground text-sm">Total</p>
-              <p className="text-lg font-bold">${order.total.toFixed(2)}</p>
+              <p className="text-muted-foreground text-xs">Total</p>
+              <p className="text-lg font-bold text-foreground">
+                ${order.total ? Number(order.total).toFixed(2) : "0.00"}
+              </p>
             </div>
           </div>
         </div>

@@ -294,7 +294,7 @@ export function ReviewTab({ product }: ProductDetailsClientProps) {
         {/* Shopee-style Review Filter Chips Bar */}
         <div className="flex flex-wrap items-center gap-2 rounded-xl border border-border/60 bg-muted/30 p-3.5">
           <span className="text-xs font-semibold text-muted-foreground mr-1">
-            Lọc đánh giá:
+            Filter Reviews:
           </span>
           <Button
             size="sm"
@@ -305,7 +305,7 @@ export function ReviewTab({ product }: ProductDetailsClientProps) {
               setFilterWithPhotos(false);
             }}
           >
-            Tất Cả ({reviewCount})
+            All ({reviewCount})
           </Button>
           <Button
             size="sm"
@@ -316,7 +316,7 @@ export function ReviewTab({ product }: ProductDetailsClientProps) {
               setFilterWithPhotos(false);
             }}
           >
-            5 Sao ({fiveStarCount})
+            5 Stars ({fiveStarCount})
           </Button>
           <Button
             size="sm"
@@ -327,7 +327,7 @@ export function ReviewTab({ product }: ProductDetailsClientProps) {
               setFilterWithPhotos(false);
             }}
           >
-            4 Sao ({fourStarCount})
+            4 Stars ({fourStarCount})
           </Button>
           <Button
             size="sm"
@@ -338,7 +338,7 @@ export function ReviewTab({ product }: ProductDetailsClientProps) {
               setFilterWithPhotos(true);
             }}
           >
-            Có Hình Ảnh ({withPhotosCount})
+            With Photos ({withPhotosCount})
           </Button>
         </div>
 

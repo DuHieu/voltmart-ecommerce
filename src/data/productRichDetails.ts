@@ -50,28 +50,28 @@ export interface RealisticReview {
 export const REALISTIC_REVIEWS_POOL: RealisticReview[] = [
   {
     id: 'rev-1',
-    userName: 'Nguyễn Hoàng Long',
+    userName: 'Marcus Vance',
     userAvatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&h=200&q=80',
     rating: 5,
-    date: '3 ngày trước',
-    variant: 'Màu: Phantom Black • Bản Flagship Pro',
-    comment: 'Hàng chính hãng đóng gói 3 lớp bóng khí cực kỳ cẩn thận. Mở hộp ra hoàn thiện nhôm anodized sờ mướt tay, không hề có chi tiết thừa. Đã test liên tục 2 ngày pin trâu đúng như quảng cáo, kết nối đa thiết bị chuyển qua lại giữa Macbook và điện thoại mượt mà trong 1 giây. Rất đáng đồng tiền bát gạo!',
+    date: '3 days ago',
+    variant: 'Color: Phantom Black • Flagship Pro Edition',
+    comment: 'Arrived packaged in triple-layered protective cushioning with tamper-evident factory seals intact. The CNC-machined anodized aluminum housing feels astonishingly solid with zero rattling parts. Tested across 48 continuous hours—battery life matches specifications perfectly, and multipoint Bluetooth switches between my MacBook and phone within one second. Superb value for money!',
     photos: [
       'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80',
       'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80'
     ],
     helpfulCount: 42,
     verifiedPurchase: true,
-    storeResponse: 'VoltMart Official Store cảm ơn anh Long đã tin tưởng ủng hộ sản phẩm! Chúc anh có những trải nghiệm công nghệ tuyệt vời cùng VoltMart. Khi cần hỗ trợ kỹ thuật hoặc bảo hành, anh vui lòng nhắn tin trực tiếp để nhân viên CSKH phục vụ anh nhanh nhất nhé!'
+    storeResponse: 'VoltMart Official Store: Thank you for your support and detailed review, Marcus! We are thrilled to hear that the build and seamless multipoint audio meet your standards. If you ever need technical support or firmware assistance, our team is at your disposal 24/7!'
   },
   {
     id: 'rev-2',
-    userName: 'Trần Minh Quân',
-    userAvatar: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=200&h=200&q=80',
+    userName: 'Sarah Jenkins',
+    userAvatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80',
     rating: 5,
-    date: '1 tuần trước',
-    variant: 'Màu: Silver Titanium • Bản Standard',
-    comment: 'Giao hàng hỏa tốc trong 2 tiếng tại TP. HCM. Đóng seal nguyên vẹn có tem niêm phong chống hàng giả của VoltMart. Âm trường rộng, dải bass đập chắc nịch nhưng không bị lấn mid, nghe acoustic hay lofi chill cực đã. Form đeo êm, làm việc suốt 5 tiếng không hề bị đau vành tai.',
+    date: '1 week ago',
+    variant: 'Color: Silver Titanium • Standard Edition',
+    comment: 'Super fast delivery. Soundstage is remarkably expansive—the sub-bass hits with visceral authority without bleeding into the midrange vocals. The earcups are delightfully cushioned with memory foam; I wore them through a 6-hour editing sprint without any fatigue or pressure hotspots.',
     photos: [
       'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=600&q=80'
     ],
@@ -80,35 +80,35 @@ export const REALISTIC_REVIEWS_POOL: RealisticReview[] = [
   },
   {
     id: 'rev-3',
-    userName: 'Lê Thanh Hà',
-    userAvatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200&q=80',
+    userName: 'David Miller',
+    userAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80',
     rating: 5,
-    date: '2 tuần trước',
-    variant: 'Màu: Moonlight White • Bản Flagship Pro',
-    comment: 'Thiết kế tối giản sang trọng theo phong cách Scandinavian, đặt lên bàn setup chụp ảnh sống ảo siêu đẹp. Các nút vật lý bấm đầm và có phản hồi cơ học chính xác, kết nối rất trực quan. Dịch vụ chăm sóc khách hàng của VoltMart trả lời siêu nhanh và nhiệt tình!',
+    date: '2 weeks ago',
+    variant: 'Color: Moonlight White • Flagship Pro Edition',
+    comment: 'Clean Scandinavian-inspired industrial aesthetic that looks gorgeous on any modern desk setup. The physical tactile dials have satisfying mechanical feedback, and companion device synchronization is instantaneous. Customer care answered my questions within five minutes!',
     helpfulCount: 17,
     verifiedPurchase: true
   },
   {
     id: 'rev-4',
-    userName: 'Đỗ Mạnh Hùng',
-    userAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80',
+    userName: 'Elena Rostova',
+    userAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80',
     rating: 4,
-    date: '3 tuần trước',
-    variant: 'Màu: Midnight Grey • Bản Standard',
-    comment: 'Chất lượng hoàn thiện 10/10, chống ồn chủ động ANC triệt tiêu được tầm 85% tiếng ồn điều hòa và tạp âm văn phòng. Điểm trừ nhỏ là hộp đựng du lịch hơi to một chút bỏ balo hơi chiếm chỗ, còn lại mọi tính năng âm thanh và pin đều xuất sắc.',
+    date: '3 weeks ago',
+    variant: 'Color: Midnight Grey • Standard Edition',
+    comment: 'Industrial build quality is easily a 10/10. Hybrid ANC cancels out about 85% of ambient office noise and HVAC hum. Only minor critique is the protective hardcase is slightly bulky in my commuter backpack, but overall hardware performance and acoustic clarity are stellar.',
     helpfulCount: 11,
     verifiedPurchase: true,
-    storeResponse: 'Chào anh Hùng, VoltMart ghi nhận góp ý về kích thước travel case của dòng Flagship để cải tiến các phiên bản phụ kiện bao da gọn nhẹ hơn trong tương lai. Cảm ơn phản hồi thực tế vô cùng chi tiết của anh ạ!'
+    storeResponse: 'VoltMart Official Store: Thank you for the thoughtful feedback, Elena! We have noted your comments regarding the protective travel case dimensions for our future accessory line revisions.'
   },
   {
     id: 'rev-5',
-    userName: 'Vũ Phương Linh',
-    userAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80',
+    userName: 'Jason Hayes',
+    userAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80',
     rating: 5,
-    date: '1 tháng trước',
-    variant: 'Màu: Phantom Black • Bản Flagship Pro',
-    comment: 'Mua đợt Flash Sale nhận voucher giảm giá hời dã man. Đã kiểm tra số serial trên website bảo hành điện tử chính hãng của VoltMart kích hoạt ngay 24 tháng. Âm thanh trong trẻo, mic đàm thoại hội thảo Zoom bắt tiếng rõ ràng kể cả khi ngồi quán cafe ồn.',
+    date: '1 month ago',
+    variant: 'Color: Phantom Black • Flagship Pro Edition',
+    comment: 'Purchased during the launch promotion. Successfully verified the serial number on the official VoltMart warranty registry for the full 2-year guarantee. Microphone beamforming is crystal clear on Zoom calls even in noisy cafe environments.',
     photos: [
       'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80'
     ],
@@ -117,12 +117,12 @@ export const REALISTIC_REVIEWS_POOL: RealisticReview[] = [
   },
   {
     id: 'rev-6',
-    userName: 'Phạm Đức Anh',
-    userAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80',
+    userName: 'Chloe Zhao',
+    userAvatar: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=200&h=200&q=80',
     rating: 5,
-    date: '1 tháng trước',
-    variant: 'Màu: Matte Black • Bản Pro Studio',
-    comment: 'Đã dùng qua nhiều tai nghe cao cấp nhưng chiếc này thực sự làm mình bất ngờ về độ chi tiết của dải treble. Nghe tiếng lấy hơi ca sĩ, tiếng gảy đàn guitar mộc mạc rõ mồn một. VoltMart giao hàng nhanh, tư vấn kỹ càng.',
+    date: '1 month ago',
+    variant: 'Color: Matte Black • Studio Pro Edition',
+    comment: 'Having owned numerous high-end studio headsets, the high-frequency treble detail on this unit completely blew me away. Vocal micro-dynamics and acoustic string pluck transients are fully resolved without any harsh sibilance.',
     helpfulCount: 19,
     verifiedPurchase: true
   }
@@ -143,103 +143,103 @@ export function getProductRichInfo(product: ProductType): ProductRichInfo {
     descLower.includes('sound')
   ) {
     return {
-      tagline: 'Đỉnh Cao Kỹ Thuật Âm Học Chính Xác & Chống Ồn Thích Ứng Thế Hệ Mới',
+      tagline: 'Pinnacle Acoustic Precision & Next-Generation Adaptive Hybrid ANC',
       highlights: [
         {
           icon: 'volume',
-          title: 'Màng Loa Beryllium 45mm',
-          description: 'Tái tạo âm thanh độ phân giải cao Hi-Res Audio với dải tần mở rộng từ 10Hz - 45.000Hz không méo tiếng.'
+          title: '45mm Custom Beryllium Drivers',
+          description: 'Certified Hi-Res audio reproduction with an extended 10Hz - 45,000Hz frequency response and vanishingly low distortion.'
         },
         {
           icon: 'shield',
-          title: 'Chống Ồn Hybrid ANC 42dB',
-          description: 'Bộ vi xử lý âm thanh AI thời gian thực phân tích tạp âm môi trường và khử ồn chủ động thích ứng liên tục.'
+          title: '42dB Hybrid Adaptive ANC',
+          description: 'Dedicated neural audio coprocessor analyzes ambient environmental noise in real-time for continuous acoustic isolation.'
         },
         {
           icon: 'battery',
-          title: 'Thời Lượng Pin Lên Đến 65 Giờ',
-          description: 'Công nghệ sạc nhanh Fast-Fuel qua USB-C PD: Chỉ cần 10 phút sạc cho 6 giờ trải nghiệm âm nhạc liên tục.'
+          title: 'Up to 65 Hours of Battery Life',
+          description: 'Fast-Fuel USB-C Power Delivery charging: 10 minutes of charge provides 6 full hours of continuous playback.'
         },
         {
           icon: 'wifi',
           title: 'Bluetooth 5.4 Low Latency',
-          description: 'Hỗ trợ codec LDAC, aptX Adaptive và AAC, kết nối đồng thời 2 thiết bị cùng lúc với độ trễ cực thấp dưới 35ms.'
+          description: 'Supports lossless LDAC, aptX Adaptive, and AAC codecs with sub-35ms ultra-low latency multipoint connectivity.'
         }
       ],
       narrativeParagraphs: [
-        `Được chế tác tỉ mỉ dựa trên tiêu chuẩn âm học phòng thu khắt khe, ${product.title} kết hợp hoàn hảo giữa thiết kế công thái học hiện đại và công nghệ xử lý tín hiệu số DSP tân tiến. Từng chi tiết linh kiện từ khung hợp kim nhôm cấp hàng không vũ trụ đến đệm tai bọc da protein thoáng khí đều được tối ưu để mang lại cảm giác đeo nhẹ êm ái suốt cả ngày dài làm việc hoặc giải trí.`,
-        'Hệ thống microphone kép trang bị thuật toán chùm tia Beamforming kết hợp công nghệ lọc gió AI ENC giúp giọng đàm thoại của bạn luôn trong trẻo, sắc nét tuyệt đối trong mọi cuộc gọi hội thảo online hay trò chuyện khi đang di chuyển ngoài đường phố đông đúc.',
-        'Sản phẩm được phân phối chính hãng bởi VoltMart Official Store với tem chống hàng giả phản quang, mã QR kích hoạt bảo hành điện tử chính hãng 24 tháng toàn quốc và chính sách 1 đổi 1 trong 30 ngày đầu tiên.'
+        `Engineered to stringent mastering-studio benchmarks, the ${product.title} unites advanced acoustic architecture with lightweight ergonomic comfort. Every component—from the aerospace-grade anodized aluminum gimbal to the breathable memory-foam ear cushions—has been calibrated for zero-fatigue listening across entire days of work or leisure.`,
+        'Dual beamforming microphone arrays powered by real-time neural noise cancellation isolate your vocal transients, guaranteeing pristine speech clarity on conference calls and outdoor commutes.',
+        'Directly backed by the VoltMart Official Flagship Store with holographic authenticity seals, digital serial number warranty activation, and an unconditional 30-day return policy.'
       ],
       gallery: [
         {
           url: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80',
-          title: 'Gia công CNC nguyên khối & Đệm bọc công thái học',
-          caption: 'Khung hợp kim nhôm siêu nhẹ kết hợp đệm tai memory foam thoáng khí giảm áp lực đỉnh đầu.'
+          title: 'Precision CNC Machining & Ergonomic Contours',
+          caption: 'Ultra-lightweight magnesium alloy headband with breathable protein leather cushioning to eliminate crown pressure.'
         },
         {
           url: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1200&q=80',
-          title: 'Cổng giao tiếp đa phương tiện & Nút điều khiển xúc giác',
-          caption: 'Tích hợp cổng 3.5mm lossless không suy hao tín hiệu và cổng USB-C sạc nhanh chuẩn Power Delivery.'
+          title: 'Tactile Mechanical Controls & High-Speed I/O',
+          caption: 'Integrated 3.5mm lossless analog bypass jack and high-speed USB-C Power Delivery port.'
         },
         {
           url: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1200&q=80',
-          title: 'Không gian trải nghiệm âm thanh sống động',
-          caption: 'Hỗ trợ Spatial Audio mô phỏng không gian rạp hát 360 độ sống động theo chuyển động đầu.'
+          title: 'Immersive Spatial Soundstage Experience',
+          caption: 'Dynamic head-tracking spatial audio creates an expansive, theatre-grade 360-degree acoustic environment.'
         }
       ],
       specGroups: [
         {
-          group: 'Cấu hình Âm thanh & Kỹ thuật',
+          group: 'Acoustic Architecture & Drivers',
           items: [
-            { label: 'Màng loa (Driver)', value: '45mm Custom Beryllium Dome' },
-            { label: 'Dải tần đáp ứng', value: '10Hz - 45,000Hz (Hi-Res Certified)' },
-            { label: 'Trở kháng danh định', value: '32 Ohms ± 15%' },
-            { label: 'Độ nhạy (SPL)', value: '108 dB / 1mW @ 1kHz' },
-            { label: 'Độ méo hài (THD)', value: '< 0.08% @ 1kHz' }
+            { label: 'Acoustic Driver', value: '45mm Custom Beryllium Dome' },
+            { label: 'Frequency Response', value: '10Hz - 45,000Hz (Hi-Res Certified)' },
+            { label: 'Nominal Impedance', value: '32 Ohms ± 15%' },
+            { label: 'Sensitivity (SPL)', value: '108 dB / 1mW @ 1kHz' },
+            { label: 'Total Harmonic Distortion', value: '< 0.08% @ 1kHz' }
           ]
         },
         {
-          group: 'Kết nối & Tương thích',
+          group: 'Connectivity & Protocols',
           items: [
-            { label: 'Phiên bản Bluetooth', value: 'Bluetooth 5.4 LE Audio' },
-            { label: 'Bộ giải mã Codec', value: 'LDAC, aptX Adaptive, AAC, SBC' },
-            { label: 'Khoảng cách kết nối', value: 'Tối đa 15 mét không vật cản' },
-            { label: 'Kết nối đa điểm', value: 'Hỗ trợ 2 thiết bị chuyển đổi tức thì' }
+            { label: 'Bluetooth Version', value: 'Bluetooth 5.4 LE Audio' },
+            { label: 'Supported Codecs', value: 'LDAC, aptX Adaptive, AAC, SBC' },
+            { label: 'Wireless Range', value: 'Up to 50 ft (15 meters) line of sight' },
+            { label: 'Multipoint Pairing', value: 'Simultaneous 2-device seamless handoff' }
           ]
         },
         {
-          group: 'Pin & Nguồn điện',
+          group: 'Battery & Power Management',
           items: [
-            { label: 'Dung lượng pin', value: '850 mAh Li-Po Polymer' },
-            { label: 'Thời lượng sử dụng', value: 'Lên đến 65h (ANC Tắt) / 45h (ANC Bật)' },
-            { label: 'Thời gian sạc đầy', value: 'Khoảng 90 phút qua cổng Type-C' },
-            { label: 'Sạc nhanh Fast-Fuel', value: '10 phút sạc = 6 giờ sử dụng' }
+            { label: 'Battery Capacity', value: '850 mAh Li-Po Polymer Cell' },
+            { label: 'Playback Runtime', value: 'Up to 65h (ANC Off) / 45h (ANC On)' },
+            { label: 'Recharge Time', value: 'Approx. 90 minutes via USB-C' },
+            { label: 'Fast-Fuel Quick Charge', value: '10 min charge = 6 hours playback' }
           ]
         },
         {
-          group: 'Vật liệu & Kích thước',
+          group: 'Build Materials & Dimensions',
           items: [
-            { label: 'Khung thân', value: 'Nhôm Anodized & Hợp kim Magie' },
-            { label: 'Chất liệu đệm tai', value: 'Memory foam bọc da Protein thoáng khí' },
-            { label: 'Trọng lượng tịnh', value: '248g (Cực kỳ nhẹ)' },
-            { label: 'Kháng nước / Mồ hôi', value: 'Chuẩn chống nước IPX4' }
+            { label: 'Chassis Construction', value: 'Anodized Aircraft Aluminum & Magnesium' },
+            { label: 'Earpad Material', value: 'Breathable Memory Foam & Protein Leather' },
+            { label: 'Weight', value: '248g (Ultra-lightweight)' },
+            { label: 'Ingress Protection', value: 'IPX4 Water & Sweat Resistant' }
           ]
         }
       ],
       inTheBox: [
-        { name: `1x Thiết bị ${product.title}`, quantity: '1 chiếc', note: 'Nguyên seal kèm tem chống giả' },
-        { name: '1x Hộp đựng bảo vệ cao cấp chống va đập (Travel Case)', quantity: '1 chiếc', note: 'Khóa kéo kim loại' },
-        { name: '1x Cáp sạc bện dù bền bỉ USB-C sang USB-C 1.2m', quantity: '1 sợi', note: 'Chuẩn sạc nhanh PD' },
-        { name: '1x Cáp âm thanh 3.5mm mạ vàng 24K truyền tín hiệu lossless', quantity: '1 sợi', note: 'Chống gãy gập' },
-        { name: '1x Đầu chuyển Adapter âm thanh trên máy bay (Airplane Adapter)', quantity: '1 chiếc' },
-        { name: '1x Sách hướng dẫn sử dụng & Thẻ bảo hành chính hãng 24T', quantity: '1 bộ' }
+        { name: `1x ${product.title} Hardware`, quantity: '1 Unit', note: 'Factory Sealed with Hologram' },
+        { name: '1x Shockproof Hard-Shell Travel Case', quantity: '1 Unit', note: 'Reinforced Metal Zipper' },
+        { name: '1x Braided USB-C to USB-C Fast-Charge Cable (1.2m)', quantity: '1 Piece', note: 'Power Delivery Ready' },
+        { name: '1x Gold-Plated 3.5mm Lossless Audio Cable (1.2m)', quantity: '1 Piece', note: 'Oxygen-Free Copper' },
+        { name: '1x Dual-Prong Airline Flight Adapter', quantity: '1 Piece' },
+        { name: '1x Quick Start Guide & Official 2-Year Warranty Card', quantity: '1 Set' }
       ],
       warrantyHighlights: [
-        'Bảo hành chính hãng 24 tháng theo mã số Serial / Tem QR điện tử',
-        'Chính sách 1 đổi 1 trong 30 ngày nếu phát sinh lỗi phần cứng từ nhà sản xuất',
-        'Hỗ trợ kỹ thuật trọn đời & nâng cấp firmware định kỳ qua ứng dụng VoltMart Connect',
-        'Miễn phí vận chuyển hai chiều khi gửi bảo hành trên toàn quốc'
+        'Official 2-Year Full Hardware Replacement Warranty via digital serial number',
+        '30-Day Hassle-Free Return & Exchange guarantee',
+        'Lifetime firmware optimization via the VoltMart companion suite',
+        'Free expedited shipping both ways for warranty diagnostics'
       ]
     };
   }
@@ -258,93 +258,93 @@ export function getProductRichInfo(product: ProductType): ProductRichInfo {
     descLower.includes('work')
   ) {
     return {
-      tagline: 'Hiệu Năng Làm Việc Đột Phá & Chuẩn Mực Công Thái Học Chuyên Nghiệp',
+      tagline: 'Peak Ergonomic Workflow & High-Frequency Professional Computing',
       highlights: [
         {
           icon: 'cpu',
-          title: 'Hiệu Suất Phản Hồi 8.000Hz',
-          description: 'Tốc độ polling rate siêu tốc xử lý tín hiệu chuẩn mili-giây, độ trễ tiệm cận 0 cho công việc và tác vụ chuyên sâu.'
+          title: '8,000Hz Ultra-High Polling Rate',
+          description: 'Sub-millisecond signal response delivering instantaneous input registration for latency-critical professional tasks.'
         },
         {
           icon: 'sparkles',
-          title: 'Chất Liệu Cao Cấp CNC Anodized',
-          description: 'Gia công từ hợp kim nguyên khối xử lý bề mặt nhám mờ sang trọng, chống bám vân tay và mồ hôi tối đa.'
+          title: 'CNC Anodized Monolithic Chassis',
+          description: 'Milled from aerospace-grade aluminum with a fingerprint-resistant matte bead-blasted surface finish.'
         },
         {
           icon: 'feather',
-          title: 'Công Thái Học Bảo Vệ Cổ Tay',
-          description: 'Góc nghiêng khoa học nghiên cứu bởi chuyên gia công thái học giúp giảm 40% áp lực khớp cổ tay khi dùng lâu.'
+          title: 'Scientifically Tuned Ergonomics',
+          description: 'Engineered wrist-relief angle reduces forearm pronation fatigue by up to 40% over prolonged sessions.'
         },
         {
           icon: 'zap',
-          title: '3 Chế Độ Kết Nối Tri-Mode',
-          description: 'Linh hoạt giữa Bluetooth 5.3, không dây 2.4GHz không độ trễ và cáp bện dù Type-C tháo rời tiện lợi.'
+          title: 'Tri-Mode Universal Connectivity',
+          description: 'Seamlessly shift between 2.4GHz dongle wireless, low-energy Bluetooth 5.3, and detachable braided USB-C.'
         }
       ],
       narrativeParagraphs: [
-        `Nâng tầm không gian làm việc chuyên nghiệp với ${product.title}. Thiết kế tối giản tinh tế nhưng ẩn chứa sức mạnh phần cứng tối tân, thiết bị đáp ứng trọn vẹn cả nhu cầu sáng tạo nội dung, lập trình chuyên nghiệp lẫn giải trí đỉnh cao.`,
-        'Mỗi phím bấm và bề mặt tiếp xúc được tối ưu hóa đến từng micromet, mang lại cảm giác gõ và di chuyển đầm chắc, êm ái và đạt chuẩn âm thanh thock trầm ấm mà không gây ồn ào ảnh hưởng tới đồng nghiệp xung quanh.',
-        'Sản phẩm trải qua hơn 50 bài kiểm tra độ bền áp lực công nghiệp tại phòng lab VoltMart, cam kết tuổi thọ vận hành bền bỉ trên 80 triệu lần nhấn.'
+        `Elevate your executive workstation with the ${product.title}. Combining understated architectural minimalism with uncompromised engineering, it delivers effortless productivity for software engineers, creative directors, and power users.`,
+        'Every keypress and motion threshold is calibrated to micrometer precision, ensuring deeply satisfying mechanical tactility with dampened acoustics that keep your office environment undisturbed.',
+        'Rigorously stress-tested through 80+ million actuation cycles in VoltMart hardware validation labs to guarantee unwavering consistency year after year.'
       ],
       gallery: [
         {
           url: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=1200&q=80',
-          title: 'Thiết kế tối giản cho bàn làm việc hiện đại',
-          caption: 'Hòa quyện hoàn hảo vào không gian setup tối giản minimalist hoặc công nghệ cao.'
+          title: 'Minimalist Architecture for Modern Workspaces',
+          caption: 'Harmonizes seamlessly into clean minimalist and high-performance creative studio setups.'
         },
         {
           url: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=1200&q=80',
-          title: 'Góc nghiêng công thái học chuẩn chỉ',
-          caption: 'Bố trí độ dốc khoa học giúp nâng đỡ khớp cổ tay và cơ bắp cẳng tay thư thái.'
+          title: 'Ergonomic Palm & Wrist Angle',
+          caption: 'Calculated incline supports natural biomechanical posture and relieves muscle strain.'
         },
         {
           url: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=1200&q=80',
-          title: 'Tương thích đa nền tảng MacOS, Windows, Linux, iPadOS',
-          caption: 'Gạt công tắc chuyển đổi layout tức thì giữa phím Command (Mac) và Win key tiện lợi.'
+          title: 'Universal Multi-OS Compatibility',
+          caption: 'Instant hardware toggles between macOS, Windows, Linux, and iPadOS key layouts.'
         }
       ],
       specGroups: [
         {
-          group: 'Thông số Kỹ thuật & Hiệu năng',
+          group: 'Core Hardware & Actuation',
           items: [
-            { label: 'Cảm biến / Switch', value: 'Cảm biến quang học chính xác cao / Switch cơ học bôi trơn sẵn' },
-            { label: 'Tần số phản hồi (Polling Rate)', value: '1,000Hz - 8,000Hz siêu tốc' },
-            { label: 'Độ phân giải DPI / Độ nhạy', value: 'Tùy chỉnh 100 - 26,000 DPI' },
-            { label: 'Tuổi thọ linh kiện', value: 'Độ bền trên 80,000,000 chu kỳ hoạt động' }
+            { label: 'Sensor / Switch Architecture', value: 'High-Precision Optical / Factory-Lubed Mechanical' },
+            { label: 'Polling Rate', value: 'Configurable 1,000Hz - 8,000Hz Ultra-Fast' },
+            { label: 'Resolution / Sensitivity', value: 'Dynamic 100 - 26,000 DPI' },
+            { label: 'Lifecycle Durability', value: 'Rated for 80,000,000+ continuous operations' }
           ]
         },
         {
-          group: 'Khả năng Kết nối & Hệ thống',
+          group: 'Connectivity & System Compatibility',
           items: [
-            { label: 'Chế độ kết nối', value: 'Tri-Mode: 2.4G Wireless, Bluetooth 5.3 & Dây Type-C' },
-            { label: 'Bộ thu USB Dongle', value: 'USB-A & Đầu chuyển Type-C kèm theo' },
-            { label: 'Hệ điều hành tương thích', value: 'Windows 10/11, macOS 12+, iOS, Android, Linux' },
-            { label: 'Bộ nhớ lưu trữ hồ sơ', value: 'Lưu onboard 5 Profile cấu hình tùy biến' }
+            { label: 'Connection Modes', value: 'Tri-Mode: 2.4GHz Wireless, Bluetooth 5.3, USB-C' },
+            { label: 'Included Receiver', value: 'USB-A 2.4GHz Nano Receiver with USB-C Adapter' },
+            { label: 'Supported Platforms', value: 'Windows 10/11, macOS 12+, Linux, iPadOS, Android' },
+            { label: 'Onboard Memory', value: '5 Hardware Profiles with instantaneous profile switching' }
           ]
         },
         {
-          group: 'Năng lượng & Trọng lượng',
+          group: 'Power & Dimensions',
           items: [
-            { label: 'Dung lượng Pin', value: 'Pin sạc lithium 4,000mAh' },
-            { label: 'Thời lượng pin liên tục', value: 'Lên đến 200 giờ (Tắt LED) / 72 giờ (Bật LED)' },
-            { label: 'Cổng nạp điện', value: 'Type-C Fast Charge 5V/1A' },
-            { label: 'Trọng lượng', value: 'Cân đối chuẩn công thái học 680g' }
+            { label: 'Battery Chemistry', value: '4,000mAh Rechargeable Lithium-Ion Cell' },
+            { label: 'Battery Longevity', value: 'Up to 200 hours (Backlight Off) / 72 hours (Active)' },
+            { label: 'Charging Interface', value: 'USB Type-C Fast Charge 5V/1A' },
+            { label: 'Weight', value: 'Optimized 680g ergonomic ballast balance' }
           ]
         }
       ],
       inTheBox: [
-        { name: `1x Thiết bị ${product.title}`, quantity: '1 chiếc', note: 'Chính hãng nguyên seal' },
-        { name: '1x Đầu thu USB 2.4GHz Nano Receiver thế hệ mới', quantity: '1 chiếc', note: 'Độ trễ 1ms' },
-        { name: '1x Cáp bện dù siêu mềm Type-C sang Type-A 1.8m', quantity: '1 sợi', note: 'Chống nhiễu từ' },
-        { name: '1x Bộ chuyển đổi Adapter Type-C sang Type-A', quantity: '1 chiếc' },
-        { name: '1x Dụng cụ gắp phụ kiện & Vệ sinh chuyên dụng', quantity: '1 chiếc' },
-        { name: '1x Sách hướng dẫn sử dụng & Thẻ bảo hành điện tử 24 tháng', quantity: '1 bộ' }
+        { name: `1x ${product.title} Device`, quantity: '1 Unit', note: 'Original Factory Box' },
+        { name: '1x 2.4GHz Ultra-Low Latency USB Receiver', quantity: '1 Piece', note: '1ms Response' },
+        { name: '1x Braided USB-C to USB-A Cable (1.8m)', quantity: '1 Piece', note: 'Shielded Ferrite Core' },
+        { name: '1x USB-C to USB-A Precision Adapter', quantity: '1 Piece' },
+        { name: '1x Maintenance Tool & Cleaning Kit', quantity: '1 Set' },
+        { name: '1x User Documentation & 2-Year Official Warranty Card', quantity: '1 Set' }
       ],
       warrantyHighlights: [
-        'Bảo hành chính hãng 24 tháng toàn diện phần cứng',
-        '1 đổi 1 mới 100% trong 30 ngày nếu phát sinh bất kỳ lỗi kỹ thuật nào',
-        'Hỗ trợ cài đặt phần mềm và driver tùy biến phím trọn đời sản phẩm',
-        'Kích hoạt bảo hành dễ dàng qua quét mã QR trên bao bì hộp'
+        '24-Month Comprehensive Manufacturer Hardware Warranty',
+        '30-Day Hassle-Free 1-to-1 Replacement on technical defects',
+        'Lifetime companion utility suite access and driver support',
+        'Direct serial-number activation via packaging QR code'
       ]
     };
   }
@@ -359,92 +359,92 @@ export function getProductRichInfo(product: ProductType): ProductRichInfo {
     titleLower.includes('tracker')
   ) {
     return {
-      tagline: 'Trợ Lý Sức Khỏe Toàn Diện & Đột Phá Thiết Kế Thể Thao Thời Thượng',
+      tagline: 'Comprehensive Biometric Telemetry & Rugged Titanium Elegance',
       highlights: [
         {
           icon: 'sparkles',
-          title: 'Màn Hình AMOLED Ultra 1.43 Inch',
-          description: 'Độ sáng đỉnh 1.000 nits, kính cường lực Sapphire chống trầy xước và hiển thị sắc nét dưới ánh nắng gắt.'
+          title: '1.43-Inch Ultra AMOLED Display',
+          description: '1,000 nits peak brightness, sapphire crystal scratch defense, and legible viewing under direct sunlight.'
         },
         {
           icon: 'shield',
-          title: 'Cảm Biến Sinh Học Bio-Sensor 5.0',
-          description: 'Theo dõi nhịp tim 24/7, SpO2 nồng độ oxy trong máu, mức độ căng thẳng Stress và chu kỳ giấc ngủ REM chuẩn y khoa.'
+          title: 'Bio-Sensor 5.0 Photonic Array',
+          description: 'Continuous 24/7 heart-rate telemetry, blood oxygen (SpO2) tracking, stress analysis, and clinical-grade sleep phase scoring.'
         },
         {
           icon: 'battery',
-          title: 'Thời Lượng Pin 14 Ngày Vượt Trội',
-          description: 'Thuật toán tiết kiệm năng lượng thông minh kết hợp sạc không dây nam châm từ tính tiện lợi.'
+          title: 'Exceptional 14-Day Battery Life',
+          description: 'Intelligent power-efficient dual-core architecture paired with rapid magnetic wireless charging.'
         },
         {
           icon: 'zap',
-          title: 'Chống Nước 5ATM & GPS Độc Lập',
-          description: 'Thoải mái bơi lội, lặn biển ở độ sâu 50 mét và ghi lại quãng đường chạy bộ chính xác mà không cần mang theo điện thoại.'
+          title: '5ATM Water Resistance & Standalone GPS',
+          description: 'Waterproof down to 50 meters with multi-constellation GNSS route tracking without requiring a phone.'
         }
       ],
       narrativeParagraphs: [
-        `${product.title} là người bạn đồng hành hoàn hảo cho phong cách sống năng động hiện đại. Được chế tác với viền titan siêu nhẹ và mặt kính Sapphire vát cong 3D, thiết bị toát lên vẻ đẹp thanh lịch đẳng cấp trên cổ tay bạn.`,
-        'Với hơn 120 chế độ luyện tập thể thao từ chạy bộ, bơi lội đến leo núi, thiết bị tự động nhận diện bài tập và đưa ra gợi ý phục hồi thể lực khoa học, giúp bạn chạm đến các mục tiêu sức khỏe bền vững.',
-        'Khả năng đồng bộ thông minh hiển thị tin nhắn, cuộc gọi hai chiều qua loa và mic chống ồn tích hợp, quản lý thông báo mọi lúc mọi nơi mà không bỏ lỡ thông tin quan trọng.'
+        `The ${product.title} is your definitive companion for an active, health-conscious lifestyle. Crafted with a lightweight aerospace titanium bezel and curved 3D sapphire glass, it asserts refined elegance in both athletic and formal settings.`,
+        'With over 120 dedicated workout disciplines ranging from marathon running to open-water swimming, it detects routines automatically and offers scientifically grounded recovery recommendations.',
+        'Full two-way communication enables clear Bluetooth calling via the noise-cancelling microphone and speaker, managing your notifications effortlessly without pulling out your smartphone.'
       ],
       gallery: [
         {
           url: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80',
-          title: 'Mặt kính Sapphire chống xước hoàn hảo',
-          caption: 'Kính cường lực tinh thể sapphire độ cứng 9H chống trầy xước tối đa trong mọi hoạt động.'
+          title: 'Sapphire Crystal Face & Titanium Bezel',
+          caption: 'Mohs 9H hardness sapphire glass resists scratches from everyday abrasives and active outdoor use.'
         },
         {
           url: 'https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?auto=format&fit=crop&w=1200&q=80',
-          title: 'Cảm biến nhịp tim & sinh trắc học quang học thế hệ mới',
-          caption: 'Bố trí 8 cụm đi-ốt quang học dưới đáy gốm thân thiện với làn da người sử dụng.'
+          title: '8-Channel Biometric Optical Telemetry',
+          caption: 'Ceramic caseback housing multi-wavelength photodiode clusters designed for hypoallergenic skin comfort.'
         },
         {
           url: 'https://images.unsplash.com/photo-1510519138197-06b8628c6711?auto=format&fit=crop&w=1200&q=80',
-          title: 'Dây đeo Silicon kháng khuẩn tháo lắp nhanh Quick-Release',
-          caption: 'Dễ dàng thay đổi nhiều phong cách dây da, kim loại hoặc dù thể thao theo cá tính.'
+          title: 'Quick-Release Antimicrobial Fluoroelastomer Strap',
+          caption: 'Compatible with standard 22mm bands in leather, steel mesh, and sports nylon.'
         }
       ],
       specGroups: [
         {
-          group: 'Màn hình & Hiển thị',
+          group: 'Display & Visuals',
           items: [
-            { label: 'Công nghệ màn hình', value: 'AMOLED True Color 1.43 inch' },
-            { label: 'Độ phân giải', value: '466 x 466 pixels (Mật độ 326 PPI)' },
-            { label: 'Độ sáng tối đa', value: '1,000 nits Tự động điều chỉnh theo môi trường' },
-            { label: 'Tính năng Always-On Display', value: 'Hỗ trợ hơn 100+ mặt đồng hồ AOD' }
+            { label: 'Screen Technology', value: 'AMOLED True Color 1.43-Inch' },
+            { label: 'Native Resolution', value: '466 x 466 pixels (326 PPI Density)' },
+            { label: 'Peak Brightness', value: '1,000 nits Auto-Adapting' },
+            { label: 'Always-On Display', value: 'Hardware-level AOD with 100+ customizable faces' }
           ]
         },
         {
-          group: 'Cảm biến Sức khỏe & Thể thao',
+          group: 'Health Telemetry & Sensors',
           items: [
-            { label: 'Cảm biến nhịp tim quang học', value: 'Bio-Tracker PPG 5.0 đo liên tục 24h' },
-            { label: 'Cảm biến Oxy trong máu (SpO2)', value: 'Đo chính xác theo thời gian thực' },
-            { label: 'Hệ thống định vị vệ tinh', value: 'Đa băng tần GNSS: GPS, GLONASS, Galileo, BeiDou' },
-            { label: 'Chỉ số chống nước', value: '5ATM (Chịu áp lực nước ở độ sâu 50m)' }
+            { label: 'Optical Biometrics', value: 'Bio-Tracker PPG 5.0 (Continuous 24/7)' },
+            { label: 'Blood Oxygen Sensor', value: 'True-pulse SpO2 monitoring' },
+            { label: 'Satellite Positioning', value: 'Dual-Band GNSS: GPS, GLONASS, Galileo, BeiDou' },
+            { label: 'Water Ingress Rating', value: '5ATM (50 meters static immersion)' }
           ]
         },
         {
-          group: 'Pin & Kết nối',
+          group: 'Battery & Communication',
           items: [
-            { label: 'Thời lượng pin tiêu chuẩn', value: 'Lên đến 14 ngày sử dụng bình thường' },
-            { label: 'Thời lượng chế độ GPS liên tục', value: 'Khoảng 32 giờ định vị chính xác' },
-            { label: 'Phương thức sạc', value: 'Đế sạc nam châm hít từ tính không dây' },
-            { label: 'Kết nối không dây', value: 'Bluetooth 5.3 BLE, Wi-Fi 2.4GHz, NFC một chạm' }
+            { label: 'Battery Endurance', value: 'Up to 14 days under standard use' },
+            { label: 'GPS Tracking Endurance', value: 'Up to 32 hours continuous geolocation' },
+            { label: 'Charging Method', value: 'Magnetic wireless inductive dock' },
+            { label: 'Wireless Standards', value: 'Bluetooth 5.3 BLE, Wi-Fi 2.4GHz, One-Tap NFC' }
           ]
         }
       ],
       inTheBox: [
-        { name: `1x Đồng hồ thông minh ${product.title}`, quantity: '1 chiếc', note: 'Chính hãng nguyên seal' },
-        { name: '1x Dây đeo thể thao kháng khuẩn fluoroelastomer cao cấp', quantity: '1 bộ' },
-        { name: '1x Cáp sạc từ tính nam châm chuẩn USB', quantity: '1 sợi' },
-        { name: '1x Miếng dán bảo vệ màn hình kháng vân tay', quantity: '1 miếng' },
-        { name: '1x Sách hướng dẫn sử dụng & Thẻ bảo hành chính hãng 24 tháng', quantity: '1 bộ' }
+        { name: `1x ${product.title} Smartwatch`, quantity: '1 Unit', note: 'Factory Sealed' },
+        { name: '1x Antimicrobial Fluoroelastomer Sport Band', quantity: '1 Set' },
+        { name: '1x Magnetic Wireless Charging Cradle (USB)', quantity: '1 Piece' },
+        { name: '1x Anti-Reflective Screen Protector', quantity: '1 Piece' },
+        { name: '1x User Manual & 2-Year Official Warranty Card', quantity: '1 Set' }
       ],
       warrantyHighlights: [
-        'Bảo hành chính hãng 24 tháng trên toàn hệ thống VoltMart Flagship',
-        'Chính sách 1 đổi 1 miễn phí trong 30 ngày đầu tiên nếu lỗi kỹ thuật phần cứng',
-        'Hỗ trợ thay thế linh kiện chính hãng và bảo dưỡng pin định kỳ',
-        'Tổng đài hỗ trợ kỹ thuật viên đồng hành 24/7'
+        'Official 2-Year Flagship Hardware Warranty coverage',
+        '30-Day Hassle-Free Replacement for any manufacturing variance',
+        'Dedicated customer engineering support available 24/7',
+        'Nationwide authorized repair center network'
       ]
     };
   }
@@ -458,180 +458,181 @@ export function getProductRichInfo(product: ProductType): ProductRichInfo {
     titleLower.includes('pad')
   ) {
     return {
-      tagline: 'Vũ Khí Chiến Game Chuyên Nghiệp & Kiểm Soát Cảm Giác Thao Tác Tuyệt Đỉnh',
+      tagline: 'Esports-Grade Control Precision & Hall-Effect Drift-Free Mastery',
       highlights: [
         {
           icon: 'zap',
-          title: 'Cần Analog Cảm Ứng Từ Hall Effect',
-          description: 'Triệt tiêu hoàn toàn hiện tượng trôi cần (drift) với độ bền cơ học trên 5 triệu chu kỳ xoay.'
+          title: 'Hall-Effect Electromagnetic Analog Sticks',
+          description: 'Zero physical contact points eliminate analog drift entirely with mechanical durability exceeding 5 million rotations.'
         },
         {
           icon: 'cpu',
-          title: 'Trigger Khóa Hành Trình Kép',
-          description: 'Tùy biến hành trình cò phím từ tuyến tính sang click chuột tức thì chỉ bằng một gạt tay.'
+          title: 'Dual Mechanical Trigger Stops',
+          description: 'Instantly toggle trigger travel from smooth full-range linear pull to instant microswitch hair-trigger clicks.'
         },
         {
           icon: 'sparkles',
-          title: 'Rung Phản Hồi Xúc Giác Haptic Rung Kép',
-          description: 'Mô phỏng chân thực từng va chạm, tiếng nổ, lực ma sát lốp xe cho trải nghiệm đắm chìm tuyệt đối.'
+          title: 'Dual Haptic Actuation Rumble',
+          description: 'Authentically conveys in-game recoil, terrain textures, and engine vibrations for absolute sensory immersion.'
         },
         {
           icon: 'wifi',
-          title: 'Tần Số Quét 1000Hz Cực Kì Ổn Định',
-          description: 'Độ trễ tín hiệu dưới 1ms qua kết nối không dây 2.4GHz không bị nhiễu sóng.'
+          title: 'True 1,000Hz Polling Rate Wireless',
+          description: 'Sub-1ms transmission latency across 2.4GHz wireless without signal packet interference.'
         }
       ],
       narrativeParagraphs: [
-        `Khẳng định phong độ đỉnh cao trong mọi đấu trường eSports với ${product.title}. Thiết kế báng cầm phủ vân cao su chống trượt giúp game thủ giữ vững cảm giác cầm nắm chắc chắn kể cả trong những trận đấu kịch tính kéo dài.`,
-        'Trang bị 4 phím Macro cơ học phía sau lưng có thể gán phím hoặc tạo chuỗi combo phức tạp tức thì mà không cần cài đặt phần mềm rườm rà. Tương thích toàn diện từ PC Windows, Steam Deck, Nintendo Switch đến smartphone Android và iOS.',
-        'Mỗi linh kiện đều được tuyển chọn kỹ lưỡng, mang lại trải nghiệm thi đấu chuyên nghiệp đạt tiêu chuẩn các giải đấu eSports hàng đầu thế giới.'
+        `Dominate competitive tournaments with the ${product.title}. The ergonomic contouring and micro-textured rubberized grip provide unwavering handling even during marathon high-stakes matches.`,
+        'Equipped with 4 remappable rear macro paddles that let you execute complex button combinations and weapon swaps instantly without leaving the thumbsticks. Fully compatible with PC Windows, Steam Deck, Nintendo Switch, Android, and iOS.',
+        'Precision engineered and validated by esports competitors to meet tournament-grade operational standards.'
       ],
       gallery: [
         {
           url: 'https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=1200&q=80',
-          title: 'Thiết kế báng cầm công thái học chống mỏi tay',
-          caption: 'Bề mặt hoa văn vi mô gia tăng độ bám và thoát mồ hôi tay tuyệt vời.'
+          title: 'Ergonomic Grip Architecture',
+          caption: 'Micro-diamond pattern ensures confident grip retention and heat dissipation.'
         },
         {
           url: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80',
-          title: 'Hệ thống đèn LED RGB đa sắc tùy biến hiệu ứng',
-          caption: 'Đồng bộ ánh sáng theo nhịp điệu trận chiến và âm thanh trong game.'
+          title: 'Customizable Multi-Zone RGB Lighting',
+          caption: 'Synchronize dynamic lighting themes and game telemetry feedback in real time.'
         },
         {
           url: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1200&q=80',
-          title: 'Cần Analog Hall Effect chống trôi tuyệt đối',
-          caption: 'Không tiếp điểm cơ học, không mài mòn, giữ độ chính xác tuyệt đối suốt nhiều năm sử dụng.'
+          title: 'Anti-Drift Hall Sensor Thumbsticks',
+          caption: 'Electromagnetic sensor precision preserves deadzone fidelity across years of aggressive gameplay.'
         }
       ],
       specGroups: [
         {
-          group: 'Hệ thống Nút bấm & Cảm biến',
+          group: 'Buttons & Input Mechanics',
           items: [
-            { label: 'Cần Analog (Thumbstick)', value: 'Công nghệ cảm ứng từ Hall Effect chống trôi' },
-            { label: 'Cò Trigger (LT/RT)', value: 'Hall Magnetic Linear Trigger có công tắc khóa 2 nấc' },
-            { label: 'Cụm phím D-Pad & ABXY', value: 'Microswitch cơ học tuổi thọ 10 triệu lượt nhấn' },
-            { label: 'Phím tùy biến lưng (Back paddles)', value: '4 phím Macro gán lệnh và combo độc lập' }
+            { label: 'Thumbsticks', value: 'Hall Effect Electromagnetic (Anti-Drift)' },
+            { label: 'Triggers (LT/RT)', value: 'Hall Magnetic Linear with 2-Stage Travel Lock' },
+            { label: 'D-Pad & Face Buttons', value: 'Mechanical Microswitches rated for 10M clicks' },
+            { label: 'Rear Paddles', value: '4 Remappable Tactile Macro Switches' }
           ]
         },
         {
-          group: 'Khả năng Kết nối & Tương thích',
+          group: 'Connectivity & System Compatibility',
           items: [
-            { label: 'Giao thức kết nối', value: 'Không dây 2.4GHz, Bluetooth 5.2, Cáp USB-C' },
-            { label: 'Thiết bị hỗ trợ', value: 'PC (Windows 10/11), Steam Deck, Switch, Android, iOS' },
-            { label: 'Tần số gửi gói tin (Polling Rate)', value: '1,000Hz (Có dây & 2.4GHz) / 250Hz (Bluetooth)' }
+            { label: 'Connectivity Modes', value: '2.4GHz Wireless, Bluetooth 5.2, USB-C Wired' },
+            { label: 'Supported Platforms', value: 'PC (Windows 10/11), Steam Deck, Switch, Android, iOS' },
+            { label: 'Polling Frequency', value: '1,000Hz (Wired & 2.4GHz) / 250Hz (Bluetooth)' }
           ]
         },
         {
-          group: 'Pin & Kích thước',
+          group: 'Battery & Ergonomics',
           items: [
-            { label: 'Dung lượng pin', value: '1,200 mAh Lithium-ion dung lượng cao' },
-            { label: 'Thời lượng chơi liên tục', value: 'Lên đến 25-30 giờ sau mỗi lần sạc đầy' },
-            { label: 'Trọng lượng', value: '265g (Tối ưu cân bằng trọng tâm)' }
+            { label: 'Battery Capacity', value: '1,200 mAh High-Density Lithium-Ion' },
+            { label: 'Continuous Game Time', value: '25-30 hours per full charge cycle' },
+            { label: 'Weight', value: '265g (Precision balanced center-of-mass)' }
           ]
         }
       ],
       inTheBox: [
-        { name: `1x Tay cầm ${product.title}`, quantity: '1 chiếc', note: 'Chính hãng nguyên seal' },
-        { name: '1x USB Receiver không dây 2.4GHz độ trễ siêu thấp', quantity: '1 chiếc' },
-        { name: '1x Cáp sạc bện dù chống đứt Type-C dài 2 mét', quantity: '1 sợi' },
-        { name: '2x Núm bọc cần Analog silicon chống trượt tặng kèm', quantity: '2 cặp' },
-        { name: '1x Thẻ bảo hành điện tử chính hãng 24 tháng & Sách HDSD', quantity: '1 bộ' }
+        { name: `1x ${product.title} Controller`, quantity: '1 Unit', note: 'Factory Sealed' },
+        { name: '1x 2.4GHz Low-Latency USB Wireless Dongle', quantity: '1 Piece' },
+        { name: '1x Reinforced Braided USB-C Cable (2.0m)', quantity: '1 Piece' },
+        { name: '2x Ergonomic Convex Thumbstick Caps', quantity: '2 Pairs' },
+        { name: '1x 2-Year Official Warranty Card & Quick Setup Guide', quantity: '1 Set' }
       ],
       warrantyHighlights: [
-        'Bảo hành chính hãng 24 tháng toàn diện, cam kết không lo lỗi trôi cần',
-        'Đổi mới ngay lập tức trong 30 ngày nếu phát hiện lỗi từ nhà máy',
-        'Hỗ trợ cập nhật firmware và phần mềm căn chỉnh deadzone miễn phí',
-        'Phục vụ hỗ trợ người dùng chu đáo qua kênh chat trực tiếp'
+        'Official 2-Year Manufacturer Warranty with zero-drift guarantee',
+        'Immediate 30-day replacement on hardware defects',
+        'Free calibration utility and firmware updates',
+        'Dedicated 24/7 customer support via direct chat'
       ]
     };
   }
 
   // Default Fallback Rich Info (Electronics / Tech)
   return {
-    tagline: 'Kỹ Thuật Chế Tác Đỉnh Cao & Tiêu Chuẩn Công Nghệ Đột Phá',
+    tagline: 'Precision Engineering & Uncompromising Flagship Standards',
     highlights: [
       {
         icon: 'sparkles',
-        title: 'Chất Lượng Hoàn Thiện Flagship',
-        description: 'Vật liệu cao cấp kiểm định nghiêm ngặt, thiết kế tinh xảo theo tiêu chuẩn công nghiệp hiện đại.'
+        title: 'Flagship Build Quality',
+        description: 'Aerospace-grade materials and rigorous manufacturing tolerances guarantee refined durability.'
       },
       {
         icon: 'cpu',
-        title: 'Vi Xử Lý Thế Hệ Mới',
-        description: 'Tối ưu hóa hiệu năng, vận hành mượt mà ổn định và tiết kiệm năng lượng tối đa.'
+        title: 'Next-Gen Processing',
+        description: 'Optimized efficiency delivers fluid responsiveness while conserving power reserves.'
       },
       {
         icon: 'shield',
-        title: 'Bảo Hành Toàn Diện 24 Tháng',
-        description: 'Chính sách 1 đổi 1 trong 30 ngày đầu, bảo hành điện tử chính hãng tại hệ thống VoltMart Flagship.'
+        title: '2-Year Full Warranty',
+        description: '30-day return policy and official digital warranty backed by the VoltMart Flagship network.'
       },
       {
         icon: 'zap',
-        title: 'Chuẩn Kết Nối Tương Thích Cao',
-        description: 'Dễ dàng đồng bộ cùng mọi hệ sinh thái thiết bị di động, laptop và máy tính cá nhân.'
+        title: 'Universal Ecosystem Sync',
+        description: 'Seamlessly interfaces across mobile, desktop, and professional computing platforms.'
       }
     ],
     narrativeParagraphs: [
-      `${product.title} là sản phẩm công nghệ cao cấp được sản xuất theo dây chuyền đạt chuẩn quốc tế. Từng đường nét, khớp nối và bề mặt hoàn thiện đều được gia công tỉ mỉ để đáp ứng nhu cầu khắt khe của người dùng hiện đại.`,
-      'Trang bị công nghệ vi xử lý tiên tiến giúp thiết bị phản hồi nhanh chóng, tiết kiệm điện năng tiêu thụ và duy trì hiệu suất hoạt động bền bỉ, ổn định trong suốt thời gian dài sử dụng liên tục.',
-      'Sản phẩm được phân phối chính hãng bởi VoltMart Official Store với đầy đủ chứng nhận chất lượng CE, FCC, RoHS, tem chống hàng giả và chế độ bảo hành 1 đổi 1 uy tín.'
+      `The ${product.title} exemplifies precision craftsmanship built to world-class manufacturing tolerances. Every joint, contour, and surface finish has been refined to serve modern power users.`,
+      'Equipped with advanced internal architectures that ensure rapid response times, optimal power conservation, and unwavering operational reliability across demanding workloads.',
+      'Distributed officially by the VoltMart Official Flagship Store with complete CE, FCC, and RoHS certifications, genuine serial verification, and dedicated customer support.'
     ],
     gallery: [
       {
         url: product.image || 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80',
-        title: 'Góc nhìn cận cảnh chi tiết thiết kế',
-        caption: 'Bề mặt phủ sơn tĩnh điện nano chống trầy xước và bám bụi bẩn hiệu quả.'
+        title: 'Detailed Macro View of Industrial Design',
+        caption: 'Electrostatic nano-coating shields against fine surface scratches and fingerprint oils.'
       },
       {
         url: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1200&q=80',
-        title: 'Cổng kết nối đa năng tiện lợi',
-        caption: 'Hỗ trợ chuẩn kết nối tiêu chuẩn hiện đại, cắm là chạy Plug-and-Play tức thì.'
+        title: 'High-Bandwidth Universal Connectivity',
+        caption: 'Features modern standardized ports with instantaneous plug-and-play driver handoffs.'
       },
       {
         url: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=1200&q=80',
-        title: 'Trải nghiệm không gian làm việc chuyên nghiệp',
-        caption: 'Nâng tầm góc làm việc hiện đại với phong cách công nghệ tối giản thanh lịch.'
+        title: 'Elevated Professional Workspace Aesthetic',
+        caption: 'Complements clean, executive-level computing environments with subtle sophistication.'
       }
     ],
     specGroups: [
       {
-        group: 'Thông số Kỹ thuật Cốt lõi',
+        group: 'Core Hardware Specifications',
         items: [
-          { label: 'Thương hiệu & Model', value: `VoltMart ${product.title}` },
-          { label: 'Mã SKU', value: product.sku || 'VLT-PRO-SERIES' },
-          { label: 'Chứng nhận tiêu chuẩn', value: 'CE, FCC, RoHS, ISO 9001' },
-          { label: 'Tình trạng tồn kho', value: `${product.stock} sản phẩm sẵn sàng giao ngay` }
+          { label: 'Brand & Model', value: `VoltMart ${product.title}` },
+          { label: 'SKU / Model ID', value: product.sku || 'VLT-PRO-SERIES' },
+          { label: 'Certifications', value: 'CE, FCC, RoHS, ISO 9001' },
+          { label: 'Stock Availability', value: `${product.stock} units ready for immediate dispatch` }
         ]
       },
       {
-        group: 'Vật liệu & Thiết kế',
+        group: 'Materials & Surface Finish',
         items: [
-          { label: 'Chất liệu vỏ ngoài', value: 'Hợp kim nhôm Anodized cao cấp & Polycarbonate chịu nhiệt' },
-          { label: 'Màu sắc hoàn thiện', value: 'Matte Black / Space Gray / Titanium' },
-          { label: 'Độ bền chu kỳ', value: 'Đạt kiểm nghiệm độ bền trên 100,000 giờ hoạt động' }
+          { label: 'Exterior Shell', value: 'Anodized Aircraft Aluminum & Thermally Stable Polycarbonate' },
+          { label: 'Colorway Finish', value: 'Matte Black / Space Gray / Titanium' },
+          { label: 'Cycle Durability', value: 'Tested for 100,000+ operational hours' }
         ]
       },
       {
-        group: 'Bảo hành & Hỗ trợ',
+        group: 'Warranty & Logistics',
         items: [
-          { label: 'Thời hạn bảo hành', value: '24 Tháng (1 đổi 1 trong 30 ngày)' },
-          { label: 'Hình thức bảo hành', value: 'Bảo hành điện tử theo Serial Number' },
-          { label: 'Đơn vị phân phối', value: 'VoltMart Flagship Store Official' }
+          { label: 'Warranty Period', value: '24 Months (1-to-1 replacement within 30 days)' },
+          { label: 'Warranty Mechanism', value: 'Official digital serial registry' },
+          { label: 'Authorized Vendor', value: 'VoltMart Official Flagship Store' }
         ]
       }
     ],
     inTheBox: [
-      { name: `1x Sản phẩm ${product.title}`, quantity: '1 chiếc', note: 'Nguyên seal chính hãng' },
-      { name: '1x Cáp kết nối tín hiệu chuẩn Type-C bọc dù cao cấp', quantity: '1 sợi' },
-      { name: '1x Bộ phụ kiện chuyển đổi & lắp đặt', quantity: '1 bộ' },
-      { name: '1x Sách hướng dẫn sử dụng tiếng Việt & tiếng Anh', quantity: '1 cuốn' },
-      { name: '1x Thẻ bảo hành điện tử VoltMart chính hãng 24 tháng', quantity: '1 chiếc' }
+      { name: `1x ${product.title} Hardware`, quantity: '1 Unit', note: 'Factory Sealed' },
+      { name: '1x High-Bandwidth Braided USB-C Cable', quantity: '1 Piece' },
+      { name: '1x Accessory & Adapter Pack', quantity: '1 Set' },
+      { name: '1x User Guide & Warranty Documentation', quantity: '1 Set' },
+      { name: '1x VoltMart 2-Year Official Digital Warranty Card', quantity: '1 Piece' }
     ],
     warrantyHighlights: [
-      'Bảo hành chính hãng 24 tháng trên toàn quốc',
-      'Đổi trả 1-đổi-1 miễn phí trong 30 ngày nếu có lỗi từ nhà sản xuất',
-      'Miễn phí chi phí vận chuyển bảo hành tận nơi',
-      'Đội ngũ kỹ thuật viên hỗ trợ tư vấn 24/7'
+      'Official 24-month manufacturer warranty with nationwide coverage',
+      'Hassle-free 30-day 1-to-1 replacement on factory defects',
+      'Free two-way expedited shipping for verified service claims',
+      '24/7 dedicated engineering support staff'
     ]
   };
 }
+

@@ -51,55 +51,55 @@ export function DescriptionTab({ product }: DescriptionTabProps) {
 
   return (
     <div className="space-y-6">
-      {/* Shopee-style Chi Tiết Sản Phẩm (Basic Meta Table) */}
+      {/* Product Metadata Table */}
       <Card className="border-border/60 shadow-sm">
         <CardContent className="p-6">
           <div className="mb-4 flex items-center gap-2 border-b border-border/50 pb-3">
             <Layers className="h-5 w-5 text-primary" />
             <h3 className="text-base font-bold text-foreground uppercase tracking-wide">
-              Chi Tiết Sản Phẩm
+              Product Specifications Overview
             </h3>
           </div>
 
           <div className="grid grid-cols-1 gap-y-2.5 text-sm sm:grid-cols-2 sm:gap-x-8">
             <div className="flex items-center justify-between border-b border-border/30 py-1.5">
-              <span className="text-muted-foreground">Thương hiệu:</span>
+              <span className="text-muted-foreground">Brand:</span>
               <span className="font-semibold text-primary">VoltMart Flagship</span>
             </div>
             <div className="flex items-center justify-between border-b border-border/30 py-1.5">
-              <span className="text-muted-foreground">Mã SKU:</span>
+              <span className="text-muted-foreground">Model SKU:</span>
               <span className="font-medium text-foreground">{product.sku || "VLT-PRO-SERIES"}</span>
             </div>
             <div className="flex items-center justify-between border-b border-border/30 py-1.5">
-              <span className="text-muted-foreground">Hạn bảo hành:</span>
-              <span className="font-medium text-foreground">24 Tháng (1 đổi 1)</span>
+              <span className="text-muted-foreground">Warranty Period:</span>
+              <span className="font-medium text-foreground">24 Months (1-to-1 Replacement)</span>
             </div>
             <div className="flex items-center justify-between border-b border-border/30 py-1.5">
-              <span className="text-muted-foreground">Loại bảo hành:</span>
-              <span className="font-medium text-foreground">Bảo hành điện tử chính hãng</span>
+              <span className="text-muted-foreground">Warranty Type:</span>
+              <span className="font-medium text-foreground">Official Digital Electronic Warranty</span>
             </div>
             <div className="flex items-center justify-between border-b border-border/30 py-1.5">
-              <span className="text-muted-foreground">Tình trạng kho:</span>
+              <span className="text-muted-foreground">Stock Status:</span>
               <span className="font-medium text-emerald-600 dark:text-emerald-400">
-                {product.stock} sản phẩm sẵn sàng giao
+                {product.stock} units ready to ship
               </span>
             </div>
             <div className="flex items-center justify-between border-b border-border/30 py-1.5">
-              <span className="text-muted-foreground">Kho vận xuất hàng:</span>
-              <span className="font-medium text-foreground">Hà Nội & TP. Hồ Chí Minh</span>
+              <span className="text-muted-foreground">Fulfillment Center:</span>
+              <span className="font-medium text-foreground">US Hubs (California & New Jersey)</span>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* Shopee-style Mô Tả Sản Phẩm (Rich Content, Gallery, Highlights) */}
+      {/* Product Description, Infographics & Features */}
       <Card className="border-border/60 shadow-sm">
         <CardContent className="space-y-8 p-6 sm:p-8">
           {/* Header & Tagline */}
           <div className="border-b border-border/50 pb-5">
             <div className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
               <Award className="h-3.5 w-3.5" />
-              Sản Phẩm Flagship Chính Hãng
+              Official Flagship Product
             </div>
             <h2 className="mt-3 text-xl font-bold text-foreground sm:text-2xl">
               {product.title}
@@ -139,10 +139,10 @@ export function DescriptionTab({ product }: DescriptionTabProps) {
             ))}
           </div>
 
-          {/* Shopee-style Embedded Image Gallery with captions */}
+          {/* High-Resolution Gallery with captions */}
           <div className="space-y-6 border-t border-border/50 pt-6">
             <h3 className="text-base font-bold text-foreground uppercase tracking-wide">
-              Hình Ảnh Chi Tiết & Trải Nghiệm Thực Tế
+              Detailed Macro Views & In-Depth Craftsmanship
             </h3>
 
             <div className="space-y-6">
@@ -174,7 +174,7 @@ export function DescriptionTab({ product }: DescriptionTabProps) {
             <div className="mb-3 flex items-center gap-2">
               <Package className="h-5 w-5 text-primary" />
               <h4 className="text-sm font-bold text-foreground uppercase tracking-wide">
-                Bộ Sản Phẩm Đóng Gói Chuẩn Bao Gồm
+                What&apos;s Included In The Box
               </h4>
             </div>
             <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 text-xs">
@@ -198,7 +198,7 @@ export function DescriptionTab({ product }: DescriptionTabProps) {
             <div className="mb-3 flex items-center gap-2">
               <ShieldCheck className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
               <h4 className="text-sm font-bold text-foreground uppercase tracking-wide">
-                Chính Sách Hậu Mãi & Bảo Hành VoltMart Flagship
+                VoltMart Official Flagship After-Sales & Warranty
               </h4>
             </div>
             <ul className="space-y-2 text-xs text-muted-foreground">

@@ -8,8 +8,8 @@ import { toast } from "sonner";
 
 export function ShopProfileCard() {
   const handleChat = () => {
-    toast.success("Kết nối tư vấn viên VoltMart CSKH...", {
-      description: "Đội ngũ chuyên viên kỹ thuật sẵn sàng hỗ trợ bạn 24/7."
+    toast.success("Connecting to VoltMart Support...", {
+      description: "A technical hardware specialist is available 24/7 to assist you."
     });
   };
 
@@ -32,12 +32,12 @@ export function ShopProfileCard() {
               </h3>
               <span className="inline-flex items-center gap-0.5 rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-semibold text-primary">
                 <ShieldCheck className="h-3 w-3" />
-                Chính Hãng
+                Verified Mall
               </span>
             </div>
             <p className="mt-0.5 flex items-center gap-1.5 text-xs text-muted-foreground">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              Online 3 phút trước
+              Active 3 mins ago
             </p>
 
             <div className="mt-3 flex items-center gap-2">
@@ -48,7 +48,7 @@ export function ShopProfileCard() {
                 className="h-8 gap-1.5 text-xs border-primary/40 text-primary hover:bg-primary/10 cursor-pointer"
               >
                 <MessageSquare className="h-3.5 w-3.5" />
-                Chat Ngay
+                Chat Now
               </Button>
               <Link href="/">
                 <Button
@@ -57,7 +57,7 @@ export function ShopProfileCard() {
                   className="h-8 gap-1.5 text-xs text-muted-foreground hover:text-foreground cursor-pointer"
                 >
                   <Store className="h-3.5 w-3.5" />
-                  Xem Shop
+                  Visit Store
                 </Button>
               </Link>
             </div>
@@ -71,7 +71,7 @@ export function ShopProfileCard() {
               <Star className="h-4 w-4 fill-amber-500" />
             </div>
             <div>
-              <p className="text-xs text-muted-foreground">Đánh Giá</p>
+              <p className="text-xs text-muted-foreground">Ratings</p>
               <p className="text-sm font-semibold text-foreground">
                 4.9 <span className="text-xs font-normal text-muted-foreground">(28.4k)</span>
               </p>
@@ -83,9 +83,9 @@ export function ShopProfileCard() {
               <Clock className="h-4 w-4" />
             </div>
             <div>
-              <p className="text-xs text-muted-foreground">Tỉ Lệ Phản Hồi</p>
+              <p className="text-xs text-muted-foreground">Response Rate</p>
               <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400">
-                99% <span className="text-xs font-normal text-muted-foreground">(Vài phút)</span>
+                99% <span className="text-xs font-normal text-muted-foreground">(Within mins)</span>
               </p>
             </div>
           </div>
@@ -95,8 +95,8 @@ export function ShopProfileCard() {
               <PackageCheck className="h-4 w-4" />
             </div>
             <div>
-              <p className="text-xs text-muted-foreground">Sản Phẩm</p>
-              <p className="text-sm font-semibold text-foreground">48 Thiết bị</p>
+              <p className="text-xs text-muted-foreground">Products</p>
+              <p className="text-sm font-semibold text-foreground">48 Devices</p>
             </div>
           </div>
 
@@ -105,7 +105,7 @@ export function ShopProfileCard() {
               <Users className="h-4 w-4" />
             </div>
             <div>
-              <p className="text-xs text-muted-foreground">Người Theo Dõi</p>
+              <p className="text-xs text-muted-foreground">Followers</p>
               <p className="text-sm font-semibold text-foreground">142.8k</p>
             </div>
           </div>
@@ -115,8 +115,8 @@ export function ShopProfileCard() {
               <ShieldCheck className="h-4 w-4" />
             </div>
             <div>
-              <p className="text-xs text-muted-foreground">Bảo Hành</p>
-              <p className="text-sm font-semibold text-foreground">24 Tháng 1-Đổi-1</p>
+              <p className="text-xs text-muted-foreground">Warranty</p>
+              <p className="text-sm font-semibold text-foreground">2-Year Full</p>
             </div>
           </div>
 
@@ -125,8 +125,8 @@ export function ShopProfileCard() {
               <Store className="h-4 w-4" />
             </div>
             <div>
-              <p className="text-xs text-muted-foreground">Tham Gia</p>
-              <p className="text-sm font-semibold text-foreground">3 Năm Trước</p>
+              <p className="text-xs text-muted-foreground">Joined</p>
+              <p className="text-sm font-semibold text-foreground">3 Years Ago</p>
             </div>
           </div>
         </div>
