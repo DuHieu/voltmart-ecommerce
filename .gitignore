@@ -41,4 +41,5 @@ dist
 .cursor
 .agents
 .claude
+.gemini
 .npmrc
