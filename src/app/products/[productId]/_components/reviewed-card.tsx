@@ -166,7 +166,7 @@ export function ReviewedCard({
                   {review.storeResponse && (
                     <div className="mt-3.5 rounded-lg border border-border/40 bg-muted/40 p-3 text-xs leading-relaxed">
                       <p className="font-bold text-primary flex items-center gap-1">
-                        Seller Response (VoltMart Official Store):
+                        VoltMart Team Response:
                       </p>
                       <p className="mt-1 text-muted-foreground">
                         {review.storeResponse}

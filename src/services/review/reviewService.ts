@@ -8,26 +8,45 @@ export const reviewService = {
     try {
       const { data, error } = await supabase
         .from('reviews')
-        .select('*, profile:profiles(*)')
+        .select('*')
         .eq('product_id', productId)
         .order('created_at', { ascending: false });
 
       if (error) {
         console.error('Error fetching reviews:', error);
-        console.error('Error details:', {
-          message: error.message,
-          details: error.details,
-          hint: error.hint,
-          code: error.code,
-        });
-        toast.error(error.message || 'Failed to fetch reviews');
         return [];
       }
 
-      return (data as ReviewType[]) || [];
+      if (!data || data.length === 0) {
+        return [];
+      }
+
+      const userIds = Array.from(new Set(data.map((r) => r.user_id).filter(Boolean)));
+      const profilesMap: Record<string, any> = {};
+
+      if (userIds.length > 0) {
+        try {
+          const { data: profiles } = await supabase
+            .from('profiles')
+            .select('*')
+            .in('profile_id', userIds);
+
+          if (profiles) {
+            profiles.forEach((p) => {
+              profilesMap[p.profile_id] = p;
+            });
+          }
+        } catch {
+          // Ignore profile lookup error, reviews will still render
+        }
+      }
+
+      return data.map((r) => ({
+        ...r,
+        profile: profilesMap[r.user_id] || null,
+      })) as ReviewType[];
     } catch (error) {
       console.error('Error in getReviewsByProduct:', error);
-      toast.error('Something went wrong');
       return [];
     }
   },
@@ -36,20 +55,32 @@ export const reviewService = {
     try {
       const { data, error } = await supabase
         .from('reviews')
-        .select('*, profile:profiles(*)')
+        .select('*')
         .eq('id', id)
-        .single();
+        .maybeSingle();
 
-      if (error) {
-        console.error('Error fetching review:', error);
-        toast.error('Failed to fetch review');
+      if (error || !data) {
+        if (error) console.error('Error fetching review:', error);
         return null;
       }
 
-      return data as ReviewType;
+      let profile = null;
+      if (data.user_id) {
+        try {
+          const { data: prof } = await supabase
+            .from('profiles')
+            .select('*')
+            .eq('profile_id', data.user_id)
+            .maybeSingle();
+          profile = prof;
+        } catch {
+          // Ignore profile lookup error
+        }
+      }
+
+      return { ...data, profile } as ReviewType;
     } catch (error) {
       console.error('Error in getReviewById:', error);
-      toast.error('Something went wrong');
       return null;
     }
   },

@@ -340,7 +340,7 @@ export default function ProductDetailsClient({
           </div>
         </div>
 
-        {/* Shopee-style Mall Seller Profile Card */}
+        {/* Direct Brand Assurance Bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
