@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { AnimatePresence } from "motion/react";
 import {
   Home,
-  Shirt,
+  Headphones,
+  Laptop,
   Watch,
   Smartphone,
   Search,
@@ -60,9 +61,26 @@ import {
 // Default icons for each category
 const categoryIcons: Record<string, React.ElementType> = {
   All: Home,
-  Clothing: Shirt,
-  Accessories: Watch,
+  Clothing: Headphones,
+  Accessories: Laptop,
   Electronics: Smartphone,
+  Audio: Headphones,
+  Computing: Laptop,
+  Wearables: Watch,
+};
+
+// Clean display names for categories
+const getCategoryDisplayName = (name: string) => {
+  switch (name.toLowerCase()) {
+    case "clothing":
+      return "Audio & Sound";
+    case "accessories":
+      return "Computing & Workspace";
+    case "electronics":
+      return "Smart Gear & Wearables";
+    default:
+      return name;
+  }
 };
 
 export default function Sidebar() {
@@ -93,20 +111,16 @@ export default function Sidebar() {
 
   // Mapping of categories from DB to display with icons and hrefs
   const categoryItems = [
-    { name: "All", icon: Home, href: "/" },
+    { name: "All Products", icon: Home, href: "/" },
     ...(categories || []).map((category) => ({
-      name: category.name,
+      name: getCategoryDisplayName(category.name),
       icon: categoryIcons[category.name] || Smartphone,
       href: `/${category.name.toLowerCase()}`,
     })),
   ];
 
-  // Filter categories based on authentication status
-  const displayCategories = user
-    ? categoryItems
-    : categoryItems.filter((category) =>
-        ["All", "Electronics"].includes(category.name),
-      );
+  // Provide full category navigation for smooth browsing
+  const displayCategories = categoryItems;
 
   // Admin navigation items
   const adminNavItems = [
@@ -127,9 +141,9 @@ export default function Sidebar() {
             animate={isCollapsed ? "closed" : "open"}
             className="flex items-center space-x-2.5"
           >
-            <div className="from-primary to-primary/80 flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br shadow-lg">
-              <span className="text-primary-foreground text-base font-bold">
-                E
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 via-orange-500 to-indigo-600 shadow-md">
+              <span className="text-white text-base font-black">
+                V
               </span>
             </div>
             {!isCollapsed && (
@@ -139,11 +153,11 @@ export default function Sidebar() {
                 animate="open"
                 className="flex flex-col"
               >
-                <span className="text-foreground text-base font-semibold">
-                  E-Store
+                <span className="text-foreground text-base font-bold tracking-tight">
+                  VoltMart
                 </span>
-                <span className="text-muted-foreground text-xs">
-                  Premium Shop
+                <span className="text-muted-foreground text-[11px] font-medium">
+                  Electronics Platform
                 </span>
               </Motion>
             )}

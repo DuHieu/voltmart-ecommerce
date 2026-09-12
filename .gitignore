@@ -24,14 +24,21 @@ dist-ssr
 *.sw?
 
 # Next.js
-# ...
 .next
 next-env.d.ts
+tsconfig.tsbuildinfo
 dist
 
-.cursor
+# Environment variables & local files
 .env
+.env*.local
+*.local
+.env.local
+.env.production
+.env.development
 
+# Editor & Agent files
+.cursor
 .agents
 .claude
 .npmrc

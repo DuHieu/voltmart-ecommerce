@@ -154,13 +154,8 @@ export function useProducts(options?: UseQueryOptions<ProductType[]>) {
     return processed;
   }, [searchTerm, filters, query.data]);
 
-  // Filter products based on user authentication
-  const getFilteredProductsForUser = (user: unknown) => {
-    if (!user) {
-      return processedProducts.filter(
-        (product) => ![1, 2].includes(product.category_id || 0) // 1 = clothing, 2 = accessories
-      );
-    }
+  // Display products consistently for all users
+  const getFilteredProductsForUser = (_user: unknown) => {
     return processedProducts;
   };
 
@@ -245,7 +240,7 @@ export function useProductsByCategory(
 
 // Enhanced hook for filtered products with TanStack Query
 export function useFilteredProducts(
-  user: unknown,
+  _user: unknown,
   initialFilters?: Partial<FilterOptions>
 ) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -308,15 +303,8 @@ export function useFilteredProducts(
     return processed;
   }, [searchTerm, filters, productsQuery.data]);
 
-  // Filter products based on user authentication
-  const displayProducts = useMemo(() => {
-    if (!user) {
-      return processedProducts.filter(
-        (product) => ![1, 2].includes(product.category_id || 0) // 1 = clothing, 2 = accessories
-      );
-    }
-    return processedProducts;
-  }, [user, processedProducts]);
+  // Clean display products
+  const displayProducts = processedProducts;
 
   return {
     displayProducts,

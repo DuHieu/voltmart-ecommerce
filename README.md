@@ -1,310 +1,169 @@
-# Ecommerce Supabase Next.js
+﻿# VoltMart – Modern Full-Stack Electronics E-Commerce Platform
 
-A modern e-commerce application built with Next.js 15, React 19, TypeScript, and Supabase. This project features a beautiful UI using shadcn/ui components, Tailwind CSS v4, and includes comprehensive features like authentication, product management, cart functionality, and order processing.
+[![Next.js 16](https://img.shields.io/badge/Next.js-16.2-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React 19](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-emerald?style=for-the-badge&logo=supabase)](https://supabase.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](./LICENSE)
 
-## Features
+VoltMart is a production-grade, full-stack electronics e-commerce web application engineered with **Next.js 16 (App Router + Turbopack)**, **React 19**, **Supabase (PostgreSQL + RLS)**, **Tailwind CSS v4**, **TanStack Query v5**, and **TypeScript**.
 
-- 🛍️ **Complete E-commerce Solution**: Product browsing, cart management, checkout process
-- 🔐 **Authentication System**: Sign up, sign in, password reset with Supabase Auth
-- 👨‍💼 **Admin Panel**: Complete admin interface for managing products, orders, and users
-- 📱 **Responsive Design**: Mobile-first approach with Tailwind CSS v4
-- 🎨 **Modern UI**: shadcn/ui components with Radix UI primitives
-- 🔍 **Product Categories**: Electronics, Clothing, Accessories with dedicated pages
-- 👤 **User Dashboard**: Profile management and order history
-- 🛒 **Shopping Cart**: Persistent cart with real-time updates
-- 💳 **Checkout Process**: Multi-step checkout with shipping and payment forms
-- 📝 **Review System**: Product reviews and ratings functionality
-- 📍 **Address Management**: Multiple shipping addresses support
-- 📊 **Data Management**: TanStack Query for efficient data fetching and caching
-- 🌙 **Dark Mode**: Theme switching with next-themes
-- 📈 **Analytics**: Chart.js integration for dashboard analytics
-- 🛡️ **Row Level Security**: Comprehensive RLS policies for data protection
+The platform is purpose-built as a modern showcase for precision audio equipment, workspace computing peripherals, and smart wearable hardware.
 
-## Prerequisites
+---
 
-Before you begin, ensure you have the following installed on your system:
+## 🌐 Live Demo
 
-- Node.js (version 18 or higher)
-- npm (version 9 or higher)
+- **Live URL**: [https://voltmart-ecommerce.vercel.app](https://voltmart-ecommerce.vercel.app) *(Coming Soon / Deployment Placeholder)*
+- **Demo Account**: demo@voltmart.io / Password123!
 
-## Installation
+---
 
-1. Clone the repository:
+## ✨ Key Features
 
-   ```bash
-   git clone https://github.com/your-username/ecommerce-supabase-next.git
-   cd ecommerce-supabase-next
-   ```
+- 🎧 **Curated Electronics Catalog**: Categorized into *Audio & Sound*, *Computing & Workspace*, and *Smart Gear & Wearables* with real-time category filtering and dynamic search.
+- 🔍 **Product Details & Technical Specifications**: High-resolution imagery, active rating breakdowns, inventory indicators, and comprehensive hardware spec sheets.
+- 🛒 **Shopping Cart & Seamless Checkout**: Persistent cart storage, reactive quantity controls, item removal, and a frictionless transition to checkout.
+- 🔐 **Secure Supabase Authentication**: Full authentication lifecycle including sign up, email sign in, password reset, and SSR cookie synchronization via @supabase/ssr.
+- 📊 **User & Analytics Dashboard**: Real-time spending charts, order histories, status summaries, and interactive data visualization powered by Chart.js.
+- 🛡️ **Role-Based Admin Controls**: Protected administrative views for product inventory management, order oversight, and customer permissions guarded by Supabase Row Level Security (RLS).
+- ⚡ **Zero-Config Resilient Architecture**: Seamless fallback to an in-memory electronics catalog ensures all features run out of the box locally even before database credentials are linked.
+- 📱 **Responsive & Accessible UI**: Fluid layouts across mobile, tablet, and desktop viewports with dark and light theme switching.
 
-2. Install the dependencies:
+---
 
-   ```bash
-   npm install
-   ```
+## 🛠️ Tech Stack
 
-3. Set up environment variables:
-   Create a `.env.local` file in the root directory with the following variables:
-   ```
-   NEXT_PUBLIC_SUPABASE_URL="your-supabase-url"
-   NEXT_PUBLIC_SUPABASE_ANON_KEY="your-supabase-anon-key"
-   POLAR_ACCESS_TOKEN="your-polar-access-token"
-   POLAR_WEBHOOK_SECRET="your-polar-webhook-secret"
-   ```
-   
-   Note: `POLAR_ACCESS_TOKEN` and `POLAR_WEBHOOK_SECRET` are server-side only and should not be exposed to the client.
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend Framework** | [Next.js 16](https://nextjs.org/) (App Router, Turbopack, Server Components) |
+| **UI Library** | [React 19](https://react.dev/), [shadcn/ui](https://ui.shadcn.com/), [Radix UI](https://www.radix-ui.com/) |
+| **Styling & Theming** | [Tailwind CSS v4](https://tailwindcss.com/), [next-themes](https://github.com/pacocoursey/next-themes), [Lucide React](https://lucide.dev/) |
+| **State & Data Fetching** | [TanStack Query v5](https://tanstack.com/query/latest), [TanStack Table](https://tanstack.com/table/latest) |
+| **Form Handling & Validation** | [TanStack Form](https://tanstack.com/form/latest), [Zod](https://zod.dev/) |
+| **Backend & Database** | [Supabase](https://supabase.com/) (PostgreSQL, Row Level Security, Auth, Storage) |
+| **Analytics & Visuals** | [Chart.js](https://www.chartjs.org/), [React-ChartJS-2](https://react-chartjs-2.js.org/), [Motion](https://motion.dev/) |
+| **Language & Tooling** | [TypeScript](https://www.typescriptlang.org/), [ESLint 9](https://eslint.org/), [Prettier](https://prettier.io/) |
 
-## Development
+---
 
-To start the development server:
+## 📸 Screenshots
 
-```bash
-npm run dev
-```
+### 1. Storefront & Featured Flagship Hardware
+> *Modern hero section featuring the flagship electronics collection and category discovery.*
+`
++-----------------------------------------------------------------------------------+
+|  [V] VoltMart   Audio & Sound   Computing   Smart Gear              [Search]  🛒  |
+|-----------------------------------------------------------------------------------|
+|                                                                                   |
+|   New 2026 Hardware Series                                                        |
+|   Precision Electronics for the Modern Workspace                                  |
+|   [ Browse All Products ]  [ Explore Audio ]                                      |
+|                                                                                   |
+|   ================ Featured Audio & Computing Gear ===============                |
+|   [ AeroPulse Headphones ]   [ Pro Mechanical Keyboard ]   [ 4K Curved Display ]  |
++-----------------------------------------------------------------------------------+
+`
 
-This will start the Next.js development server with Turbo mode enabled. Open your browser and navigate to `http://localhost:3000` to view the application.
+### 2. Product Specifications & Detail Views
+> *Detailed product pages featuring customer reviews, stock indicators, and hardware spec tables.*
 
-## Available Scripts
+### 3. Shopping Cart & Guest Flow
+> *Responsive sliding cart and dedicated checkout workflow with guest preservation.*
 
-- `npm run dev`: Start the development server with Turbo mode
-- `npm run build`: Build the application for production
-- `npm run start`: Start the production server
-- `npm run lint`: Run ESLint with Next.js configuration
-- `npm run version:patch`: Increment patch version
-- `npm run version:minor`: Increment minor version
-- `npm run version:major`: Increment major version
-- `npm run version:check`: Check current version
-- `npm run precommit`: Run lint and build before commit
+---
 
-## Project Structure
+## 🚀 Local Setup & Installation
 
-```
-src/
-├── app/                          # Next.js App Router pages and layouts
-│   ├── (auth)/                  # Authentication routes group
-│   │   ├── reset-password/      # Password reset flow
-│   │   │   ├── confirmation/    # Reset confirmation page
-│   │   │   ├── update/          # Password update page
-│   │   │   └── page.tsx         # Reset request page
-│   │   ├── signin/              # Sign in page
-│   │   └── signup/              # Sign up page
-│   ├── accessories/             # Accessories category page
-│   ├── admin/                   # Admin panel (protected routes)
-│   │   ├── orders/              # Order management
-│   │   ├── products/            # Product management
-│   │   ├── users/               # User management
-│   │   └── layout.tsx           # Admin layout with protection
-│   ├── cart/                    # Shopping cart page
-│   ├── checkout/                # Multi-step checkout process
-│   │   ├── confirmation/        # Order confirmation page
-│   │   └── layout.tsx           # Checkout layout
-│   ├── clothing/                # Clothing category page
-│   ├── dashboard/               # User dashboard with analytics
-│   ├── electronics/             # Electronics category page
-│   ├── products/                # Product pages
-│   │   └── [productId]/         # Dynamic product detail pages
-│   ├── profile/                 # User profile management
-│   ├── layout.tsx               # Root layout component
-│   ├── page.tsx                 # Home page
-│   ├── globals.css              # Global styles
-│   ├── error.tsx                # Global error boundary
-│   └── not-found.tsx            # 404 page
-├── components/                   # Reusable React components
-│   ├── admin/                   # Admin-specific components
-│   │   ├── DeleteConfirmModal.tsx
-│   │   ├── OrderDetailsModal.tsx
-│   │   ├── ProductFormModal.tsx
-│   │   └── UserDetailsModal.tsx
-│   ├── checkout/                # Checkout flow components
-│   ├── dashboard/               # Dashboard components
-│   │   ├── DashboardCharts.tsx
-│   │   ├── OrderHistoryChart.tsx
-│   │   ├── OrderStatusChart.tsx
-│   │   └── PaymentDistributionChart.tsx
-│   ├── ui/                      # shadcn/ui components
-│   │   ├── avatar.tsx
-│   │   ├── badge.tsx
-│   │   ├── button.tsx
-│   │   ├── card.tsx
-│   │   ├── dialog.tsx
-│   │   └── ...                  # Additional UI components
-│   ├── CategoryPage.tsx         # Category page template
-│   ├── ClientProducts.tsx       # Client-side products component
-│   ├── ErrorBoundary.tsx        # Error boundary component
-│   ├── LoadingSpinner.tsx       # Loading states
-│   ├── MainLayout.tsx           # Main application layout
-│   ├── Navbar.tsx               # Navigation component
-│   ├── ProductCard.tsx          # Product display card
-│   ├── ProductComments.tsx      # Review system component
-│   ├── Sidebar.tsx              # Application sidebar
-│   └── theme-provider.tsx       # Dark mode provider
-├── context/                     # React context providers
-│   ├── AuthContext.tsx          # Authentication state
-│   ├── CartContext.tsx          # Shopping cart state
-│   └── SidebarContext.tsx       # Sidebar state
-├── hooks/                       # Custom React hooks
-│   ├── queries/                 # TanStack Query hooks
-│   │   ├── use-cart.ts          # Cart queries
-│   │   ├── use-orders.ts        # Order queries
-│   │   ├── use-products.ts      # Product queries
-│   │   ├── use-profile.ts       # Profile queries
-│   │   └── use-reviews.ts       # Review queries
-│   ├── useAdmin.ts              # Admin functionality
-│   ├── useAuthForm.ts           # Authentication forms
-│   ├── useCart.ts               # Cart operations
-│   ├── useProducts.ts           # Product operations
-│   ├── useProfile.ts            # Profile management
-│   └── useSupabaseAuth.tsx      # Supabase auth integration
-├── lib/                         # Library configurations
-│   ├── providers/               # Provider components
-│   │   └── query-provider.tsx   # TanStack Query provider
-│   ├── supabase/                # Supabase client setup
-│   │   ├── client.ts            # Client-side client
-│   │   ├── server.ts            # Server-side client
-│   │   └── clientUtils.ts       # Utility functions
-│   └── utils.ts                 # General utilities
-├── services/                    # Service layer for API interactions
-│   ├── address/                 # Address management services
-│   ├── admin/                   # Admin-specific services
-│   ├── auth/                    # Authentication services
-│   ├── cart/                    # Shopping cart operations
-│   ├── category/                # Category management
-│   ├── order/                   # Order processing
-│   ├── product/                 # Product operations
-│   ├── profile/                 # Profile management
-│   └── review/                  # Review system
-├── types/                       # TypeScript type definitions
-│   ├── supabase.ts              # Supabase generated types
-│   └── types.ts                 # Application types
-├── utils/                       # Utility functions
-│   ├── supabase/                # Supabase utilities
-│   ├── adminUtils.ts            # Admin helper functions
-│   ├── errorHandling.ts         # Error handling utilities
-│   ├── formatCurrency.ts        # Currency formatting
-│   └── testSupabase.ts          # Supabase testing utilities
-└── middleware.ts                # Next.js auth middleware
-```
+### Prerequisites
+- **Node.js**: v20.x or higher
+- **npm**: v9.x or higher
+- **Git**
 
-## Technologies Used
+### 1. Clone the Repository
+`ash
+git clone https://github.com/DuHieu/voltmart-ecommerce.git
+cd voltmart-ecommerce
+`
 
-### Core Framework
+### 2. Install Dependencies
+`ash
+npm install
+`
 
-- **Next.js 15** - React framework with App Router
-- **React 19** - UI library with latest features
-- **TypeScript** - Type-safe JavaScript
+### 3. Configure Environment Variables
+Copy the template .env.example into a local configuration file:
+`ash
+cp .env.example .env.local
+`
 
-### Styling & UI
+Populate the required keys in .env.local:
+`env
+# Supabase Configuration
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
 
-- **Tailwind CSS v4** - Utility-first CSS framework
-- **shadcn/ui** - Modern component library
-- **Radix UI** - Headless UI primitives
-- **next-themes** - Theme switching support
-- **Lucide React** - Beautiful icon library
+# Polar Payment Configuration (Optional)
+POLAR_ACCESS_TOKEN=your_polar_access_token
+POLAR_WEBHOOK_SECRET=your_polar_webhook_secret
+POLAR_PRODUCT_ID=your_polar_product_id
+POLAR_ORG_ID=your_polar_org_id
+`
 
-### Backend & Data
+> **Note**: If you run the project without Supabase credentials, VoltMart automatically activates its built-in fallback catalog so you can still preview and test all store views locally without errors.
 
-- **Supabase** - Backend-as-a-Service (Auth, Database, Storage)
-- **@supabase/ssr** - Server-side rendering support
-- **TanStack Query** - Data fetching and caching
-- **TanStack Table** - Powerful table component
-- **Zod** - Schema validation
+---
 
-### Developer Experience
+## 🗄️ Supabase Database Setup
 
-- **TanStack Form** - Type-safe form handling
-- **Sonner** - Toast notifications
-- **Chart.js & React Chart.js 2** - Data visualization
-- **ESLint** - Code linting with Next.js config
-- **Prettier** - Code formatting with Tailwind plugin
-- **TypeScript** - Static type checking
-- **Framer Motion** - Animation library
-- **date-fns** - Date utility library
-- **Stagewise Toolbar** - Development toolbar for debugging
+To link your own Supabase instance:
 
-## Supabase Integration
+1. Create a new project in [Supabase](https://supabase.com/).
+2. In the Supabase Dashboard, navigate to the **SQL Editor**.
+3. Copy and run the entire SQL script from [supabase/seed.sql](./supabase/seed.sql):
+   - Sets up table schemas (products, categories, orders, profiles, eviews, cart).
+   - Configures Row Level Security (RLS) policies.
+   - Populates the 12 curated electronics products and categories.
+4. Retrieve your **Project URL** and **anon public key** from Project Settings > API and paste them into .env.local.
 
-This project uses Supabase for:
+---
 
-- **Authentication**: User sign up, sign in, password reset
-- **Database**: Products, orders, user profiles, reviews
-- **Row Level Security**: Data access control
-- **Real-time subscriptions**: Live data updates
+## 📜 Available Scripts
 
-For detailed Supabase setup instructions, refer to the [SUPABASE_GUIDE.md](./SUPABASE_GUIDE.md) file.
+| Command | Description |
+| :--- | :--- |
+| 
+pm run dev | Starts the Next.js development server with Turbopack on http://localhost:3000 |
+| 
+pm run build | Compiles an optimized production build of the application |
+| 
+pm run start | Boots the production server |
+| 
+pm run lint | Analyzes code quality using ESLint |
+| 
+px tsc --noEmit | Runs full TypeScript static type checking |
+| 
+pm run precommit | Runs both 
+pm run lint and 
+pm run build as a pre-commit quality gate |
 
-## Documentation
+---
 
-Additional documentation is available in the `docs/` directory:
+## 🔒 Security & Deployment Checklist
 
-- [API Documentation](./docs/api.md) - API endpoints and usage
-- [Architecture Overview](./docs/architecture.md) - System architecture and design decisions
-- [Database Schema](./docs/schema.md) - Database structure and relationships
-- [README](./docs/README.md) - Additional project information
+- [x] Environment variables isolated via .env.local (excluded from git tracking).
+- [x] Row Level Security (RLS) enforced across all database tables.
+- [x] Sensitive payments handled server-side through protected API webhooks.
+- [x] Client-safe Supabase anon key configured with zero private role escalation.
+- [x] Clean static generation and dynamic route rendering.
 
-## Key Features Implementation
+---
 
-### Authentication Flow
+## 📄 License & Attribution
 
-- Protected routes with middleware
-- Email/password authentication
-- Password reset with email confirmation
-- Session management with SSR
-- Role-based access control (user/admin)
+This project is licensed under the [MIT License](./LICENSE).
 
-### E-commerce Features
-
-- Product catalog with categories (Electronics, Clothing, Accessories)
-- Shopping cart with persistence and real-time updates
-- Multi-step checkout process with shipping and payment forms
-- Order management with status tracking
-- Product reviews and ratings system
-- Address management for multiple shipping locations
-- User dashboard with order history and analytics
-
-### Admin Panel
-
-- Comprehensive admin interface with protected routes
-- Product management (create, update, delete)
-- Order management and status updates
-- User management with role assignments
-- Data analytics with Chart.js visualizations
-- Secure server actions for sensitive operations
-
-### Performance Optimizations
-
-- Next.js App Router for optimal loading
-- TanStack Query for efficient data caching
-- Image optimization with Next.js Image
-- Code splitting with dynamic imports
-- Server-side rendering for SEO
-- Optimistic updates for better UX
-
-### Security Features
-
-- Row Level Security (RLS) policies in Supabase
-- Middleware protection for authenticated routes
-- Admin route protection
-- Data sanitization and validation
-- Secure server actions for admin operations
-
-## Configuration Files
-
-- `next.config.mjs`: Next.js configuration with image optimization
-- `tsconfig.json`: TypeScript configuration with strict mode
-- `postcss.config.js`: PostCSS configuration for Tailwind CSS v4
-- `components.json`: shadcn/ui component configuration
-- `eslint.config.js`: ESLint configuration with Next.js and TypeScript rules
-- `package.json`: Dependencies and scripts configuration
-- `.env.local`: Environment variables (not tracked in git)
-- `middleware.ts`: Next.js middleware for authentication
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+- Architecture and original open-source base by [tarektech](https://github.com/tarektech/ecommerce-supabase-Nextjs).
+- Transformed, branded, and maintained by [Dư Hiếu](https://github.com/DuHieu) as the **VoltMart** portfolio project.

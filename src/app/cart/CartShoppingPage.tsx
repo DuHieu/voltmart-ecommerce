@@ -25,35 +25,39 @@ export default function CartShoppingPage() {
     return <ShoppingSkeleton />;
   }
 
-  // Show login prompt if user is not authenticated
-  if (!user) {
+  // Show empty cart prompt if no items
+  if (cartItems.length === 0) {
     return (
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4 py-12">
         <div className="mb-6 flex items-center">
-          <Link href="/" className="text-primary flex items-center">
+          <Link href="/" className="text-primary flex items-center text-sm font-medium">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Shopping
           </Link>
-          <h1 className="ml-4 text-3xl font-bold">Your Shopping Cart</h1>
+          <h1 className="ml-4 text-2xl font-bold tracking-tight">Shopping Cart</h1>
         </div>
-        <Card className="mx-auto max-w-md">
+        <Card className="mx-auto max-w-md text-center py-6">
           <CardHeader>
-            <CardTitle>Please Log In</CardTitle>
+            <CardTitle className="text-xl">Your Cart is Empty</CardTitle>
           </CardHeader>
-          <CardContent>
-            <p className="mb-4">You need to be logged in to view your cart.</p>
-            <Link href="/signin">
-              <Button className="w-full">Log In</Button>
+          <CardContent className="space-y-4">
+            <p className="text-muted-foreground text-sm">
+              Explore our latest high-performance electronics and audio equipment.
+            </p>
+            <Link href="/">
+              <Button className="w-full cursor-pointer">Explore Catalog</Button>
             </Link>
           </CardContent>
-          <CardFooter>
-            <p className="text-muted-foreground text-sm">
-              Don&apos;t have an account?{" "}
-              <Link href="/signup" className="text-primary hover:underline">
-                Sign up
-              </Link>
-            </p>
-          </CardFooter>
+          {!user && (
+            <CardFooter className="justify-center border-t border-border/40 pt-4">
+              <p className="text-muted-foreground text-xs">
+                Already have an account?{" "}
+                <Link href="/signin" className="text-primary hover:underline">
+                  Sign in
+                </Link>
+              </p>
+            </CardFooter>
+          )}
         </Card>
       </div>
     );
@@ -161,11 +165,19 @@ export default function CartShoppingPage() {
                 </div>
               </CardContent>
               <CardFooter>
-                <Link href="/checkout">
-                  <Button className="w-full cursor-pointer">
-                    Proceed to Checkout
-                  </Button>
-                </Link>
+                {user ? (
+                  <Link href="/checkout" className="w-full">
+                    <Button className="w-full cursor-pointer">
+                      Proceed to Checkout
+                    </Button>
+                  </Link>
+                ) : (
+                  <Link href="/signin?returnTo=/checkout" className="w-full">
+                    <Button className="w-full cursor-pointer">
+                      Sign In to Checkout
+                    </Button>
+                  </Link>
+                )}
               </CardFooter>
             </Card>
           </div>

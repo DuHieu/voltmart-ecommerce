@@ -1,6 +1,7 @@
 import { supabase } from '@/lib/supabase/client';
 import { CategoryType } from '../../types';
 import { isNoRowsError, toUserFacingQueryError } from '@/utils/errorHandling';
+import { mockCategories } from '@/lib/mockData';
 
 export const categoryService = {
   async getCategories(): Promise<CategoryType[]> {
@@ -8,17 +9,14 @@ export const categoryService = {
       const { data, error } = await supabase
         .from('categories')
         .select('*')
-        .order('name');
+        .order('id');
 
-      if (error) {
-        throw toUserFacingQueryError('Categories', error);
+      if (!error && data && data.length > 0) {
+        return data as CategoryType[];
       }
-
-      return data as CategoryType[];
-    } catch (error) {
-      throw error instanceof Error
-        ? error
-        : toUserFacingQueryError('Categories', {});
+      return mockCategories;
+    } catch {
+      return mockCategories;
     }
   },
 

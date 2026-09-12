@@ -31,8 +31,18 @@ export function Navbar() {
       <div className="mx-4 flex h-16 items-center">
         <div className="flex items-center gap-2">
           <SidebarTrigger className="hover:bg-muted/50 transition-colors duration-200" />
-          <Link href="/" className="flex cursor-pointer items-center">
-            <h1 className="text-2xl font-bold">ShopClone</h1>
+          <Link href="/" className="flex cursor-pointer items-center gap-2.5">
+            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-amber-500 via-orange-500 to-indigo-600 flex items-center justify-center text-white font-black text-sm shadow-sm">
+              V
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold tracking-tight text-foreground leading-none">
+                Volt<span className="text-primary font-normal">Mart</span>
+              </span>
+              <span className="text-[10px] font-medium tracking-widest text-muted-foreground uppercase">
+                Electronics
+              </span>
+            </div>
           </Link>
         </div>
 

@@ -38,11 +38,21 @@ export function ProductCard({ product }: ProductCardProps) {
     router.push(`/products/${product.product_id}`);
   };
 
-  // Generate mock rating and reviews for demonstration
-  const rating = 4.2 + Math.random() * 0.8;
-  const reviewCount = Math.floor(Math.random() * 200) + 50;
-  const isOnSale = Math.random() > 0.7;
-  const originalPrice = isOnSale ? product.price * 1.3 : null;
+  // Deterministic ratings and reviews based on product ID to eliminate hydration mismatches
+  const getProductHash = (str: string) => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = (hash << 5) - hash + str.charCodeAt(i);
+      hash |= 0;
+    }
+    return Math.abs(hash);
+  };
+
+  const hash = getProductHash(product.product_id || product.title);
+  const rating = Number((4.3 + (hash % 7) * 0.1).toFixed(1));
+  const reviewCount = 40 + (hash % 160);
+  const isOnSale = (hash % 10) > 6;
+  const originalPrice = isOnSale ? Math.round(product.price * 1.25) : null;
 
   const renderStars = () => {
     return Array.from({ length: 5 }, (_, index) => {

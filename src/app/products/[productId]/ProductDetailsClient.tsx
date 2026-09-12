@@ -346,8 +346,9 @@ export default function ProductDetailsClient({
           transition={{ delay: 0.7 }}
         >
           <Tabs defaultValue="description" className="mb-12">
-            <TabsList className="grid w-full grid-cols-2">
+            <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="description">Description</TabsTrigger>
+              <TabsTrigger value="specs">Specifications</TabsTrigger>
               <TabsTrigger value="reviews">Reviews</TabsTrigger>
             </TabsList>
 
@@ -365,6 +366,39 @@ export default function ProductDetailsClient({
                         </p>
                       </div>
                     )}
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            <TabsContent value="specs" className="mt-6">
+              <Card>
+                <CardContent className="p-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                    <div className="flex justify-between border-b border-border/40 py-2">
+                      <span className="text-muted-foreground">Manufacturer</span>
+                      <span className="font-medium text-foreground">VoltMart Studio</span>
+                    </div>
+                    <div className="flex justify-between border-b border-border/40 py-2">
+                      <span className="text-muted-foreground">SKU / Model</span>
+                      <span className="font-medium text-foreground">{product.sku || 'VLT-PRO-STD'}</span>
+                    </div>
+                    <div className="flex justify-between border-b border-border/40 py-2">
+                      <span className="text-muted-foreground">Connectivity</span>
+                      <span className="font-medium text-foreground">USB-C PD, BT 5.4, 2.4GHz</span>
+                    </div>
+                    <div className="flex justify-between border-b border-border/40 py-2">
+                      <span className="text-muted-foreground">Build Material</span>
+                      <span className="font-medium text-foreground">Anodized Alloy & Polymer</span>
+                    </div>
+                    <div className="flex justify-between border-b border-border/40 py-2">
+                      <span className="text-muted-foreground">Warranty</span>
+                      <span className="font-medium text-foreground">2 Years Full Coverage</span>
+                    </div>
+                    <div className="flex justify-between border-b border-border/40 py-2">
+                      <span className="text-muted-foreground">Certification</span>
+                      <span className="font-medium text-foreground">FCC, CE, RoHS, Hi-Res</span>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

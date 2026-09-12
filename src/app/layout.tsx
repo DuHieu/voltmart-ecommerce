@@ -11,14 +11,23 @@ import { Toaster } from "sonner";
 import { MainLayout } from "@/components/MainLayout";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { DemoBanner } from "@/components/DemoBanner";
+import { Footer } from "@/components/Footer";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
-  title: "E-Commerce",
-  description: "E-Commerce App",
+  title: {
+    default: "VoltMart – Modern Full-Stack Electronics Ecommerce",
+    template: "%s | VoltMart",
+  },
+  description:
+    "VoltMart – A modern full-stack electronics ecommerce platform built with Next.js, React, TypeScript, Supabase, PostgreSQL, and Tailwind CSS.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -29,11 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={cn("font-sans", geist.variable)}>
       <head>
-        <link rel="icon" type="image/svg+xml" href="/icon.svg" />
-        <title>My App</title>
-        <meta name="description" content="My App is a..." />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
-      <body className="bg-background min-h-screen">
+      <body className="bg-background min-h-screen flex flex-col">
         <ErrorBoundary>
           <TanStackQueryProvider>
             <AuthProvider>
@@ -46,10 +53,11 @@ export default function RootLayout({
                 >
                   <SidebarProvider>
                     <Sidebar />
-                    <SidebarInset>
+                    <SidebarInset className="flex flex-col min-h-screen">
                       <DemoBanner />
                       <Navbar />
                       <MainLayout>{children}</MainLayout>
+                      <Footer />
                     </SidebarInset>
                   </SidebarProvider>
                 </ThemeProvider>

@@ -32,9 +32,9 @@ const stockOptions = [
 
 const categoryOptions = [
   { value: "all", label: "All Categories" },
-  { value: "electronics", label: "Electronics" },
-  { value: "clothing", label: "Clothing" },
-  { value: "accessories", label: "Accessories" },
+  { value: "clothing", label: "Audio & Sound" },
+  { value: "accessories", label: "Computing & Workspace" },
+  { value: "electronics", label: "Smart Gear & Wearables" },
 ];
 
 export function ProductFilter({ filters, onFilterChange }: ProductFilterProps) {
