@@ -1,5 +1,5 @@
 "use client";
-import { ShoppingCart, Moon, Sun, User, LogIn } from "lucide-react";
+import { ShoppingCart, Moon, Sun, LogIn } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { SidebarTrigger } from "@/components/ui/sidebar";
@@ -8,6 +8,8 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { useAuth } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
+
+import { VoltMartLogo } from "@/components/VoltMartLogo";
 
 export function Navbar() {
   const { totalItems } = useCart();
@@ -31,18 +33,8 @@ export function Navbar() {
       <div className="mx-4 flex h-16 items-center">
         <div className="flex items-center gap-2">
           <SidebarTrigger className="hover:bg-muted/50 transition-colors duration-200" />
-          <Link href="/" className="flex cursor-pointer items-center gap-2.5">
-            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-amber-500 via-orange-500 to-indigo-600 flex items-center justify-center text-white font-black text-sm shadow-sm">
-              V
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-foreground leading-none">
-                Volt<span className="text-primary font-normal">Mart</span>
-              </span>
-              <span className="text-[10px] font-medium tracking-widest text-muted-foreground uppercase">
-                Electronics
-              </span>
-            </div>
+          <Link href="/" className="cursor-pointer">
+            <VoltMartLogo size="md" />
           </Link>
         </div>
 
@@ -65,11 +57,14 @@ export function Navbar() {
             <Button
               variant="ghost"
               size="icon"
-              className="h-9 w-9 cursor-pointer"
+              className="relative h-9 w-9 rounded-full cursor-pointer p-0 overflow-hidden ring-1 ring-border/80 hover:ring-primary transition-all"
               onClick={() => router.push("/profile")}
+              title={user.email || "Tài khoản của tôi"}
             >
-              <User className="h-[1.2rem] w-[1.2rem]" />
-              <span className="sr-only">{user ? "Profile" : "Sign in"}</span>
+              <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-amber-500 via-orange-500 to-indigo-600 text-white font-bold text-xs uppercase shadow-inner">
+                {user.email?.charAt(0) || "U"}
+              </div>
+              <span className="sr-only">Tài khoản</span>
             </Button>
           ) : (
             <Button

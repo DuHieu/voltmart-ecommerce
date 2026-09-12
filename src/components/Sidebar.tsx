@@ -32,6 +32,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { VoltMartLogo } from "@/components/VoltMartLogo";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   Sidebar as ShadcnSidebar,
@@ -143,33 +144,9 @@ export default function Sidebar() {
       {/* Header with logo */}
       <SidebarHeader>
         <div className="flex items-center justify-between">
-          <Motion
-            variants={contentVariants}
-            initial={isCollapsed ? "closed" : "open"}
-            animate={isCollapsed ? "closed" : "open"}
-            className="flex items-center space-x-2.5"
-          >
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 via-orange-500 to-indigo-600 shadow-md">
-              <span className="text-white text-base font-black">
-                V
-              </span>
-            </div>
-            {!isCollapsed && (
-              <Motion
-                variants={itemVariants}
-                initial="closed"
-                animate="open"
-                className="flex flex-col"
-              >
-                <span className="text-foreground text-base font-bold tracking-tight">
-                  VoltMart
-                </span>
-                <span className="text-muted-foreground text-[11px] font-medium">
-                  Electronics Platform
-                </span>
-              </Motion>
-            )}
-          </Motion>
+          <Link href="/" className="flex items-center">
+            <VoltMartLogo size="sm" showText={!isCollapsed} />
+          </Link>
 
           {!isCollapsed && (
             <SidebarTrigger className="hover:bg-muted/50 ml-auto transition-colors duration-200" />

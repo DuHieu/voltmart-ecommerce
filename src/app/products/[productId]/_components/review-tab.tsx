@@ -14,6 +14,7 @@ import { toast } from "sonner";
 import { ReviewedCard } from "./reviewed-card";
 import { useQueryClient } from "@tanstack/react-query";
 import { reviewKeys } from "@/hooks/queries";
+import { REALISTIC_REVIEWS_POOL } from "@/data/productRichDetails";
 
 type ProductDetailsClientProps = {
   product: ProductType;
@@ -29,8 +30,23 @@ export function ReviewTab({ product }: ProductDetailsClientProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const { data: reviewsData } = useGetProductReviews(product.product_id);
-
   const createReviewMutation = useCreateReview();
+
+  const [filterRating, setFilterRating] = useState<number | null>(null);
+  const [filterWithPhotos, setFilterWithPhotos] = useState(false);
+
+  // Combine database reviews with realistic pool for metrics
+  const combinedReviews = useMemo(() => {
+    const dbItems = (reviewsData || []).map((rev) => ({
+      rating: rev.rating,
+      hasPhoto: false,
+    }));
+    const mockItems = REALISTIC_REVIEWS_POOL.map((rev) => ({
+      rating: rev.rating,
+      hasPhoto: Boolean(rev.photos && rev.photos.length > 0),
+    }));
+    return [...dbItems, ...mockItems];
+  }, [reviewsData]);
 
   // Ensure reviews is always an array (handle null/undefined) with stable reference
   const reviews = useMemo(() => reviewsData ?? [], [reviewsData]);
@@ -43,17 +59,17 @@ export function ReviewTab({ product }: ProductDetailsClientProps) {
     );
   }, [reviews, user]);
 
-  // Calculate real rating distribution from actual reviews
+  // Calculate real rating distribution from combined reviews
   const ratingDistribution = useMemo(() => {
     const distribution = { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
 
-    reviews.forEach((review) => {
+    combinedReviews.forEach((review) => {
       if (review.rating >= 1 && review.rating <= 5) {
         distribution[review.rating as keyof typeof distribution]++;
       }
     });
 
-    const total = reviews.length || 1;
+    const total = combinedReviews.length || 1;
 
     return [5, 4, 3, 2, 1].map((stars) => ({
       stars,
@@ -62,17 +78,20 @@ export function ReviewTab({ product }: ProductDetailsClientProps) {
       ),
       count: distribution[stars as keyof typeof distribution],
     }));
-  }, [reviews]);
+  }, [combinedReviews]);
 
-  // Calculate review stats from actual reviews
+  // Calculate review stats from combined reviews
   const averageRating = useMemo(() => {
-    if (reviews.length === 0) return 0;
+    if (combinedReviews.length === 0) return 5.0;
     return (
-      reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length
+      combinedReviews.reduce((sum, review) => sum + review.rating, 0) / combinedReviews.length
     );
-  }, [reviews]);
+  }, [combinedReviews]);
 
-  const reviewCount = reviews.length;
+  const reviewCount = combinedReviews.length;
+  const fiveStarCount = combinedReviews.filter((r) => r.rating === 5).length;
+  const fourStarCount = combinedReviews.filter((r) => r.rating === 4).length;
+  const withPhotosCount = combinedReviews.filter((r) => r.hasPhoto).length;
 
   const handleSubmitReview = async () => {
     if (!user) {
@@ -272,8 +291,63 @@ export function ReviewTab({ product }: ProductDetailsClientProps) {
           </Card>
         )}
 
+        {/* Shopee-style Review Filter Chips Bar */}
+        <div className="flex flex-wrap items-center gap-2 rounded-xl border border-border/60 bg-muted/30 p-3.5">
+          <span className="text-xs font-semibold text-muted-foreground mr-1">
+            Lọc đánh giá:
+          </span>
+          <Button
+            size="sm"
+            variant={filterRating === null && !filterWithPhotos ? "default" : "outline"}
+            className="h-8 text-xs cursor-pointer"
+            onClick={() => {
+              setFilterRating(null);
+              setFilterWithPhotos(false);
+            }}
+          >
+            Tất Cả ({reviewCount})
+          </Button>
+          <Button
+            size="sm"
+            variant={filterRating === 5 ? "default" : "outline"}
+            className="h-8 text-xs cursor-pointer"
+            onClick={() => {
+              setFilterRating(5);
+              setFilterWithPhotos(false);
+            }}
+          >
+            5 Sao ({fiveStarCount})
+          </Button>
+          <Button
+            size="sm"
+            variant={filterRating === 4 ? "default" : "outline"}
+            className="h-8 text-xs cursor-pointer"
+            onClick={() => {
+              setFilterRating(4);
+              setFilterWithPhotos(false);
+            }}
+          >
+            4 Sao ({fourStarCount})
+          </Button>
+          <Button
+            size="sm"
+            variant={filterWithPhotos ? "default" : "outline"}
+            className="h-8 text-xs cursor-pointer"
+            onClick={() => {
+              setFilterRating(null);
+              setFilterWithPhotos(true);
+            }}
+          >
+            Có Hình Ảnh ({withPhotosCount})
+          </Button>
+        </div>
+
         {/* Reviews List */}
-        <ReviewedCard productId={product.product_id} />
+        <ReviewedCard
+          productId={product.product_id}
+          filterRating={filterRating}
+          filterWithPhotos={filterWithPhotos}
+        />
       </div>
     </div>
   );

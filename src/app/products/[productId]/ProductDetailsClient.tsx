@@ -21,6 +21,9 @@ import {
   Check,
 } from "lucide-react";
 import { ReviewTab } from "./_components/review-tab";
+import { DescriptionTab } from "./_components/description-tab";
+import { ShopProfileCard } from "@/components/ShopProfileCard";
+import { getProductRichInfo } from "@/data/productRichDetails";
 
 type ProductDetailsClientProps = {
   product: ProductType;
@@ -337,6 +340,15 @@ export default function ProductDetailsClient({
           </div>
         </div>
 
+        {/* Shopee-style Mall Seller Profile Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.65 }}
+        >
+          <ShopProfileCard />
+        </motion.div>
+
         {/* Product Details Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -345,65 +357,44 @@ export default function ProductDetailsClient({
         >
           <Tabs defaultValue="description" className="mb-12">
             <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="description">Description</TabsTrigger>
+              <TabsTrigger value="description">Description & Details</TabsTrigger>
               <TabsTrigger value="specs">Specifications</TabsTrigger>
-              <TabsTrigger value="reviews">Reviews</TabsTrigger>
+              <TabsTrigger value="reviews">Customer Reviews</TabsTrigger>
             </TabsList>
 
             <TabsContent value="description" className="mt-6">
-              <Card>
-                <CardContent className="p-6">
-                  <div className="prose prose-sm max-w-none">
-                    <p className="text-muted-foreground mb-4 leading-relaxed">
-                      {product.description}
-                    </p>
-                    {product.sku && (
-                      <div className="border-border mt-4 border-t pt-4">
-                        <p className="text-muted-foreground text-sm">
-                          <strong>SKU:</strong> {product.sku}
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
+              <DescriptionTab product={product} />
             </TabsContent>
 
             <TabsContent value="specs" className="mt-6">
-              <Card>
-                <CardContent className="p-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                    <div className="flex justify-between border-b border-border/40 py-2">
-                      <span className="text-muted-foreground">Manufacturer</span>
-                      <span className="font-medium text-foreground">VoltMart Studio</span>
+              <Card className="border-border/60 shadow-sm">
+                <CardContent className="space-y-6 p-6">
+                  {getProductRichInfo(product).specGroups.map((group, gIdx) => (
+                    <div key={gIdx} className="space-y-3">
+                      <h4 className="border-b border-border/40 pb-2 text-sm font-bold text-foreground uppercase tracking-wider text-primary">
+                        {group.group}
+                      </h4>
+                      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 text-sm">
+                        {group.items.map((item, iIdx) => (
+                          <div
+                            key={iIdx}
+                            className="flex justify-between border-b border-border/20 py-2 sm:pr-4"
+                          >
+                            <span className="text-muted-foreground">{item.label}</span>
+                            <span className="font-medium text-foreground text-right pl-2">
+                              {item.value}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div className="flex justify-between border-b border-border/40 py-2">
-                      <span className="text-muted-foreground">SKU / Model</span>
-                      <span className="font-medium text-foreground">{product.sku || 'VLT-PRO-STD'}</span>
-                    </div>
-                    <div className="flex justify-between border-b border-border/40 py-2">
-                      <span className="text-muted-foreground">Connectivity</span>
-                      <span className="font-medium text-foreground">USB-C PD, BT 5.4, 2.4GHz</span>
-                    </div>
-                    <div className="flex justify-between border-b border-border/40 py-2">
-                      <span className="text-muted-foreground">Build Material</span>
-                      <span className="font-medium text-foreground">Anodized Alloy & Polymer</span>
-                    </div>
-                    <div className="flex justify-between border-b border-border/40 py-2">
-                      <span className="text-muted-foreground">Warranty</span>
-                      <span className="font-medium text-foreground">2 Years Full Coverage</span>
-                    </div>
-                    <div className="flex justify-between border-b border-border/40 py-2">
-                      <span className="text-muted-foreground">Certification</span>
-                      <span className="font-medium text-foreground">FCC, CE, RoHS, Hi-Res</span>
-                    </div>
-                  </div>
+                  ))}
                 </CardContent>
               </Card>
             </TabsContent>
 
             <TabsContent value="reviews" className="mt-6">
-                <ReviewTab product={product} />
+              <ReviewTab product={product} />
             </TabsContent>
           </Tabs>
         </motion.div>

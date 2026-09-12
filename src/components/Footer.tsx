@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Cpu, ShieldCheck, Truck, RotateCcw } from 'lucide-react';
+import { VoltMartLogo } from '@/components/VoltMartLogo';
 
 export function Footer() {
   return (
@@ -51,11 +52,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Col */}
           <div className="space-y-4 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-amber-500 via-orange-500 to-indigo-600 flex items-center justify-center text-white font-black text-sm">
-                V
-              </div>
-              <span className="text-xl font-bold tracking-tight">Volt<span className="text-primary font-normal">Mart</span></span>
+            <Link href="/" className="inline-block">
+              <VoltMartLogo size="md" />
             </Link>
             <p className="text-xs text-muted-foreground leading-relaxed">
               Precision audio, computing peripherals, and smart wearable hardware engineered for power users and creators.
