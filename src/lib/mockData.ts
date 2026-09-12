@@ -567,7 +567,7 @@ export const mockProducts: ProductType[] = [
 
   // ─── Cameras & Creator Studio (category_id: 7) ───────────────────────
   {
-    product_id: 'g7000000-0000-0000-0000-000000000001',
+    product_id: '07000000-0000-0000-0000-000000000001',
     title: 'VoltMart CineGimbal 3-Axis Motorized Smartphone Stabilizer',
     description: 'Pro 3-axis motorized gimbal with magnetic AI tracking module, built-in extension rod, 360° infinite roll, and wireless focus/zoom control wheel.',
     price: 139.00,
@@ -575,7 +575,7 @@ export const mockProducts: ProductType[] = [
     stock: 30, sku: 'VLT-CAM-001', category_id: 7, created_at: now, updated_at: now,
   },
   {
-    product_id: 'g7000000-0000-0000-0000-000000000002',
+    product_id: '07000000-0000-0000-0000-000000000002',
     title: 'VoltMart LuminaPanel Edge-Lit Studio Key Light',
     description: 'Edge-lit 2800K-7000K bi-color streaming light with 2800 lumens output, zero glare, Wi-Fi desktop app control, and heavy-duty desk clamp mount.',
     price: 109.00,
@@ -583,7 +583,7 @@ export const mockProducts: ProductType[] = [
     stock: 38, sku: 'VLT-CAM-002', category_id: 7, created_at: now, updated_at: now,
   },
   {
-    product_id: 'g7000000-0000-0000-0000-000000000003',
+    product_id: '07000000-0000-0000-0000-000000000003',
     title: 'VoltMart StudioCam 4K60 Pro Creator Webcam',
     description: 'High-performance 4K 60fps streaming camera with 1/1.8" Sony STARVIS 2 sensor, f/1.8 optical glass lens, AI auto-exposure, and omnidirectional stereo mics.',
     price: 199.00,
@@ -591,7 +591,7 @@ export const mockProducts: ProductType[] = [
     stock: 25, sku: 'VLT-CAM-003', category_id: 7, created_at: now, updated_at: now,
   },
   {
-    product_id: 'g7000000-0000-0000-0000-000000000004',
+    product_id: '07000000-0000-0000-0000-000000000004',
     title: 'VoltMart Podcaster Dual Wireless Lavalier Mic System',
     description: '2.4GHz dual-channel wireless microphone kit with onboard 32-bit float recording, environmental noise cancellation, and 24-hour charging case.',
     price: 149.00,
@@ -599,7 +599,7 @@ export const mockProducts: ProductType[] = [
     stock: 40, sku: 'VLT-CAM-004', category_id: 7, created_at: now, updated_at: now,
   },
   {
-    product_id: 'g7000000-0000-0000-0000-000000000005',
+    product_id: '07000000-0000-0000-0000-000000000005',
     title: 'VoltMart TelePrompter Pro for Tablets & Phones',
     description: 'Studio beam-splitter 70/30 optical glass teleprompter compatible with DSLRs, mirrorless cameras, iPads, and smartphones, with wireless remote control.',
     price: 89.00,
@@ -607,7 +607,7 @@ export const mockProducts: ProductType[] = [
     stock: 20, sku: 'VLT-CAM-005', category_id: 7, created_at: now, updated_at: now,
   },
   {
-    product_id: 'g7000000-0000-0000-0000-000000000006',
+    product_id: '07000000-0000-0000-0000-000000000006',
     title: 'VoltMart MultiMount Pro Heavy-Duty Desk Rig System',
     description: 'All-metal modular desk rigging pole with 3 articulating arms for simultaneously mounting camera, microphone, and ring light in small spaces.',
     price: 69.00,
@@ -615,7 +615,7 @@ export const mockProducts: ProductType[] = [
     stock: 35, sku: 'VLT-CAM-006', category_id: 7, created_at: now, updated_at: now,
   },
   {
-    product_id: 'g7000000-0000-0000-0000-000000000007',
+    product_id: '07000000-0000-0000-0000-000000000007',
     title: 'VoltMart ChromaKey Pro Collapsible Green Screen Panel',
     description: 'Wrinkle-resistant pneumatic pop-up green screen (150x200cm) housed in an aluminum hard-shell base for instant streaming chroma key setup.',
     price: 119.00,
@@ -623,7 +623,7 @@ export const mockProducts: ProductType[] = [
     stock: 18, sku: 'VLT-CAM-007', category_id: 7, created_at: now, updated_at: now,
   },
   {
-    product_id: 'g7000000-0000-0000-0000-000000000008',
+    product_id: '07000000-0000-0000-0000-000000000008',
     title: 'VoltMart AcousticShield Pro Reflection Filter',
     description: 'High-density acoustic foam microphone isolation shield with vented aluminum backplate for capturing dry, studio-grade vocals in untreated rooms.',
     price: 59.00,
