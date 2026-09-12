@@ -1,4 +1,4 @@
-﻿export interface CategoryMeta {
+export interface CategoryMeta {
   id: number;
   name: string;
   slug: string;
@@ -35,6 +35,18 @@ export const CATEGORIES_LIST: CategoryMeta[] = [
     name: "Networking & Smart Home",
     slug: "networking",
     description: "Wi-Fi 7 mesh routers, smart home hubs, IP cameras, NAS storage, and connected home automation.",
+  },
+  {
+    id: 6,
+    name: "Power & Mobile Gear",
+    slug: "power",
+    description: "Ultra-fast GaN chargers, high-capacity laptop power banks, solar generators, and rugged cables.",
+  },
+  {
+    id: 7,
+    name: "Cameras & Creator Studio",
+    slug: "cameras",
+    description: "4K action cameras, studio broadcast mics, AI tracking webcams, motorized gimbals, and ring lights.",
   },
 ];
 

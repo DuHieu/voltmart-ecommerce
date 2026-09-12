@@ -11,7 +11,9 @@ export const productService = {
         .order('title');
 
       if (!error && data && data.length > 0) {
-        return data as ProductType[];
+        const existingIds = new Set(data.map((p) => p.product_id));
+        const additional = mockProducts.filter((p) => !existingIds.has(p.product_id));
+        return [...data, ...additional] as ProductType[];
       }
       // Fallback to curated electronics catalog
       return mockProducts;
@@ -47,10 +49,13 @@ export const productService = {
         .eq('category_id', categoryId)
         .order('title');
 
+      const mockForCategory = mockProducts.filter((p) => p.category_id === categoryId);
       if (!error && data && data.length > 0) {
-        return data as ProductType[];
+        const existingIds = new Set(data.map((p) => p.product_id));
+        const additional = mockForCategory.filter((p) => !existingIds.has(p.product_id));
+        return [...data, ...additional] as ProductType[];
       }
-      return mockProducts.filter((p) => p.category_id === categoryId);
+      return mockForCategory;
     } catch {
       return mockProducts.filter((p) => p.category_id === categoryId);
     }

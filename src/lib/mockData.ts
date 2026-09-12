@@ -1,4 +1,4 @@
-﻿import { ProductType } from '@/types';
+import { ProductType } from '@/types';
 
 export const mockCategories = [
   {
@@ -25,6 +25,16 @@ export const mockCategories = [
     id: 5,
     name: 'Networking & Smart Home',
     description: 'Wi-Fi 7 mesh routers, smart home hubs, IP cameras, NAS storage, and connected home automation.',
+  },
+  {
+    id: 6,
+    name: 'Power & Mobile Gear',
+    description: 'Ultra-fast GaN chargers, high-capacity laptop power banks, solar generators, and rugged cables.',
+  },
+  {
+    id: 7,
+    name: 'Cameras & Creator Studio',
+    description: '4K action cameras, studio broadcast mics, AI tracking webcams, motorized gimbals, and ring lights.',
   },
 ];
 
@@ -390,12 +400,28 @@ export const mockProducts: ProductType[] = [
     image: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&q=80',
     stock: 22, sku: 'VLT-GAM-008', category_id: 4, created_at: now, updated_at: now,
   },
+  {
+    product_id: 'd4000000-0000-0000-0000-000000000009',
+    title: 'ApexGlide Wireless Hall-Effect Gaming Mouse',
+    description: 'Ultra-lightweight 49g competitive gaming mouse with 8,000Hz polling rate, magnetic optical switches, and carbon fiber composite shell.',
+    price: 129.00,
+    image: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80',
+    stock: 35, sku: 'VLT-GAM-009', category_id: 4, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'd4000000-0000-0000-0000-000000000010',
+    title: 'Vortex RGB Desktop Soundbar for PC Gaming',
+    description: 'High-output compact gaming soundbar with dynamic reactive RGB, USB-C DAC input, Bluetooth 5.3, and dual passive bass radiators.',
+    price: 99.00,
+    image: 'https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80',
+    stock: 40, sku: 'VLT-GAM-010', category_id: 4, created_at: now, updated_at: now,
+  },
 
-  // â”€â”€â”€ Networking & Smart Home (category_id: 5) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ─── Networking & Smart Home (category_id: 5) ────────────────────────
   {
     product_id: 'e5000000-0000-0000-0000-000000000001',
     title: 'MeshPro Wi-Fi 7 Tri-Band Router System',
-    description: 'BE19000 tri-band Wi-Fi 7 mesh system (3-pack) with MLO, 320MHz channels, 10GbE WAN port, intelligent QoS, and covers up to 700mÂ² per pack.',
+    description: 'BE19000 tri-band Wi-Fi 7 mesh system (3-pack) with MLO, 320MHz channels, 10GbE WAN port, intelligent QoS, and covers up to 700m² per pack.',
     price: 549.00,
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
     stock: 10, sku: 'VLT-NET-001', category_id: 5, created_at: now, updated_at: now,
@@ -411,7 +437,7 @@ export const mockProducts: ProductType[] = [
   {
     product_id: 'e5000000-0000-0000-0000-000000000003',
     title: 'VaultNAS 4-Bay Network Storage Server',
-    description: '4-bay NAS with Intel Celeron N5095, 8GB ECC RAM expandable to 32GB, 2Ã—2.5GbE, Docker support, Plex media server, and RAID 0/1/5/6 support.',
+    description: '4-bay NAS with Intel Celeron N5095, 8GB ECC RAM expandable to 32GB, 2×2.5GbE, Docker support, Plex media server, and RAID 0/1/5/6 support.',
     price: 649.00,
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
     stock: 7, sku: 'VLT-NET-003', category_id: 5, created_at: now, updated_at: now,
@@ -435,7 +461,7 @@ export const mockProducts: ProductType[] = [
   {
     product_id: 'e5000000-0000-0000-0000-000000000006',
     title: 'AuraPlug Smart Power Strip',
-    description: '6-outlet smart power strip with energy monitoring per outlet, 4Ã—USB-A, 1Ã—USB-C 30W, surge protection (4320J), and voice/app control.',
+    description: '6-outlet smart power strip with energy monitoring per outlet, 4×USB-A, 1×USB-C 30W, surge protection (4320J), and voice/app control.',
     price: 79.00,
     image: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=800&q=80',
     stock: 55, sku: 'VLT-NET-006', category_id: 5, created_at: now, updated_at: now,
@@ -443,7 +469,7 @@ export const mockProducts: ProductType[] = [
   {
     product_id: 'e5000000-0000-0000-0000-000000000007',
     title: 'DoorSense Video Smart Doorbell',
-    description: '4K HDR video doorbell with 180Â° head-to-toe view, package detection, built-in speaker/mic, local recording, and wired or 6000mAh battery powered.',
+    description: '4K HDR video doorbell with 180° head-to-toe view, package detection, built-in speaker/mic, local recording, and wired or 6000mAh battery powered.',
     price: 229.00,
     image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80',
     stock: 16, sku: 'VLT-NET-007', category_id: 5, created_at: now, updated_at: now,
@@ -451,10 +477,157 @@ export const mockProducts: ProductType[] = [
   {
     product_id: 'e5000000-0000-0000-0000-000000000008',
     title: 'ZenAir Smart Purifier & Air Quality Monitor',
-    description: 'HEPA H14 + activated carbon air purifier with laser PM2.5/VOC/COâ‚‚ sensors, auto mode, quiet 22dB sleep mode, app control, and 50mÂ² coverage.',
+    description: 'HEPA H14 + activated carbon air purifier with laser PM2.5/VOC/CO₂ sensors, auto mode, quiet 22dB sleep mode, app control, and 50m² coverage.',
     price: 349.00,
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
     stock: 18, sku: 'VLT-NET-008', category_id: 5, created_at: now, updated_at: now,
   },
-];
+  {
+    product_id: 'e5000000-0000-0000-0000-000000000009',
+    title: 'OmniShield Biometric Smart Door Lock',
+    description: 'Keyless entry smart lock featuring 3D fingerprint scanner, Apple HomeKit / Matter compatibility, auto-relock, and built-in tamper alarm.',
+    price: 249.00,
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
+    stock: 22, sku: 'VLT-NET-009', category_id: 5, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'e5000000-0000-0000-0000-000000000010',
+    title: 'SenseAir Smart Thermostat with Remote Sensors',
+    description: 'Energy-saving smart thermostat with ambient humidity tracking, schedule automation, voice control, and dual room temperature probes.',
+    price: 179.00,
+    image: 'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=800&q=80',
+    stock: 26, sku: 'VLT-NET-010', category_id: 5, created_at: now, updated_at: now,
+  },
 
+  // ─── Power & Mobile Gear (category_id: 6) ───────────────────────────
+  {
+    product_id: 'f6000000-0000-0000-0000-000000000001',
+    title: 'VoltMart HyperCharge 140W GaN 4-Port Fast Charger',
+    description: 'Ultra-efficient GaN III wall charger delivering 140W total output across 3x USB-C PD 3.1 and 1x USB-A ports with intelligent dynamic power allocation.',
+    price: 89.00,
+    image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80',
+    stock: 50, sku: 'VLT-PWR-001', category_id: 6, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'f6000000-0000-0000-0000-000000000002',
+    title: 'VoltMart PowerVault 25,000mAh 145W Laptop Power Bank',
+    description: 'Airline-safe high-capacity power bank capable of 100W single-port charging for MacBooks and ultrabooks, with digital smart status display.',
+    price: 119.00,
+    image: 'https://images.unsplash.com/photo-1609592426867-a54823292150?auto=format&fit=crop&w=800&q=80',
+    stock: 35, sku: 'VLT-PWR-002', category_id: 6, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'f6000000-0000-0000-0000-000000000003',
+    title: 'VoltMart MagSpeed Qi2 15W Magnetic Wireless Car Mount',
+    description: 'Certified Qi2 15W wireless charging car mount with active thermoelectric cooling fan, N52 neodymium magnets, and 360° ball joint air vent clamp.',
+    price: 49.00,
+    image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=800&q=80',
+    stock: 65, sku: 'VLT-PWR-003', category_id: 6, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'f6000000-0000-0000-0000-000000000004',
+    title: 'VoltMart SolarFlow 100W Portable Foldable Solar Panel',
+    description: 'Monocrystalline solar panel with 23.5% conversion efficiency, IP65 water resistance, kickstand design, and direct USB-C PD / DC solar generator output.',
+    price: 269.00,
+    image: 'https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=800&q=80',
+    stock: 15, sku: 'VLT-PWR-004', category_id: 6, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'f6000000-0000-0000-0000-000000000005',
+    title: 'VoltMart ArmorFlex 240W Kevlar Braided USB-C Cable (2m)',
+    description: 'Ultra-durable Kevlar-reinforced 240W USB-C cable supporting 40Gbps data transfer, 8K video output, and certified 35,000 bend lifespan.',
+    price: 29.00,
+    image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80',
+    stock: 90, sku: 'VLT-PWR-005', category_id: 6, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'f6000000-0000-0000-0000-000000000006',
+    title: 'VoltMart CubeStation 65W Desktop Charging Station',
+    description: 'Compact desktop cube with 3 AC outlets, dual USB-C 65W, dual USB-A, and a soft braided 1.8m flat-plug power cord for clean cable management.',
+    price: 59.00,
+    image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80',
+    stock: 45, sku: 'VLT-PWR-006', category_id: 6, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'f6000000-0000-0000-0000-000000000007',
+    title: 'VoltMart MagGrip Magnetic Wallet Stand with Find My',
+    description: 'Premium vegan leather magnetic wallet holding 3 cards, with adjustable viewing kickstand and integrated Apple Find My lost-item tracking.',
+    price: 39.00,
+    image: 'https://images.unsplash.com/photo-1609554496796-c345a5335ceb?auto=format&fit=crop&w=800&q=80',
+    stock: 60, sku: 'VLT-PWR-007', category_id: 6, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'f6000000-0000-0000-0000-000000000008',
+    title: 'VoltMart TurboCharge 45W Dual USB-C Mini Travel Adapter',
+    description: 'Pocket-sized folding-prong dual-port GaN charger engineered for fast iPhone, iPad, and Galaxy smartphone quick recharging on the go.',
+    price: 34.00,
+    image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=800&q=80',
+    stock: 75, sku: 'VLT-PWR-008', category_id: 6, created_at: now, updated_at: now,
+  },
+
+  // ─── Cameras & Creator Studio (category_id: 7) ───────────────────────
+  {
+    product_id: 'g7000000-0000-0000-0000-000000000001',
+    title: 'VoltMart CineGimbal 3-Axis Motorized Smartphone Stabilizer',
+    description: 'Pro 3-axis motorized gimbal with magnetic AI tracking module, built-in extension rod, 360° infinite roll, and wireless focus/zoom control wheel.',
+    price: 139.00,
+    image: 'https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?auto=format&fit=crop&w=800&q=80',
+    stock: 30, sku: 'VLT-CAM-001', category_id: 7, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'g7000000-0000-0000-0000-000000000002',
+    title: 'VoltMart LuminaPanel Edge-Lit Studio Key Light',
+    description: 'Edge-lit 2800K-7000K bi-color streaming light with 2800 lumens output, zero glare, Wi-Fi desktop app control, and heavy-duty desk clamp mount.',
+    price: 109.00,
+    image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80',
+    stock: 38, sku: 'VLT-CAM-002', category_id: 7, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'g7000000-0000-0000-0000-000000000003',
+    title: 'VoltMart StudioCam 4K60 Pro Creator Webcam',
+    description: 'High-performance 4K 60fps streaming camera with 1/1.8" Sony STARVIS 2 sensor, f/1.8 optical glass lens, AI auto-exposure, and omnidirectional stereo mics.',
+    price: 199.00,
+    image: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=800&q=80',
+    stock: 25, sku: 'VLT-CAM-003', category_id: 7, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'g7000000-0000-0000-0000-000000000004',
+    title: 'VoltMart Podcaster Dual Wireless Lavalier Mic System',
+    description: '2.4GHz dual-channel wireless microphone kit with onboard 32-bit float recording, environmental noise cancellation, and 24-hour charging case.',
+    price: 149.00,
+    image: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80',
+    stock: 40, sku: 'VLT-CAM-004', category_id: 7, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'g7000000-0000-0000-0000-000000000005',
+    title: 'VoltMart TelePrompter Pro for Tablets & Phones',
+    description: 'Studio beam-splitter 70/30 optical glass teleprompter compatible with DSLRs, mirrorless cameras, iPads, and smartphones, with wireless remote control.',
+    price: 89.00,
+    image: 'https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&q=80',
+    stock: 20, sku: 'VLT-CAM-005', category_id: 7, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'g7000000-0000-0000-0000-000000000006',
+    title: 'VoltMart MultiMount Pro Heavy-Duty Desk Rig System',
+    description: 'All-metal modular desk rigging pole with 3 articulating arms for simultaneously mounting camera, microphone, and ring light in small spaces.',
+    price: 69.00,
+    image: 'https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=800&q=80',
+    stock: 35, sku: 'VLT-CAM-006', category_id: 7, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'g7000000-0000-0000-0000-000000000007',
+    title: 'VoltMart ChromaKey Pro Collapsible Green Screen Panel',
+    description: 'Wrinkle-resistant pneumatic pop-up green screen (150x200cm) housed in an aluminum hard-shell base for instant streaming chroma key setup.',
+    price: 119.00,
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80',
+    stock: 18, sku: 'VLT-CAM-007', category_id: 7, created_at: now, updated_at: now,
+  },
+  {
+    product_id: 'g7000000-0000-0000-0000-000000000008',
+    title: 'VoltMart AcousticShield Pro Reflection Filter',
+    description: 'High-density acoustic foam microphone isolation shield with vented aluminum backplate for capturing dry, studio-grade vocals in untreated rooms.',
+    price: 59.00,
+    image: 'https://images.unsplash.com/photo-1516223725307-6f76b9182f7c?auto=format&fit=crop&w=800&q=80',
+    stock: 28, sku: 'VLT-CAM-008', category_id: 7, created_at: now, updated_at: now,
+  },
+];

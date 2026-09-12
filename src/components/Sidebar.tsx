@@ -21,6 +21,8 @@ import {
   Gamepad2,
   Wifi,
   PanelLeft,
+  Zap,
+  Camera,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -68,6 +70,8 @@ const categoryIcons: Record<string, React.ElementType> = {
   "Smart Gear & Wearables": Watch,
   "Gaming & Controllers": Gamepad2,
   "Networking & Smart Home": Wifi,
+  "Power & Mobile Gear": Zap,
+  "Cameras & Creator Studio": Camera,
   Clothing: Headphones,
   Accessories: Laptop,
   Electronics: Watch,
